@@ -71,6 +71,13 @@ module.exports = {
 				400: "#FFB703",
 				500: "#FB8500",
 			},
+			version2: {
+				100: "#8ECAE6",
+				200: "#A3CCAB",
+				300: "#34675C",
+				400: "#053D38",
+				500: "#F26800",
+			},
 		},
 		backgroundImage: {
 			landing: "url('/bg-landing.svg')",

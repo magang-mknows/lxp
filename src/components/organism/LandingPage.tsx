@@ -1,5 +1,9 @@
 import { FC, Fragment, ReactElement } from "react";
+import LandingArticle from "../moleculs/LandingArticle";
+import LandingBenefits from "../moleculs/LandingBenefits";
+import LandingCatalog from "../moleculs/LandingCatalog";
 import LandingHero from "../moleculs/LandingHero";
+import LandingPartner from "../moleculs/LandingPartner";
 import Navbar from "../moleculs/Navbar";
 
 const LandingPage: FC = (): ReactElement => {
@@ -7,6 +11,10 @@ const LandingPage: FC = (): ReactElement => {
     <Fragment>
       <Navbar />
       <LandingHero />
+      <LandingPartner />
+      <LandingCatalog />
+      <LandingBenefits />
+      <LandingArticle />
     </Fragment>
   );
 };
