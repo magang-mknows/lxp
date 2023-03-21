@@ -8,8 +8,8 @@ const LandingPartnerLogo: FC<TImageIDProps> = ({ id }): ReactElement => {
       src={`/assets/landing/brand${id}.svg`}
       alt="dashboard-view"
       className="w-44 h-36 bg-neautral-50 "
-      height={1000}
-      width={1000}
+      height={30}
+      width={30}
       loading="eager"
     />
   );

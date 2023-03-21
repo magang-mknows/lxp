@@ -7,7 +7,7 @@ import HeadlinePoster from "../atoms/HeroHeadlinePoster";
 const LandingHero: FC = (): ReactElement => {
   return (
     <div
-      className="flex flex-col items-center py-24 relative overflow-hidden  max-h-[126vh] bg-no-repeat bg-cover"
+      className="flex flex-col items-center pt-24 relative overflow-hidden   bg-no-repeat bg-cover"
       style={{
         backgroundImage: `url(/assets/landing/heroImage.svg)`,
       }}
