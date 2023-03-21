@@ -3,12 +3,12 @@ import LandingHero from "../moleculs/LandingHero";
 import Navbar from "../moleculs/Navbar";
 
 const LandingPage: FC = (): ReactElement => {
-	return (
-		<Fragment>
-			<Navbar />
-			<LandingHero />
-		</Fragment>
-	);
+  return (
+    <Fragment>
+      <Navbar />
+      <LandingHero />
+    </Fragment>
+  );
 };
 
 export default LandingPage;
