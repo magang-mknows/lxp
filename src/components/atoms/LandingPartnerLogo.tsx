@@ -1,19 +1,18 @@
 import Image from "next/image";
 import { FC, ReactElement } from "react";
+import { TImageIDProps } from "./types";
 
-const LandingPartnerLogo: FC = (): ReactElement => {
-	return (
-		<div>
-			<Image
-				src={"/assets/landing/brand1.svg"}
-				alt='dashboard-view'
-				className=''
-				height={100}
-				width={100}
-				loading='eager'
-			/>
-		</div>
-	);
+const LandingPartnerLogo: FC<TImageIDProps> = ({ id }): ReactElement => {
+  return (
+    <Image
+      src={`/assets/landing/brand${id}.svg`}
+      alt="dashboard-view"
+      className="w-44 h-36 bg-neautral-50 "
+      height={1000}
+      width={1000}
+      loading="eager"
+    />
+  );
 };
 
 export default LandingPartnerLogo;
