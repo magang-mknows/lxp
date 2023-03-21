@@ -14,11 +14,11 @@ jobs:
       - run: yarn install
       - run: yarn lint
 
-   build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           node-version: 18
       - run: yarn install
-      - run: yarn build 
+      - run: yarn build
