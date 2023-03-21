@@ -4,11 +4,11 @@ import ClienProvider from "@/providers/ClientProvider";
 import { FC, ReactElement } from "react";
 
 const LandingModule: FC = (): ReactElement => {
-	return (
-		<ClienProvider>
-			<LandingPage />
-		</ClienProvider>
-	);
+  return (
+    <ClienProvider>
+      <LandingPage />
+    </ClienProvider>
+  );
 };
 
 export default LandingModule;

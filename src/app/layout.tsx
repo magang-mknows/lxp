@@ -7,11 +7,7 @@ import ApiService from "@/services/api";
 
 ApiService.init("https://randomuser.me/api/");
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
