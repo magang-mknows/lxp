@@ -15,10 +15,6 @@ const Navbar = () => {
         <NavbarAskMenu />
         <FeatureMenu />
         <NavbarThemeOption />
-        <NavbarMenu />
-        <NavbarAskMenu />
-        <FeatureMenu />
-        <NavbarThemeOption />
         <NavButton type="secondary" text="Masuk" size="w-24" />
         <NavButton type="primary" text="Daftar" size="w-24" />
       </div>
