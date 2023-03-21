@@ -1,5 +1,6 @@
 import { FC, Fragment, ReactElement } from "react";
 import LandingHero from "../moleculs/LandingHero";
+import LandingPartner from "../moleculs/LandingPartner";
 import Navbar from "../moleculs/Navbar";
 
 const LandingPage: FC = (): ReactElement => {
@@ -7,6 +8,7 @@ const LandingPage: FC = (): ReactElement => {
 		<Fragment>
 			<Navbar />
 			<LandingHero />
+			<LandingPartner />
 		</Fragment>
 	);
 };
