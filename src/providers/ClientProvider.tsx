@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 const ClienProvider: FC<TProviderProps> = ({ children }): ReactElement => {
 	return (
-		<div className={`${montserrat.className} container mx-auto px-16`}>
+		<div className={`${montserrat.className} container mx-auto`}>
 			{children}
 		</div>
 	);

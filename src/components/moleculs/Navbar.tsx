@@ -8,15 +8,15 @@ import ThemeOption from "../atoms/ThemeOption";
 
 const Navbar = () => {
 	return (
-		<nav className='bg-neautral-50 py-5 flex justify-between items-center'>
+		<nav className='bg-neautral-50 py-4 px-16 flex justify-between items-center'>
 			<NavbarLogo />
 			<div className='flex gap-4 items-center'>
 				<NavMenu />
 				<AskMenu />
 				<FeatureMenu />
 				<ThemeOption />
-				<NavButton type='secondary' text='Masuk' />
-				<NavButton type='primary' text='Daftar' />
+				<NavButton type='secondary' text='Masuk' size='w-24' />
+				<NavButton type='primary' text='Daftar' size='w-24' />
 			</div>
 		</nav>
 	);
