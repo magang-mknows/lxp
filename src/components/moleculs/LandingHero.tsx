@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FC, ReactElement } from "react";
 import Button from "../atoms/Button";
 import Headline from "../atoms/HeroHeadline";
@@ -16,6 +17,17 @@ const LandingHero: FC = (): ReactElement => {
       <HeadlineDesc />
       <Button type="primary" text="Get a demo" size="w-28" />
       <HeadlinePoster />
+      <div>
+        <Image
+          src={"/assets/landing/dashboardImage.svg"}
+          alt="dashboard-view"
+          className="h-11"
+          width={100}
+          height={60}
+          loading="eager"
+          quality={40}
+        />
+      </div>
     </div>
   );
 };
