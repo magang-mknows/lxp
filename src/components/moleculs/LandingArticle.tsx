@@ -27,7 +27,7 @@ const LandingArticle: FC = (): ReactElement => {
       <div className="grid grid-cols-3 gap-10 mb-28">
         {dummyArticles.map((article, index) => {
           return (
-            <div>
+            <div key={index}>
               <LandingArticleCardThumb id={index + 1} />
               <LandingArticleContent desc={article.text} title={article.title} />
             </div>

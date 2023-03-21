@@ -8,7 +8,7 @@ const LandingPartner: FC = (): ReactElement => {
       <LandingPartnerTitle />
       <div className=" grid grid-cols-4 gap-0.5">
         {[...Array(8)].map((data, index) => {
-          return <LandingPartnerLogo id={index + 1} />;
+          return <LandingPartnerLogo key={index} id={index + 1} />;
         })}
       </div>
     </div>
