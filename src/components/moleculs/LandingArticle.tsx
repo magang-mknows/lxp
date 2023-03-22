@@ -22,9 +22,9 @@ const LandingArticle: FC = (): ReactElement => {
   ];
 
   return (
-    <div className="px-16 py-24 bg-neutral-100">
+    <div className="px-8 md:px-14 lg:px-16 py-12 md:py-14 lg:py-16 xl:py-20 bg-neutral-100">
       <LandingArticleTitle />
-      <div className="grid grid-cols-3 gap-10 mb-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 mb-12 md:mb-10 lg:mb-14 xl:mb-28">
         {dummyArticles.map((article, index) => {
           return (
             <div key={index}>
@@ -34,7 +34,7 @@ const LandingArticle: FC = (): ReactElement => {
           );
         })}
       </div>
-      <div className="w-full flex items-center justify-center">
+      <div className="w-full flex items-center justify-center md:justify-start lg:justify-center">
         <Button
           icon={<BiRefresh className="text-lg" />}
           text="Lihat semua artikel"

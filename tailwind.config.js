@@ -80,7 +80,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      landing: "url('/bg-landing.svg')",
+      LandingHero: "url(/assets/landing/heroImage.svg)",
     },
     extend: {},
   },

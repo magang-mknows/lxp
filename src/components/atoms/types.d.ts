@@ -13,6 +13,6 @@ export type TImageIDProps = {
 };
 
 export type TCardContentProps = {
-  title: string;
-  desc: string;
+  title?: string;
+  desc?: string;
 };

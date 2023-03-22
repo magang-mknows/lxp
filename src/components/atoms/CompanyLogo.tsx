@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const NavbarLogo = () => {
+const CompanyLogo = () => {
   return (
     <Image
       src={"/assets/navbar/logo.svg"}
@@ -16,4 +16,4 @@ const NavbarLogo = () => {
   // return <h1>Company Logo</h1>;
 };
 
-export default NavbarLogo;
+export default CompanyLogo;

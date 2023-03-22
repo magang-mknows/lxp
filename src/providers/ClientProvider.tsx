@@ -10,7 +10,9 @@ const montserrat = Montserrat({
 });
 
 const ClienProvider: FC<TProviderProps> = ({ children }): ReactElement => {
-  return <div className={`${montserrat.className} container mx-auto`}>{children}</div>;
+  return (
+    <div className={`${montserrat.className} max-w-screen-2xl container mx-auto`}>{children}</div>
+  );
 };
 
 export default ClienProvider;

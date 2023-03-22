@@ -1,12 +1,12 @@
-import { FC, ReactElement } from "react";
+import { FC, Fragment, ReactElement } from "react";
 import { TCardContentProps } from "./types";
 
 const LandingArticleContent: FC<TCardContentProps> = ({ desc, title }): ReactElement => {
   return (
-    <div>
-      <h1 className="font-bold min-h-[50px] text-neautral-900 text-base mb-2">{title}</h1>
-      <p className="text-neautral-700 text-sm">{desc}</p>
-    </div>
+    <Fragment>
+      <h1 className="font-bold text-neautral-900 text-sm md:text-base mb-1">{title}</h1>
+      <p className="text-neautral-700 text-xs ">{desc}</p>
+    </Fragment>
   );
 };
 
