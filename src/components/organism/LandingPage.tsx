@@ -3,6 +3,7 @@ import LandingArticle from "../moleculs/LandingArticle";
 import LandingBenefits from "../moleculs/LandingBenefits";
 import LandingCatalog from "../moleculs/LandingCatalog";
 import LandingHero from "../moleculs/LandingHero";
+import LandingOffer from "../moleculs/LandingOffer";
 import LandingPartner from "../moleculs/LandingPartner";
 import Navbar from "../moleculs/Navbar";
 
@@ -15,6 +16,7 @@ const LandingPage: FC = (): ReactElement => {
       <LandingCatalog />
       <LandingBenefits />
       <LandingArticle />
+      <LandingOffer />
     </Fragment>
   );
 };

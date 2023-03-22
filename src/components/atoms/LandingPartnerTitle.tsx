@@ -4,7 +4,7 @@ const LandingPartnerTitle: FC = (): ReactElement => {
   return (
     <div className="flex flex-col gap-2">
       <p className="text-sm text-version2-200 ">OUR PARTNER</p>
-      <h1 className="text-4xl pr-96  font-bold text-neautral-50">Learn with Our Partners</h1>
+      <h1 className="text-4xl pr-96  font-bold text-neutral-50">Learn with Our Partners</h1>
     </div>
   );
 };

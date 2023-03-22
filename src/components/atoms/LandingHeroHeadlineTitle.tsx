@@ -1,6 +1,6 @@
 import React from "react";
 
-const Headline = () => {
+const LandingHeroHeadlineTitle = () => {
   return (
     <div className="px-[224px] mb-10">
       <h1 className="text-7xl text-neautral-800 font-black text-center leading-[74px]">
@@ -11,4 +11,4 @@ const Headline = () => {
   );
 };
 
-export default Headline;
+export default LandingHeroHeadlineTitle;

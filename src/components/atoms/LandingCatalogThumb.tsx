@@ -7,7 +7,7 @@ const LandingCatalogThumb: FC<TImageIDProps> = ({ id }): ReactElement => {
     <Fragment>
       <Image
         src={`/assets/landing/catalog${id}.svg`}
-        alt="dashboard-view"
+        alt="catalog-view"
         className=" bg-neautral-50 w-full "
         height={30}
         width={30}

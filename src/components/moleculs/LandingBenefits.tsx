@@ -23,7 +23,7 @@ const LandingBenefits: FC = (): ReactElement => {
   ];
 
   return (
-    <div className="px-16 bg-neautral-100">
+    <div className="px-16 bg-neutral-100">
       <section className="px-16 rounded-lg bg-version2-400 grid grid-cols-3 gap-10 items-center">
         <LandingBenefitsTitle />
         <section className="col-span-2 grid grid-cols-2 gap-10 py-16">

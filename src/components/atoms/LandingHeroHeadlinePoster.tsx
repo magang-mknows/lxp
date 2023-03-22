@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC, ReactElement } from "react";
 
-const HeadlinePoster: FC = (): ReactElement => {
+const LandingHeroHeadlinePoster: FC = (): ReactElement => {
   return (
     <div className="mt-20 relative bottom-0">
       <Image
@@ -32,4 +32,4 @@ const HeadlinePoster: FC = (): ReactElement => {
   );
 };
 
-export default HeadlinePoster;
+export default LandingHeroHeadlinePoster;

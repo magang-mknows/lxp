@@ -22,7 +22,7 @@ const LandingArticle: FC = (): ReactElement => {
   ];
 
   return (
-    <div className="px-16 py-24">
+    <div className="px-16 py-24 bg-neutral-100">
       <LandingArticleTitle />
       <div className="grid grid-cols-3 gap-10 mb-28">
         {dummyArticles.map((article, index) => {
@@ -38,7 +38,7 @@ const LandingArticle: FC = (): ReactElement => {
         <Button
           icon={<BiRefresh className="text-lg" />}
           text="Lihat semua artikel"
-          size="w-[200px]"
+          size="large"
           type="primary"
         />
       </div>

@@ -1,4 +1,5 @@
 import { FC, ReactElement } from "react";
+import Button from "../atoms/Button";
 import LandingCatalogContent from "../atoms/LandingCatalogContent";
 import LandingCatalogDesc from "../atoms/LandingCatalogDesc";
 import LandingCatalogThumb from "../atoms/LandingCatalogThumb";
@@ -21,7 +22,7 @@ const LandingCatalog: FC = (): ReactElement => {
   ];
 
   return (
-    <div className="px-16 py-20 bg-neautral-100">
+    <div className="px-16 py-20 bg-neutral-100">
       <LandingCatalogTitle />
       <LandingCatalogDesc />
       <div className="grid gap-10 grid-cols-3">
@@ -29,7 +30,10 @@ const LandingCatalog: FC = (): ReactElement => {
           return (
             <section key={index} className="bg-neautral-50 rounded-md overflow-hidden shadow-sm">
               <LandingCatalogThumb id={index + 1} />
-              <LandingCatalogContent desc={catalog.desc} title={catalog.title} />
+              <div className="flex justify-between items-end px-5 mb-3">
+                <LandingCatalogContent desc={catalog.desc} title={catalog.title} />
+                <Button text="Join now" size="tiny" type="primary" />
+              </div>
             </section>
           );
         })}

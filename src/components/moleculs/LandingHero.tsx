@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { FC, ReactElement } from "react";
 import Button from "../atoms/Button";
-import Headline from "../atoms/HeroHeadline";
-import HeadlineDesc from "../atoms/HeroHeadlineDesc";
-import HeadlinePoster from "../atoms/HeroHeadlinePoster";
+import LandingHeroHeadlineTitle from "../atoms/LandingHeroHeadlineTitle";
+import LandingHeroHeadlineDesc from "../atoms/LandingHeroHeadlineDesc";
+import LandingHeroHeadlinePoster from "../atoms/LandingHeroHeadlinePoster";
 
 const LandingHero: FC = (): ReactElement => {
   return (
@@ -13,10 +13,10 @@ const LandingHero: FC = (): ReactElement => {
         backgroundImage: `url(/assets/landing/heroImage.svg)`,
       }}
     >
-      <Headline />
-      <HeadlineDesc />
-      <Button type="primary" text="Get a demo" size="w-28" />
-      <HeadlinePoster />
+      <LandingHeroHeadlineTitle />
+      <LandingHeroHeadlineDesc />
+      <Button type="primary" text="Get a demo" size="medium" />
+      <LandingHeroHeadlinePoster />
     </div>
   );
 };

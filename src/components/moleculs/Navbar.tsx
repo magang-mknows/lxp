@@ -1,6 +1,6 @@
 import React from "react";
 import NavbarAskMenu from "../atoms/NavbarAskMenu";
-import FeatureMenu from "../atoms/FeatureMenu";
+import NavbarFeatureMenu from "../atoms/NavbarFeatureMenu";
 import NavbarLogo from "../atoms/NavbarLogo";
 import NavButton from "../atoms/Button";
 import NavbarMenu from "../atoms/NavbarMenu";
@@ -13,10 +13,10 @@ const Navbar = () => {
       <div className="flex gap-4 items-center">
         <NavbarMenu />
         <NavbarAskMenu />
-        <FeatureMenu />
+        <NavbarFeatureMenu />
         <NavbarThemeOption />
-        <NavButton type="secondary" text="Masuk" size="w-24" />
-        <NavButton type="primary" text="Daftar" size="w-24" />
+        <NavButton type="secondary" text="Masuk" size="small" />
+        <NavButton type="primary" text="Daftar" size="small" />
       </div>
     </nav>
   );

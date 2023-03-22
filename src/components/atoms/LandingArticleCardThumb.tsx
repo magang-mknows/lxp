@@ -7,7 +7,7 @@ const LandingArticleCardThumb: FC<TImageIDProps> = ({ id, date }) => {
     <div>
       <Image
         src={`/assets/landing/article${id}.svg`}
-        alt="dashboard-view"
+        alt="article-view"
         className="bg-neautral-50 w-full mb-4"
         height={30}
         width={30}
