@@ -80,7 +80,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      LandingHero: "url(/assets/landing/heroImage.svg)",
+      LandingHero: "url(/assets/landing/landingHeroImage.webp)",
     },
     extend: {},
   },

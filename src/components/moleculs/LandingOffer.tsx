@@ -13,8 +13,9 @@ const LandingOffer: FC = (): ReactElement => {
           <LandingOfferDesc />
           <Button type="primary" size="extraLarge" text="Daftar Sekarang" />
         </section>
-        <section>
+        <section className="relative">
           <LandingOfferThumb />
+          <div className="bg-version2-200 absolute h-[90%] w-[90%] rounded-md -top-2 z-10 -right-2 lg:-right-6"></div>
         </section>
       </section>
     </div>

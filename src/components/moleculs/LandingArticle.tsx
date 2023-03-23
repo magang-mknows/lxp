@@ -24,7 +24,7 @@ const LandingArticle: FC = (): ReactElement => {
   return (
     <div className="px-8 md:px-14 lg:px-16 py-12 md:py-14 lg:py-16 xl:py-20 bg-neutral-100">
       <LandingArticleTitle />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 mb-12 md:mb-10 lg:mb-14 xl:mb-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8 mb-6 md:mb-8 lg:mb-10 xl:mb-14">
         {dummyArticles.map((article, index) => {
           return (
             <div key={index}>
