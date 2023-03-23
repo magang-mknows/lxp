@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, ReactElement, FC } from "react";
+import { ReactElement, FC } from "react";
 import { TProviderProps } from "./types";
 
 import { Montserrat } from "next/font/google";
@@ -10,7 +10,9 @@ const montserrat = Montserrat({
 });
 
 const ClienProvider: FC<TProviderProps> = ({ children }): ReactElement => {
-  return <div className={`${montserrat.className} container mx-auto`}>{children}</div>;
+  return (
+    <div className={`${montserrat.className} max-w-[2200px] container mx-auto`}>{children}</div>
+  );
 };
 
 export default ClienProvider;
