@@ -71,8 +71,6 @@ const ContactForm = () => {
           placeholder={"Masukan Pertanyaan"}
         />
       </section>
-      status
-      {isValid ? "valid" : "ngga"}
       <Button type="primary" text="Kirim" size="full" />
     </Form>
   );
