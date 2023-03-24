@@ -31,16 +31,16 @@ const NavbarMobileMenu: FC = (): ReactElement => {
         } bg-neutral-50 border-t-[0.5px] border-t-neutral-200`}
       >
         <ul className="flex flex-col  text-sm items-center">
-          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-900 hover:text-version3-500 cursor-pointer py-4 text-center">
+          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-900 hover:text-version3-500 cursor-pointer py-4 text-center transition-colors ease-in-out duration-300">
             About us
           </li>
-          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-900 hover:text-version3-500 cursor-pointer py-4 text-center">
+          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-900 hover:text-version3-500 cursor-pointer py-4 text-center transition-colors ease-in-out duration-300">
             Contact us
           </li>
-          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-50 cursor-pointer py-4 text-center bg-version3-500 hover:bg-version3-400 ">
+          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-50 cursor-pointer py-4 text-center bg-version3-500 hover:bg-version2-300  transition-colors ease-in-out duration-300 ">
             Masuk
           </li>
-          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-900 hover:text-version3-500 cursor-pointer py-4 text-center">
+          <li className="w-full border-b-[0.5px] border-b-neutral-200 text-neutral-900 hover:text-version3-500 cursor-pointer py-4 text-center transition-colors ease-in-out duration-300 ">
             Daftar
           </li>
         </ul>

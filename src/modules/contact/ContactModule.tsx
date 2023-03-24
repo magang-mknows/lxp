@@ -1,13 +1,14 @@
+import ContactPage from "@/components/organism/ContactPage";
 import LandingPage from "@/components/organism/LandingPage";
 import ClienProvider from "@/providers/ClientProvider";
 import { FC, ReactElement } from "react";
 
-const LandingModule: FC = (): ReactElement => {
+const ContactModule: FC = (): ReactElement => {
   return (
     <ClienProvider>
-      <LandingPage />
+      <ContactPage />
     </ClienProvider>
   );
 };
 
-export default LandingModule;
+export default ContactModule;
