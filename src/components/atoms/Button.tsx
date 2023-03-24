@@ -6,7 +6,7 @@ const Button: FC<TButtonProps> = ({ type, text, size, icon }): ReactElement => {
     <button
       className={`${
         type === "primary"
-          ? "bg-version2-500 text-neutral-100 hover:bg-version3-500"
+          ? "bg-version2-500 text-neutral-100 hover:bg-version2-300 hover:border-version2-300"
           : "bg-neutral-50 text-version2-500 hover:bg-neutral-100 hover:text-version2-500 "
       } ${size === "tiny" && "text-xs py-1  w-20"} ${size === "small" && "text-sm py-2 w-24"} ${
         size === "medium" && "text-sm py-2 w-28"

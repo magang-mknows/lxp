@@ -14,5 +14,7 @@ export type TImageIDProps = {
 
 export type TCardContentProps = {
   title?: string;
+  subTitle?: string;
   desc?: string;
+  srcImg?: string;
 };

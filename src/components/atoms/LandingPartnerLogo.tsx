@@ -5,12 +5,12 @@ import { TImageIDProps } from "./types";
 const LandingPartnerLogo: FC<TImageIDProps> = ({ id }): ReactElement => {
   return (
     <Image
-      src={`/assets/landing/brand${id}.svg`}
-      alt="dashboard-view"
-      className="w-44 h-24 md:h-32 bg-neutral-50 "
-      height={30}
-      width={30}
-      loading="eager"
+      src={`/assets/landing/brand${id}.webp`}
+      alt="partner-view"
+      className="w-24 md:w-28 lg:w-32 overflow-hidden h-20 md:h-32 lg:h-32 bg-neutral-50 "
+      height={1000}
+      width={1000}
+      loading="lazy"
     />
   );
 };

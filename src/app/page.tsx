@@ -1,4 +1,4 @@
-import LandingPage from "@/modules/Landing";
+import LandingModule from "@/modules/landing";
 
 export const metadata = {
   title: "LXP App",
@@ -6,5 +6,5 @@ export const metadata = {
 };
 
 export default async function Home() {
-  return <LandingPage />;
+  return <LandingModule />;
 }

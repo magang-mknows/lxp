@@ -16,7 +16,7 @@ const LandingPage: FC = (): ReactElement => {
   return (
     <Fragment>
       <Navbar />
-      <section className="pt-16 bg-neutral-100">
+      <section className="pt-[74px] bg-neutral-100">
         <LandingHero />
         <LandingPartner />
         <LandingCatalog />
