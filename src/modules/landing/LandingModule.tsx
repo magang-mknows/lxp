@@ -1,4 +1,3 @@
-import Navbar from "@/components/moleculs/Navbar";
 import LandingPage from "@/components/organism/LandingPage";
 import ClienProvider from "@/providers/ClientProvider";
 import { FC, ReactElement } from "react";

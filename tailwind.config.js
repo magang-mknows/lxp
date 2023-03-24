@@ -81,6 +81,7 @@ module.exports = {
     },
     backgroundImage: {
       LandingHero: "url(/assets/landing/landingHeroImage.webp)",
+      AboutHero: "url(/assets/about/aboutHeroImage.webp)",
     },
     extend: {},
   },

@@ -1,10 +1,9 @@
-import LandingPage from "@/modules/Landing";
+import LandingModule from "@/modules/landing/LandingModule";
+import { NextPage } from "next";
+import { ReactElement } from "react";
 
-export const metadata = {
-  title: "LXP App",
-  description: "LXP App adalah LMS berbasis AI",
+const Home: NextPage = (): ReactElement => {
+  return <LandingModule />;
 };
 
-export default async function Home() {
-  return <LandingPage />;
-}
+export default Home;
