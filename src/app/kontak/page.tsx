@@ -1,12 +1,9 @@
 import ContactModule from "@/modules/contact/ContactModule";
-import React from "react";
+import { NextPage } from "next";
+import { Fragment, ReactElement } from "react";
 
-const ContactUs = () => {
-  return (
-    <div>
-      <ContactModule />
-    </div>
-  );
+const ContactUs: NextPage = (): ReactElement => {
+  return <ContactModule />;
 };
 
 export default ContactUs;
