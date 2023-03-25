@@ -14,7 +14,6 @@ const ContactPage: FC = (): ReactElement => {
       <Navbar />
       <section className="pt-[74px] bg-neutral-100/70">
         <ContactContainer />
-        <ContactLoading />
         <LandingFooter />
       </section>
     </Fragment>
