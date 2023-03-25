@@ -7,7 +7,7 @@ import LandingHeroHeadlinePoster from "../atoms/LandingHeroHeadlinePoster";
 
 const LandingHero: FC = (): ReactElement => {
   return (
-    <div className="flex flex-col items-center pt-16 md:pt-20 lg:pt-24 relative overflow-hidden bg-no-repeat bg-cover bg-LandingHero">
+    <div className="flex flex-col items-center pt-16 md:pt-20 lg:pt-24 relative overflow-hidden bg-no-repeat bg-cover bg-LandingHero ">
       <LandingHeroHeadlineTitle />
       <LandingHeroHeadlineDesc />
       <Button type="primary" text="Get a demo" size="medium" />

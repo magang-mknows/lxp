@@ -1,15 +1,16 @@
+import LandingLoading from "@/modules/landing/LandingLoading";
 import { FC } from "react";
 
 const Loading: FC = () => {
   return (
-    <div className="flex items-center opacity-50 h-auto z-10 justify-center w-full" role="status">
+    <div className="flex h-screen w-screen justify-center items-center">
       <svg
-        className="animate-spin mx-auto mt-[20%]"
-        width="45"
-        height="45"
+        width="52"
+        height="52"
         viewBox="0 0 150 150"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className=" animate-spin"
       >
         <path
           d="M75 0C116.421 0 150 33.5786 150 75C150 116.421 116.421 150 75 150C33.5786 150 0 116.421 0 75C0 33.5786 33.5786 0 75 0ZM75 130.101C105.431 130.101 130.101 105.431 130.101 75C130.101 44.5687 105.431 19.8993 75 19.8993C44.5687 19.8993 19.8993 44.5687 19.8993 75C19.8993 105.431 44.5687 130.101 75 130.101Z"
