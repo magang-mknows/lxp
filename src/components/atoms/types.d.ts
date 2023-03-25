@@ -17,6 +17,7 @@ export type TCardContentProps = {
   subTitle?: string;
   desc?: string;
   srcImg?: string;
+  icon?: ReactNode;
 };
 export interface TextFieldProps {
   type: HTMLInputTypeAttribute;
@@ -43,3 +44,12 @@ export interface FormProps {
   children: ReactNode;
   onSubmit?: FormEventHandler<HTMLFormElement>;
 }
+
+export type TCrumbItem = {
+  link: string;
+  name: string;
+};
+
+export type TBreadCrumbProps = {
+  items: CrumbItem[];
+};
