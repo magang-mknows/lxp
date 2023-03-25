@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 const FeaturesSearch: FC = (): ReactElement => {
   return (
-    <section className="mx-8 md:mx-14 lg:mx-72 xl:mx-80 px-4 py-3 flex items-center gap-2 bg-[#F5F5F5] rounded-md mb-10 md:mb-14 lg:mb-16 xl:mb-20 relative">
+    <section className="mx-8 md:mx-14 lg:mx-72 xl:mx-80 px-4 py-3 flex items-center gap-2 bg-neutral-200 rounded-md mb-10 md:mb-14 lg:mb-16 xl:mb-20 relative">
       <AiOutlineSearch className="text-neutral-400 text-lg" />
       <input
         type="text"
