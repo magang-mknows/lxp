@@ -1,7 +1,8 @@
 import AboutModule from "@/modules/about";
 import { NextPage } from "next";
+import { ReactElement } from "react";
 
-const AboutUs: NextPage = () => {
+const AboutUs: NextPage = (): ReactElement => {
   return <AboutModule />;
 };
 

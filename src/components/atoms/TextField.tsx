@@ -40,35 +40,35 @@ const TextField: FC<TextFieldProps> = forwardRef(
             error &&
             !warning &&
             !success &&
-            "focus:border-[0.5px] text-sm focus:border-red-600 border-red-600  bg-red-50 border-[0.5px]"
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 border-[0.5px] "
           }
 
           ${
             error &&
             !warning &&
             success &&
-            "focus:border-[0.5px] text-sm focus:border-red-600 border-red-600  bg-red-50 border-1"
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 border-[0.5px] "
           }
 
           ${
             success &&
             !warning &&
             !error &&
-            "focus:border-[0.5px] text-sm focus:border-green-400 border-green-400  bg-green-50 border-[0.5px]"
+            " text-sm focus:border-green-400 border-green-400  bg-green-50 border-[0.5px] "
           }
           
           ${
             warning &&
             !success &&
             !error &&
-            "focus:border-[0.5px] text-sm focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px]"
+            " text-sm focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px] "
           }
           
           ${
             !warning &&
             !error &&
             !success &&
-            "border-[0.5px] border-neutral-500 rounded-md px-3 py-2 text-sm"
+            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-sm"
           }
           ${className}
             rounded-lg p-3 outline-none focus:outline-none
@@ -87,38 +87,38 @@ const TextField: FC<TextFieldProps> = forwardRef(
             error &&
             !warning &&
             !success &&
-            "focus:border-[0.5px] text-sm focus:border-red-600 border-red-600  bg-red-50 border-[0.5px]"
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100  "
           }
 
           ${
             error &&
             !warning &&
             success &&
-            "focus:border-[0.5px] text-sm focus:border-red-600 border-red-600  bg-red-50 border-1"
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100  "
           }
 
           ${
             success &&
             !warning &&
             !error &&
-            "focus:border-[0.5px] text-sm focus:border-green-400 border-green-400  bg-green-50 border-[0.5px]"
+            " text-sm focus:border-green-400 border-green-400  bg-green-50 border-[0.5px] "
           }
           
           ${
             warning &&
             !success &&
             !error &&
-            "focus:border-[0.5px] text-sm focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px]"
+            " text-sm focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px] "
           }
           
           ${
             !warning &&
             !error &&
             !success &&
-            "border-[0.5px] border-neutral-500 rounded-md px-3 py-2 text-sm"
+            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-sm"
           }
           ${className}
-            rounded-lg p-3 outline-none focus:outline-none
+          border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-sm
           `}
             placeholder={placeholder}
             onChange={onChange}

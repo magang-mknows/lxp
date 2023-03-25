@@ -1,3 +1,4 @@
+import ContactLoading from "@/modules/contact/ContactLoading";
 import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement } from "react";
 import ContactContainer from "../moleculs/ContactContainer";
