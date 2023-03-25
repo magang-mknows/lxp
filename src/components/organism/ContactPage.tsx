@@ -1,3 +1,4 @@
+import ContactLoading from "@/modules/contact/ContactLoading";
 import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement } from "react";
 import ContactContainer from "../moleculs/ContactContainer";
@@ -13,6 +14,7 @@ const ContactPage: FC = (): ReactElement => {
       <Navbar />
       <section className="pt-[74px] bg-neutral-100/70">
         <ContactContainer />
+        <ContactLoading />
         <LandingFooter />
       </section>
     </Fragment>

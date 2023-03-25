@@ -1,6 +1,6 @@
 import ContactModule from "@/modules/contact/ContactModule";
 import { NextPage } from "next";
-import { Fragment, ReactElement } from "react";
+import { ReactElement } from "react";
 
 const ContactUs: NextPage = (): ReactElement => {
   return <ContactModule />;
