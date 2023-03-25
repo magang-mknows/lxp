@@ -1,4 +1,3 @@
-import LandingLoading from "@/modules/landing/LandingLoading";
 import { FC } from "react";
 
 const Loading: FC = () => {
