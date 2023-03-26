@@ -18,6 +18,7 @@ export type TCardContentProps = {
   desc?: string;
   srcImg?: string;
   icon?: ReactNode;
+  isAvailable?: boolean;
 };
 export interface TextFieldProps {
   type: HTMLInputTypeAttribute;

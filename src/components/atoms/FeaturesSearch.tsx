@@ -1,12 +1,19 @@
+import { useUserSearch } from "@/hooks/features/useUserSearch";
+import { UserSearchState } from "@/store/features";
 import Image from "next/image";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import { useRecoilState } from "recoil";
 
 const FeaturesSearch: FC = (): ReactElement => {
+  const { setUserSearch, getUserSearch } = useUserSearch();
+
   return (
-    <section className="mx-8 md:mx-14 lg:mx-72 xl:mx-80 px-4 py-3 flex items-center gap-2 bg-neutral-200 rounded-md mb-10 md:mb-14 lg:mb-16 xl:mb-20 relative">
+    <section className="mx-8 md:mx-14 lg:mx-72 xl:mx-80 px-4 py-3 flex items-center gap-2 bg-[#eeeeee] rounded-md mb-10 md:mb-14 lg:mb-16 xl:mb-20 relative">
       <AiOutlineSearch className="text-neutral-400 text-lg" />
       <input
+        value={getUserSearch}
+        onChange={(e) => setUserSearch(e.target.value)}
         type="text"
         placeholder="Cari Fitur"
         className="text-neutral-900 z-50 relative text-sm bg-primary-100/0 w-full outline-none rounded-md"

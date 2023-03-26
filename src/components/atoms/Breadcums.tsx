@@ -11,16 +11,12 @@ const Breadcums: FC<TBreadCrumbProps> = ({ items }): ReactElement => {
             const isLastItem = index === items.length - 1;
             if (!isLastItem) {
               return (
-                <>
-                  <Link
-                    href={crumb.link}
-                    key={index}
-                    className="inline-flex items-center text-version3-200"
-                  >
+                <section key={index} className="inline">
+                  <Link href={crumb.link} className="inline-flex items-center text-version3-200">
                     {crumb.name}
                   </Link>
                   <span className="px-3 text-neutral-400 font-[600]">{">"}</span>
-                </>
+                </section>
               );
             } else {
               return (
