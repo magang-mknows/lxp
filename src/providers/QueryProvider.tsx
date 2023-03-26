@@ -11,9 +11,7 @@ const queryInit = new QueryClient({
 });
 
 const QueryProvider: FC<TProviderProps> = ({ children }): ReactElement => {
-  return (
-    <QueryClientProvider client={queryInit}>{children}</QueryClientProvider>
-  );
+  return <QueryClientProvider client={queryInit}>{children}</QueryClientProvider>;
 };
 
 export default QueryProvider;

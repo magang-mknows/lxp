@@ -1,32 +1,19 @@
 import Image from "next/image";
 import { FC, ReactElement } from "react";
 import Button from "../atoms/Button";
-import Headline from "../atoms/Headline";
-import HeadlineDesc from "../atoms/HeadlineDesc";
+import LandingHeroHeadlineTitle from "../atoms/LandingHeroHeadlineTitle";
+import LandingHeroHeadlineDesc from "../atoms/LandingHeroHeadlineDesc";
+import LandingHeroHeadlinePoster from "../atoms/LandingHeroHeadlinePoster";
 
 const LandingHero: FC = (): ReactElement => {
-	return (
-		<div
-			className='flex flex-col items-center py-24 h-screen bg-no-repeat bg-cover'
-			style={{
-				backgroundImage: `url(/assets/landing/heroImage.svg)`,
-			}}>
-			<Headline />
-			<HeadlineDesc />
-			<Button type='primary' text='Get a demo' size='w-28' />
-			<div>
-				<Image
-					src={"/assets/landing/dashboardImage.svg"}
-					alt='dashboard-view'
-					className='h-11'
-					width={100}
-					height={60}
-					loading='eager'
-					quality={40}
-				/>
-			</div>
-		</div>
-	);
+  return (
+    <div className="flex flex-col items-center pt-16 md:pt-20 lg:pt-24 relative overflow-hidden bg-no-repeat bg-cover bg-LandingHero ">
+      <LandingHeroHeadlineTitle />
+      <LandingHeroHeadlineDesc />
+      <Button type="primary" text="Get a demo" size="medium" />
+      <LandingHeroHeadlinePoster />
+    </div>
+  );
 };
 
 export default LandingHero;
