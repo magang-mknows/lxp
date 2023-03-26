@@ -73,7 +73,7 @@ const NavbarFeatureMenu: FC = (): ReactElement => {
               <h1 className="text-neutral-900 text-xs text-center">Penyeluran Kerja</h1>
             </Menu.Item>
           </div>
-          <Link href={"/"} passHref>
+          <Link href={"/semua-fitur"} passHref>
             <div className="bg-neutral-200 hover:bg-neutral-300 cursor-pointer transition-colors ease-in-out duration-300 w-full flex items-center group justify-center py-4">
               <h1 className="text-xs text-neutral-500 group-hover:text-neutral-900">Lihat Semua</h1>
             </div>
