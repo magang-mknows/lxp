@@ -14,7 +14,7 @@ const FeaturesSearch: FC = (): ReactElement => {
       <Image
         src={`/assets/features/circle1.svg`}
         alt="feature-view"
-        className="h-52 w-52 mb-2 absolute -top-28 -left-28 -z-40"
+        className="h-36 w-36 lg:h-52 lg:w-52 mb-2 absolute -top-28 -left-28 -z-40"
         height={30}
         width={30}
         loading="eager"
@@ -22,7 +22,7 @@ const FeaturesSearch: FC = (): ReactElement => {
       <Image
         src={`/assets/features/circle2.svg`}
         alt="feature-view"
-        className="h-52 w-52 mb-2 -z-50 absolute -top-16 -right-24"
+        className="h-36 w-36 lg:h-52 lg:w-52 mb-2  -z-50 absolute -top-16 -right-4 lg:-right-24"
         height={30}
         width={30}
         loading="eager"
