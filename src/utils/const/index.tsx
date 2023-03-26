@@ -127,7 +127,7 @@ export const AboutJobList = [
   },
   {
     title: "Outbond",
-    srcImg: "/assets/about/outbond.webp",
+    srcImg: "/assets/about/Outbond.webp",
   },
   {
     title: "Events",
