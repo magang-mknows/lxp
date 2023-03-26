@@ -91,3 +91,42 @@ export const FeaturesList = [
     srcImg: "/assets/features/Analitik.svg",
   },
 ];
+
+export const AboutJobList = [
+  {
+    title: "Online learning, Public, and In-House Training",
+    srcImg: "/assets/about/onlinelearning.webp",
+  },
+  {
+    title: "Consulting Services",
+    srcImg: "/assets/about/consulting.webp",
+  },
+  {
+    title: "Assessment for Technical Competency",
+    srcImg: "/assets/about/assessment.webp",
+  },
+  {
+    title: "Executive Coaching and Business Mentoring",
+    srcImg: "/assets/about/Executive.webp",
+  },
+  {
+    title: "Outbond",
+    srcImg: "/assets/about/outbond.webp",
+  },
+  {
+    title: "Events",
+    srcImg: "/assets/about/Events.webp",
+  },
+  {
+    title: "Presentation Design",
+    srcImg: "/assets/about/Presentation.webp",
+  },
+  {
+    title: "Business Video",
+    srcImg: "/assets/about/Business.webp",
+  },
+  {
+    title: "Hybrid Officer Developement Crash Program for Financial Industry",
+    srcImg: "/assets/about/Hybrid.webp",
+  },
+];
