@@ -20,6 +20,7 @@ export type TCardContentProps = {
   icon?: ReactNode;
   isAvailable?: boolean;
   addtionalClass?: string;
+  detailList?: Array<string>;
 };
 export interface TextFieldProps {
   type: HTMLInputTypeAttribute;

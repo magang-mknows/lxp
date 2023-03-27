@@ -8,6 +8,16 @@ export const FeaturesBreadCumbs = [
     link: "/semua-fitur",
   },
 ];
+export const ConsultingBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Konsultasi & Layanan",
+    link: "/konsultasi",
+  },
+];
 
 export const FeaturesList = [
   {
