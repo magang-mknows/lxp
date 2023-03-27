@@ -5,8 +5,8 @@ import { TCardContentProps } from "./types";
 const FeaturesCards: FC<TCardContentProps> = ({
   title,
   desc,
-  srcImg,
   isAvailable,
+  srcImg,
 }): ReactElement => {
   return (
     <div
