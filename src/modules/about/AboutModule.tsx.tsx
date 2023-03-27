@@ -1,12 +1,12 @@
 import AboutPage from "@/components/organism/AboutPage";
-import ClienProvider from "@/providers/ClientProvider";
+import LayoutProvider from "@/providers/LayoutProvider";
 import React from "react";
 
 const AboutModule = () => {
   return (
-    <ClienProvider>
+    <LayoutProvider>
       <AboutPage />
-    </ClienProvider>
+    </LayoutProvider>
   );
 };
 

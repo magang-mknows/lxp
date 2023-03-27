@@ -7,7 +7,17 @@ import LandingHeroHeadlinePoster from "../atoms/LandingHeroHeadlinePoster";
 
 const LandingHero: FC = (): ReactElement => {
   return (
-    <div className="flex flex-col items-center pt-16 md:pt-20 lg:pt-24 relative overflow-hidden bg-no-repeat bg-cover bg-LandingHero ">
+    <div className="flex flex-col  items-center pt-16 md:pt-20 lg:pt-24 relative overflow-hidden">
+      <div className="absolute left-0 right-0 bottom-0 top-0 w-[100wh]">
+        <Image
+          alt="bg-hero"
+          className="h-full -z-50 w-full object-cover"
+          src={"/assets/landing/landingHeroImage.webp"}
+          width={2000}
+          height={2000}
+          loading="eager"
+        />
+      </div>
       <LandingHeroHeadlineTitle />
       <LandingHeroHeadlineDesc />
       <Button type="primary" text="Get a demo" size="medium" />

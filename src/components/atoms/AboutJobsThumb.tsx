@@ -7,10 +7,10 @@ const AboutJobsThumb: FC<TCardContentProps> = ({ srcImg }): ReactElement => {
     <Image
       src={`${srcImg}`}
       alt="article-view"
-      className="bg-neautral-50 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 w-full bg-primary-400"
-      height={900}
-      width={900}
-      loading="eager"
+      className="bg-neautral-50 cursor-pointer min-h-80 w-full bg-primary-400"
+      height={850}
+      width={850}
+      loading="lazy"
     />
   );
 };

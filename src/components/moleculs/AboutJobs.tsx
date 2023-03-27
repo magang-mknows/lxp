@@ -13,11 +13,18 @@ const AboutJobs: FC = (): ReactElement => {
         {AboutJobList.map((job, index) => {
           return (
             <section
-              className="rounded-md flex flex-col justify-between overflow-hidden shadow-md"
+              className="rounded-md flex flex-col justify-between overflow-hidden bg-version2-200 shadow-md"
               key={index}
             >
               <AboutJobsThumb srcImg={job.srcImg} />
-              <AboutJobsDetail title={job.title} />
+              <AboutJobsDetail
+                title={job.title}
+                addtionalClass={
+                  (index + 1) % 2 !== 0
+                    ? "bg-version2-400  text-neutral-100 "
+                    : "bg-version2-200  text-version2-400 "
+                }
+              />
             </section>
           );
         })}
