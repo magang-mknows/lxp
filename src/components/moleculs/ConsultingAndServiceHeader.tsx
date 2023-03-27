@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from "react";
 import { FaQuestion } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
 
-const ConsultingHeader: FC = (): ReactElement => {
+const ConsultingAndServiceHeader: FC = (): ReactElement => {
   return (
     <header className="mt-2 md:mt-6 lg:mt-8 relative mb-28 h-52 lg:h-64 rounded-md shadow-sm mx-8 md:mx-14 lg:mx-16 px-8 md:px-14 lg:px-16 text-neutral-100 flex flex-col justify-center items-center bg-version2-400">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">Konsultasi dan Layanan</h1>
@@ -15,4 +15,4 @@ const ConsultingHeader: FC = (): ReactElement => {
   );
 };
 
-export default ConsultingHeader;
+export default ConsultingAndServiceHeader;

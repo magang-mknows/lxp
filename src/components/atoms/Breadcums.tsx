@@ -4,7 +4,7 @@ import { TBreadCrumbProps } from "./types";
 
 const Breadcums: FC<TBreadCrumbProps> = ({ items }): ReactElement => {
   return (
-    <section className=" px-8 md:px-14 lg:px-16 py-8 text-sm font-[500]">
+    <section className=" px-8 md:px-14 lg:px-16 py-8 text-xs md:text-sm font-[500]">
       <ul className="inline-flex space-x-1 md:space-x-3">
         <li>
           {items.map((crumb, index) => {
@@ -14,7 +14,7 @@ const Breadcums: FC<TBreadCrumbProps> = ({ items }): ReactElement => {
                 <section key={index} className="inline">
                   <Link
                     href={crumb.link}
-                    className="inline-flex font-bold items-center text-version3-200"
+                    className="inline-flex font-bold items-center text-[#5DA0CF]"
                   >
                     {crumb.name}
                   </Link>

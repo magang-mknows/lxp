@@ -1,7 +1,7 @@
 import { FC, Fragment, ReactElement } from "react";
 import ConsultingQuestionsList from "../atoms/ConsultingQuestionsList";
 
-const ConsultingQuestions: FC = (): ReactElement => {
+const ConsultingAndServiceQuestions: FC = (): ReactElement => {
   const dummyQuestionsList = [
     {
       title: "Apa itu LMS M-Knows?",
@@ -45,4 +45,4 @@ const ConsultingQuestions: FC = (): ReactElement => {
   );
 };
 
-export default ConsultingQuestions;
+export default ConsultingAndServiceQuestions;

@@ -1,9 +1,9 @@
-import ConsultingModule from "@/modules/consulting-service/ConsultingAndServiceModule";
+import ConsultingAndServiceModule from "@/modules/consulting-service/ConsultingAndServiceModule";
 import { NextPage } from "next";
 import React, { ReactElement } from "react";
 
 const ConsltingPage: NextPage = (): ReactElement => {
-  return <ConsultingModule />;
+  return <ConsultingAndServiceModule />;
 };
 
 export default ConsltingPage;
