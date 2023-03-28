@@ -92,3 +92,25 @@ export interface CheckboxFieldProps {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   control: Control<any, T>;
 }
+
+export interface UploadFieldProps {
+  multiple?: boolean;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  name: string;
+  className?: string;
+  error?: string;
+  success?: string;
+  warning?: string;
+  disabled?: boolean;
+  required?: boolean;
+  label?: string;
+  hasLabel?: boolean;
+  ref?: Ref<HTMLInputElement>;
+  files?: string;
+  value?: string;
+  accepted?: string;
+  control?: Control<any, T>;
+  onDrop?: (acceptedFiles: any) => void;
+  path?: File;
+  type?: string;
+}
