@@ -1,7 +1,6 @@
 import { FC, ReactElement } from "react";
 
 import { BsQuestionCircle } from "react-icons/bs";
-// import { AiOutlineSearch } from "react-icons/ai";
 
 import { usePathname } from "next/navigation";
 import { AiOutlineSearch } from "react-icons/ai";

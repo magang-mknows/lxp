@@ -21,7 +21,7 @@ const ConsultingAndServiceProduct: FC = (): ReactElement => {
       title: "Layanan",
       detailList: [
         { text: "Dokumen (Unduh berbagai dokumen)", link: "dokumen" },
-        { text: "Proses Dokumen (Ajukan dokumen yang telah di download)", link: "dokumen" },
+        { text: "Proses Dokumen (Ajukan dokumen yang telah di download)", link: "proses-dokumen" },
         { text: "Cek Status Dokumen", link: "dokumen" },
       ],
       icon: <RiCustomerService2Fill />,

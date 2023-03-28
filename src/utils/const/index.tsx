@@ -184,3 +184,26 @@ export const AboutJobList = [
     srcImg: "/assets/about/Hybrid.webp",
   },
 ];
+
+export const BottomNavMenu = [
+  {
+    title: "Dashboard",
+    link: "/dashboard",
+  },
+  {
+    title: "Pelatihan-Ku",
+    link: "/pelatihan-ku",
+  },
+  {
+    title: "Rencana Pelatihan",
+    link: "/rencana-pelatihan",
+  },
+  {
+    title: "Rencana Pelatihan",
+    link: "/rencana-pelatihan",
+  },
+  {
+    title: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+];

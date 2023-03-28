@@ -6,6 +6,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ControlledTextField from "../atoms/ControlledInput";
 import Form from "../atoms/CommonForm";
+import Button from "../atoms/Button";
 
 const DocumentProcessForm: FC = (): ReactElement => {
   const validationSchema = z.object({
@@ -43,39 +44,76 @@ const DocumentProcessForm: FC = (): ReactElement => {
   });
 
   return (
-    <div className="mx-40 my-10 bg-neutral-50 rounded-md shadow-sm min-h-[80vh]">
-      <form className="px-16 py-16 w-full ">
-        <section className="flex gap-20 justify-between items-start">
+    <div className="mx-8 md:mx-16 lg:mx-40 my-10 bg-neutral-50 rounded-md shadow-sm min-h-[80vh]">
+      <form className="px-8 md:px-14 lg:px-16 py-8 md:py-14 lg:py-16 w-full ">
+        <section className="flex gap-2 lg:gap-20 flex-col lg:flex-row justify-between items-start mb-1">
           <label
             htmlFor="name"
-            className="w-[100px] mt-3 text-neutral-800 font-bold text-lg flex items-center justify-center"
+            className="w-[100px] mt-4 text-neutral-800 font-bold text-lg flex items-center "
           >
             Nama <span className="text-warning-500 px-2">*</span>
           </label>
           <ControlledTextField
             hasLabel={false}
-            className="w-[800px]"
+            className="w-[320px] lg:w-[720px] py-3"
             control={control}
             type={"text"}
             name={"name"}
             placeholder={"Masukan Nama"}
           />
         </section>
-        <section className="flex gap-20 justify-between items-start">
+        <section className="flex gap-20 justify-between items-start mb-1">
           <label
-            htmlFor="name"
-            className="w-[100px] mt-3 text-neutral-800 font-bold text-lg flex items-center justify-center"
+            htmlFor="nip"
+            className="w-[100px] mt-4 text-neutral-800 font-bold text-lg flex items-center "
           >
             NIP <span className="text-warning-500 px-2">*</span>
           </label>
           <ControlledTextField
             hasLabel={false}
-            className="w-[800px]"
+            className="w-[720px] py-3"
             control={control}
             type={"text"}
             name={"nip"}
-            placeholder={"Masukan Nama"}
+            placeholder={"Masukan NIP"}
           />
+        </section>
+        <section className="flex gap-20 justify-between items-start mb-1">
+          <label
+            htmlFor="email"
+            className="w-[100px] mt-4 text-neutral-800 font-bold text-lg flex items-center "
+          >
+            Email <span className="text-warning-500 px-2">*</span>
+          </label>
+          <ControlledTextField
+            hasLabel={false}
+            className="w-[720px] py-3"
+            control={control}
+            type={"text"}
+            name={"email"}
+            placeholder={"Masukan email"}
+          />
+        </section>
+        <section className="flex gap-20 justify-between items-start mb-1">
+          <label
+            htmlFor="message"
+            className="w-[100px] mt-4 text-neutral-800 font-bold text-lg flex items-center "
+          >
+            Pesan <span className="text-warning-500 px-2">*</span>
+          </label>
+          <ControlledTextField
+            textAreaSize="medium"
+            isTextArea={true}
+            hasLabel={false}
+            className="w-[720px] py-3"
+            control={control}
+            type={"message"}
+            name={"message"}
+            placeholder={"Masukan pesan"}
+          />
+        </section>
+        <section className="w-full flex justify-end my-4">
+          <Button size="extraLarge" type="primary" text="Ajukan Dokumen" />
         </section>
       </form>
     </div>

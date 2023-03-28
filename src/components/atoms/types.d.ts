@@ -41,6 +41,7 @@ export interface TextFieldProps {
   hasLabel?: boolean;
   control: Control<any, T>;
   isTextArea?: boolean;
+  textAreaSize?: "small" | "medium";
 }
 
 export interface FormProps {
