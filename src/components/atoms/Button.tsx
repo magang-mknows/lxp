@@ -1,9 +1,18 @@
 import { FC, ReactElement } from "react";
 import { TButtonProps } from "./types";
 
-const Button: FC<TButtonProps> = ({ type, text, size, icon }): ReactElement => {
+const Button: FC<TButtonProps> = ({
+  type,
+  text,
+  size,
+  icon,
+  className,
+  disabled,
+  onClick,
+}): ReactElement => {
   return (
     <button
+      disabled={disabled}
       type="submit"
       className={`${
         type === "primary"
@@ -14,7 +23,8 @@ const Button: FC<TButtonProps> = ({ type, text, size, icon }): ReactElement => {
       } ${size === "large" && "text-sm py-2 w-[200px]"}
         ${size === "extraLarge" && "text-sm py-3 w-[200px] md:w-[240px] lg:w-[300px]"} ${
         size === "full" && "w-full text-sm py-4"
-      } font-bold transition-colors ease-in-out relative z-30 rounded-md duration-300  border-2 border-version2-500 flex items-center justify-center gap-2`}
+      } font-bold transition-colors ease-in-out relative z-30 rounded-md duration-300  border-2 border-version2-500 flex items-center justify-center gap-2 ${className}`}
+      onClick={onClick}
     >
       <p>{text}</p>
       {icon && icon}
