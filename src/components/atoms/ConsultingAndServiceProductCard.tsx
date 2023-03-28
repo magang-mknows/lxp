@@ -9,9 +9,11 @@ const ConsultingAndServiceProductCard: FC<TCardContentProps> = ({
   detailList,
 }): ReactElement => {
   return (
-    <div className="bg-neutral-50 w-full md:w-[380px] lg:w-[320px] h-[370px] drop-shadow-md relative rounded-md py-16">
-      <div className="h-24 w-24 bg-neutral-50 text-6xl text-version3-500 -top-10 left-[40%] md:left-[38%] lg:left-[35%] absolute flex justify-center items-center rounded-full border-[3px] border-version2-400">
-        {icon}
+    <div className="bg-neutral-50 w-full md:w-[380px] lg:w-[320px] h-[370px] shadow-md relative rounded-md py-16">
+      <div className="h-[80px] w-full absolute flex items-center justify-center -top-10">
+        <div className="h-24 w-24 bg-neutral-50 text-6xl text-version3-500 flex justify-center items-center rounded-full border-[3px] border-version2-400">
+          {icon}
+        </div>
       </div>
       <h1 className="text-left md:text-center px-4 md:px-14 lg:px-16 font-bold text-neutral-800 text-lg mb-3 pt-4">
         {title}
@@ -25,7 +27,7 @@ const ConsultingAndServiceProductCard: FC<TCardContentProps> = ({
               passHref
               className="hover:underline-offset-4 hover:underline"
             >
-              <h1 className="text-sm">{list.text}</h1>
+              <h1 className="text-sm text-neutral-800">{list.text}</h1>
             </Link>
           </section>
         );
