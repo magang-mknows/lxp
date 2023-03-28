@@ -9,6 +9,7 @@ import NavbarMenu from "../atoms/NavbarMenu";
 import NavbarMobileMenu from "../atoms/NavbarMobileMenu";
 import dynamic from "next/dynamic";
 import useWindowScroll from "@/hooks/navabar/useWindowScroll";
+import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
 
 const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
   ssr: false,
@@ -16,6 +17,7 @@ const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
 
 const Navbar = () => {
   const { isScrollY } = useWindowScroll();
+  const { getLoginPopup, setLoginPopup } = useLoginPopup();
 
   return (
     <nav
@@ -37,7 +39,12 @@ const Navbar = () => {
         <NavbarFeatureMenu />
         <NavbarThemeOption />
         <section className="lg:flex gap-4 hidden">
-          <NavButton type="secondary" text="Masuk" size="small" />
+          <NavButton
+            type="secondary"
+            text="Masuk"
+            size="small"
+            onClick={() => setLoginPopup(true)}
+          />
           <NavButton type="primary" text="Daftar" size="small" />
         </section>
       </div>
