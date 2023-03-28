@@ -1,12 +1,12 @@
 import FeaturePage from "@/components/organism/FeaturePage";
-import ClienProvider from "@/providers/ClientProvider";
+import LayoutProvider from "@/providers/LayoutProvider";
 import React from "react";
 
 const FeaturesModule = () => {
   return (
-    <ClienProvider>
+    <LayoutProvider>
       <FeaturePage />
-    </ClienProvider>
+    </LayoutProvider>
   );
 };
 

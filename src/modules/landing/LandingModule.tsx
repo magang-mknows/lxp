@@ -1,12 +1,12 @@
 import LandingPage from "@/components/organism/LandingPage";
-import ClienProvider from "@/providers/ClientProvider";
+import LayoutProvider from "@/providers/LayoutProvider";
 import { FC, ReactElement } from "react";
 
 const LandingModule: FC = (): ReactElement => {
   return (
-    <ClienProvider>
+    <LayoutProvider>
       <LandingPage />
-    </ClienProvider>
+    </LayoutProvider>
   );
 };
 

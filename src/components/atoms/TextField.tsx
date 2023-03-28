@@ -5,6 +5,7 @@ import { RiErrorWarningFill, RiCheckFill } from "react-icons/ri";
 const TextField: FC<TextFieldProps> = forwardRef(
   (
     {
+      hasLabel,
       isTextArea,
       type,
       placeholder,

@@ -3,7 +3,7 @@ import { RiDoubleQuotesR } from "react-icons/ri";
 
 const AboutDesc: FC = (): ReactElement => {
   return (
-    <div className="bg-version2-400  lg:pt-16 relative top-20 lg:top-[36%] px-5 md:px-6 lg:px-8 py-12 lg:py-20 text-xs font-medium text-neutral-100 text-left lg:text-justify h-fit leading-4 md:text-sm ">
+    <div className="bg-version2-400  lg:pt-16 relative top-14 lg:top-[36%] py-14 px-5 md:px-6 lg:px-8 text-sm font-medium text-neutral-100 text-left lg:text-justify h-fit  leading-4 md:text-sm ">
       <RiDoubleQuotesR className="text-8xl text-version3-500 absolute left-2 -top-10 rotate-180 font-bold" />
       <RiDoubleQuotesR className="text-8xl text-version3-500 absolute right-2 -bottom-10 rotate-180 font-bold" />
       <p className="mb-1 ">
@@ -22,7 +22,7 @@ const AboutDesc: FC = (): ReactElement => {
         berpengalaman dalam mengelola program public training & in house training, yang sering kali
         merupakan bagian dari konsultasi.
       </p>
-      <p className="mb-4">
+      <p>
         &nbsp; &nbsp;Kami percaya model pelatihan kontemporer lebih baik dibandingkan pendekatan
         yang klasik dan konservatif.
       </p>
