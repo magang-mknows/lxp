@@ -14,7 +14,7 @@ const Breadcums: FC<TBreadCrumbProps> = ({ items }): ReactElement => {
                 <section key={index} className="inline">
                   <Link
                     href={crumb.link}
-                    className="inline-flex font-bold items-center text-[#5DA0CF]"
+                    className="inline-flex font-bold items-center text-version2-400"
                   >
                     {crumb.name}
                   </Link>
