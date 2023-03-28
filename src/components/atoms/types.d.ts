@@ -1,10 +1,13 @@
-import { ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 export type TButtonProps = {
-  type: "primary" | "secondary";
+  type?: "primary" | "secondary";
   text: string;
-  size: "tiny" | "small" | "medium" | "large" | "extraLarge" | "full";
+  size?: "tiny" | "small" | "medium" | "large" | "extraLarge" | "full";
   icon?: ReactNode;
+  className?: string;
+  disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 export type TImageIDProps = {
@@ -57,3 +60,34 @@ export type TCrumbItem = {
 export type TBreadCrumbProps = {
   items: CrumbItem[];
 };
+
+export type ModalProps = {
+  title?: string;
+  children: ReactNode;
+  button?: ReactNode;
+  hasButton?: boolean;
+  hasImage?: boolean;
+  lookup: boolean;
+  withClose?: boolean;
+  widthModal?: string;
+  onClose?: MouseEventHandler<HTMLDivElement | HTMLSpanElement | SVGElement>;
+};
+
+export type DashedTextProps = {
+  text?: string;
+};
+
+export interface CheckboxFieldProps {
+  className?: string;
+  labelClassName?: string;
+  name: string;
+  value?: string;
+  placeholder?: string;
+  required?: boolean;
+  label?: string;
+  checked?: boolean;
+  error?: string;
+  disabled?: boolean;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  control: Control<any, T>;
+}

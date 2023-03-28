@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FC, Fragment, ReactElement } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { ModalProps } from "./types";
+import Logo from "../../../public/assets/navbar/logo.svg";
 
 const Modal: FC<ModalProps> = ({
   title,
@@ -23,11 +24,11 @@ const Modal: FC<ModalProps> = ({
           role="dialog"
           aria-modal="true"
         >
-          <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75 " />
+          <div className="fixed inset-0 transition-opacity bg-[#fff] bg-opacity-75 " />
           <div className="fixed inset-0 z-10 overflow-y-auto">
             <div className="flex items-center justify-center w-full min-h-full p-4 text-center sm:items-center sm:p-0">
               <div
-                className={`relative w-auto overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl sm:my-8 ${widthModal} `}
+                className={`relative w-auto overflow-hidden text-left transition-all transform bg-[#fff] rounded-lg shadow-xl sm:my-8 ${widthModal} `}
               >
                 <div className="w-full px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
                   <div
@@ -36,13 +37,7 @@ const Modal: FC<ModalProps> = ({
                     }`}
                   >
                     {hasImage && (
-                      <Image
-                        src="/logo-light.svg"
-                        width={82}
-                        height={35}
-                        alt={"Logo kg"}
-                        loading="lazy"
-                      />
+                      <Image src={Logo} width={82} height={35} alt={"Logo kg"} loading="lazy" />
                     )}
                     {withClose && (
                       <AiOutlineClose

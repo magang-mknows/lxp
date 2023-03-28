@@ -32,7 +32,10 @@ const CheckboxField: FC<CheckboxFieldProps> = forwardRef(
             disabled={disabled}
             ref={ref}
           />
-          <label htmlFor={name} className={"font-medium text-neutral-800 text-1xl"}>
+          <label
+            htmlFor={name}
+            className={"font-medium text-neutral-800 lg:text-[16px] text-[12px]"}
+          >
             {label}
           </label>
         </div>
