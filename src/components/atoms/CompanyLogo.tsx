@@ -8,7 +8,7 @@ const CompanyLogo = () => {
       <Image
         src={"/assets/navbar/logo.svg"}
         alt="M-Know Logo's"
-        className="w-auto h-8 md:h-9 lg:h-11"
+        className="w-auto h-6 md:h-9 lg:h-11"
         width={100}
         height={60}
         loading="eager"

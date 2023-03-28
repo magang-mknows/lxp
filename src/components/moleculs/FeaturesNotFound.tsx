@@ -20,11 +20,11 @@ const FeaturesNotFound = () => {
             width={10}
             loading="eager"
           />
-          <h1 className="text-sm">
+          <h1 className="text-sm text-neutral-800">
             Yah.. Saat ini fitur <span className="font-bold">`{getUserSearch}`</span> belum
             tersedia,
           </h1>
-          <h1 className="text-sm"> tunggu kabar dari kami ya!</h1>
+          <h1 className="text-sm text-neutral-800"> tunggu kabar dari kami ya!</h1>
         </div>
       )}
     </Fragment>
