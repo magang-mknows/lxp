@@ -16,11 +16,7 @@ const Button: FC<TButtonProps> = ({
       type="submit"
       className={`${
         type === "primary"
-          ? `${
-              disabled
-                ? " bg-version2-200/70 border-none "
-                : "bg-version2-500 text-neutral-100 hover:bg-version2-300 hover:border-version2-300"
-            }`
+          ? " disabled:bg-version2-200/70 disabled:border-none bg-version2-500 text-neutral-100 hover:bg-version2-300 hover:border-version2-300"
           : "bg-neutral-50 text-version2-500 hover:border-version2-300 hover:bg-neutral-100 hover:text-version2-400 "
       } ${size === "tiny" && "text-xs py-1  w-20"} ${size === "small" && "text-sm py-2 w-24"} ${
         size === "medium" && "text-sm py-2 w-28"

@@ -20,7 +20,7 @@ const ConsultingChatContainer: FC = (): ReactElement => {
         <div className="h-0.5 w-full bg-neutral-300"></div>
       </header>
       <main className="w-full flex justify-center py-10">
-        <Button size="large" text="Mulai Chat" type="primary" />
+        {/* <Button size="large" text="Mulai Chat" type="primary" /> */}
       </main>
     </Fragment>
   );
