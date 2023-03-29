@@ -2,26 +2,25 @@
 import Button from "@/components/atoms/Button";
 import DashedText from "@/components/atoms/DashedText";
 import Form from "@/components/atoms/CommonForm";
-// import { useLogin } from "@/hooks/Auth/useLogin";
-// import { handleError } from "@/utilities/helper";
-import GoogleFoto from "../../../public/assets/Login/Google.svg";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { FC, ReactElement } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import ControlledTextField from "../atoms/ControlledInput";
-import ControlledCheckboxField from "../atoms/ControlledCheckbox";
 import { FcGoogle } from "react-icons/fc";
 
 const RegisterForm: FC = (): ReactElement => {
-  const validationSchema = z.object({
-    email: z.string().min(1, { message: "Email harus diisi" }).email({
-      message: "Email harus valid",
-    }),
-    password: z.string().min(1, { message: "Password harus diisi" }),
-    remember: z.boolean(),
-  });
+  const validationSchema = z
+    .object({
+      fullName: z.string().min(1, { message: "Nama Lengkap harus diisi" }),
+      email: z.string().min(1, { message: "Email harus diisi" }).email({
+        message: "Email harus valid",
+      }),
+      password: z.string().min(1, { message: "Password harus diisi" }),
+      confirmPassword: z.string().min(1, { message: "Password harus diisi" }),
+    })
+    .refine((data) => data.password === data.confirmPassword, { message: "Password tidak sesuai" });
 
   type ValidationSchema = z.infer<typeof validationSchema>;
 
@@ -35,7 +34,6 @@ const RegisterForm: FC = (): ReactElement => {
     defaultValues: {
       email: "",
       password: "",
-      remember: false,
     },
   });
 
@@ -56,7 +54,7 @@ const RegisterForm: FC = (): ReactElement => {
         name={"fullName"}
         placeholder={"Nama Lengkap"}
         required
-        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] !mb-[30px]"
+        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
       />
       <ControlledTextField
         control={control}
@@ -64,32 +62,26 @@ const RegisterForm: FC = (): ReactElement => {
         name={"email"}
         placeholder={"Email"}
         required
-        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] !mb-[30px]"
+        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
       />
       <ControlledTextField
         control={control}
         type={"password"}
         name={"password"}
         placeholder={"Kata Sandi"}
-        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] !mb-[30px]"
+        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
         required
       />
       <ControlledTextField
         control={control}
         type={"password"}
-        name={"password"}
+        name={"confirmPassword"}
         placeholder={"Konfirmasi Kata Sandi"}
         className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
         required
       />
 
       <div className="flex justify-between w-full">
-        <ControlledCheckboxField
-          control={control}
-          name={"remember"}
-          required={false}
-          label={"Remember Me"}
-        />
         <Link
           className="text-[#053D38] lg:text-[16px] text-[12px] font-[600]"
           href={"/auth/forgot"}
@@ -114,10 +106,10 @@ const RegisterForm: FC = (): ReactElement => {
         />
         <div className="flex justify-center">
           <h1 className="text-black">
-            Belum punya akun ?{" "}
+            Sudah punya akun ?{" "}
             <span className="text-[#053D38] text-[18px] font-[600]">
               {" "}
-              <Link href={"/"}>Daftar disini</Link>{" "}
+              <Link href={"/"}>Masuk disini</Link>{" "}
             </span>
           </h1>
         </div>
