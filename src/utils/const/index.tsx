@@ -46,6 +46,20 @@ export const DocProcessBreadCumbs = [
     link: "/proses-dokumen",
   },
 ];
+export const DocStatusBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+  {
+    name: "Cek Status Dokumen",
+    link: "/status-dokumen",
+  },
+];
 
 export const FeaturesList = [
   {
@@ -207,3 +221,5 @@ export const BottomNavMenu = [
     link: "/konsultasi-layanan",
   },
 ];
+
+export const ducumentStatus = ["Semua Status", "Diproses", "Ditolak", "Selesai"];
