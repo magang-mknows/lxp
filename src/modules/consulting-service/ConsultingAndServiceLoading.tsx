@@ -18,6 +18,10 @@ const ConsultingAndServiceLoading: FC = (): ReactElement => {
         <div className="w-full md:w-[380px] lg:w-[320px] h-[370px] bg-neutral-200 animate-pulse rounded-md"></div>
         <div className="w-full md:w-[380px] lg:w-[320px] h-[370px] bg-neutral-200 animate-pulse rounded-md"></div>
       </section>
+      <section className="px-8 md:px-14 lg:px-16 mb-14">
+        <div className="text-2xl h-9 w-96 bg-neutral-200 animate-pulse rounded-md font-bold mb-2"></div>
+        <div className="text-2xl h-4 w-72 bg-neutral-200 animate-pulse rounded-md font-bold mb-2"></div>
+      </section>
     </section>
   );
 };

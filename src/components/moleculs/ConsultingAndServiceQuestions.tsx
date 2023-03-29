@@ -31,17 +31,15 @@ const ConsultingAndServiceQuestions: FC = (): ReactElement => {
   ];
 
   return (
-    <Fragment>
-      <section className="min-h-[90vh]">
-        <section className="px-8 md:px-14 lg:px-16 pb-40 flex flex-col gap-6 ">
-          {dummyQuestionsList.map((question, index) => {
-            return (
-              <ConsultingQuestionsList key={index} title={question.title} desc={question.desc} />
-            );
-          })}
-        </section>
+    <section className="min-h-[90vh]">
+      <section className="px-8 md:px-14 lg:px-16 pb-40 flex flex-col gap-6 ">
+        {dummyQuestionsList.map((question, index) => {
+          return (
+            <ConsultingQuestionsList key={index} title={question.title} desc={question.desc} />
+          );
+        })}
       </section>
-    </Fragment>
+    </section>
   );
 };
 

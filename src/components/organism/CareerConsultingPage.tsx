@@ -6,7 +6,9 @@ import Breadcums from "../atoms/Breadcums";
 import CareerConsultingHeader from "../moleculs/CareerConsultingHeader";
 import ConsultingChatContainer from "../moleculs/ConsultingChatContainer";
 
-const ConsultingChatList = dynamic(() => import("../moleculs/ConsultingChatList"));
+const ConsultingChatList = dynamic(() => import("../moleculs/ConsultingChatList"), {
+  ssr: false,
+});
 
 const CareerConsultingPage: FC = (): ReactElement => {
   return (
