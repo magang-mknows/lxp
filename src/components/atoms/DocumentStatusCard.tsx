@@ -16,7 +16,7 @@ const DocumentStatusCard: FC<TCardContentProps> = ({ title, desc, subTitle }): R
     >
       <section>
         <h1 className="text-lg font-bold mb-1">{title}</h1>
-        <p className="text-sm text-warning-500">{subTitle}</p>
+        {desc === "rejected" && <p className="text-sm text-warning-500">{subTitle}</p>}
       </section>
 
       {desc == "rejected" && (

@@ -22,15 +22,11 @@ const DocumentStatusContainer: FC = (): ReactElement => {
     },
   ];
 
-  const rejectedDoc = dummyStoredDocument.filter((doc) => {
-    return doc.status === "rejected";
-  });
-
   return (
     <nav className="mx-8 md:mx-16 lg:mx-40 mt-10 pb-10 bg-neutral-50 rounded-md shadow-sm min-h-[80vh]">
-      <Tab.Group as="section" className="py-4">
+      <Tab.Group as="div" className="py-4">
         <DocumentStatusTab />
-        <Tab.Panels as="section" className="py-8 px-16">
+        <Tab.Panels as="div" className="py-8 px-16">
           <Tab.Panel>
             {dummyStoredDocument.map((item, index) => {
               return (

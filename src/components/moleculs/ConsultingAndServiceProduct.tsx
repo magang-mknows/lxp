@@ -9,7 +9,7 @@ const ConsultingAndServiceProduct: FC = (): ReactElement => {
     {
       title: "Konsultasi",
       detailList: [
-        { text: "Konsultasi Karir dan Cita-Cita", link: "dokumen" },
+        { text: "Konsultasi Karir dan Cita-Cita", link: "konsultasi-karir" },
         { text: "Konsultasi Masalah Keluarga dan Keuangan", link: "dokumen" },
         { text: "Konsultasi Masalah Pribadi", link: "dokumen" },
         { text: "Konsultasi Kinerja", link: "dokumen" },
