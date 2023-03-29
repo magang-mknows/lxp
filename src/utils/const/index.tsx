@@ -46,6 +46,34 @@ export const DocProcessBreadCumbs = [
     link: "/proses-dokumen",
   },
 ];
+export const DocStatusBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+  {
+    name: "Cek Status Dokumen",
+    link: "/status-dokumen",
+  },
+];
+export const CareerConsultingBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+  {
+    name: "Konsultasi Karir & Cita-cita",
+    link: "/konsultasi-karir",
+  },
+];
 
 export const FeaturesList = [
   {
@@ -184,3 +212,28 @@ export const AboutJobList = [
     srcImg: "/assets/about/Hybrid.webp",
   },
 ];
+
+export const BottomNavMenu = [
+  {
+    title: "Dashboard",
+    link: "/dashboard",
+  },
+  {
+    title: "Pelatihan-Ku",
+    link: "/pelatihan-ku",
+  },
+  {
+    title: "Rencana Pelatihan",
+    link: "/rencana-pelatihan",
+  },
+  {
+    title: "Rencana Pelatihan",
+    link: "/rencana-pelatihan",
+  },
+  {
+    title: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+];
+
+export const ducumentStatus = ["Semua Status", "Diproses", "Ditolak", "Selesai"];

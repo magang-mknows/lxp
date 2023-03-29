@@ -9,7 +9,7 @@ const ConsultingAndServiceProduct: FC = (): ReactElement => {
     {
       title: "Konsultasi",
       detailList: [
-        { text: "Konsultasi Karir dan Cita-Cita", link: "dokumen" },
+        { text: "Konsultasi Karir dan Cita-Cita", link: "konsultasi-karir" },
         { text: "Konsultasi Masalah Keluarga dan Keuangan", link: "dokumen" },
         { text: "Konsultasi Masalah Pribadi", link: "dokumen" },
         { text: "Konsultasi Kinerja", link: "dokumen" },
@@ -21,8 +21,8 @@ const ConsultingAndServiceProduct: FC = (): ReactElement => {
       title: "Layanan",
       detailList: [
         { text: "Dokumen (Unduh berbagai dokumen)", link: "dokumen" },
-        { text: "Proses Dokumen (Ajukan dokumen yang telah di download)", link: "dokumen" },
-        { text: "Cek Status Dokumen", link: "dokumen" },
+        { text: "Proses Dokumen (Ajukan dokumen yang telah di download)", link: "proses-dokumen" },
+        { text: "Cek Status Dokumen", link: "status-dokumen" },
       ],
       icon: <RiCustomerService2Fill />,
     },
