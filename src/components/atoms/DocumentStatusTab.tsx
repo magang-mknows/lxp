@@ -8,11 +8,13 @@ const DocumentStatusTab: FC = (): ReactElement => {
     <Tab.List as="div" className="px-16 w-full border-b-2 border-neutral-200 flex gap-10">
       {ducumentStatus.map((status, index) => {
         return (
-          <Tab as="div" key={index}>
+          <Tab key={index}>
             {({ selected }) => (
               <button
                 className={`${
-                  selected ? "text-version3-500 border-b-2 border-version3-500" : "text-neutral-900"
+                  selected
+                    ? "text-version3-500 border-b-2 border-version3-500 "
+                    : "text-neutral-900"
                 } font-bold py-4 focus:outline-none outline-none `}
               >
                 {status}
