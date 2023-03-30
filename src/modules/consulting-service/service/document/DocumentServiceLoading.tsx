@@ -19,7 +19,7 @@ const DocumentServiceLoading = () => {
           return (
             <div
               key={index}
-              className="bg-neutral-200 animate-pulse rounded-md shadow-md px-10 py-10 w-full md:w-[360px] lg:w-[320px] h-[310px]"
+              className="bg-neutral-200 animate-pulse rounded-md shadow-md px-10 py-10 w-full md:w-[300px] lg:w-[320px] h-[310px]"
             >
               <div className="h-[120px] bg-neutral-300 rounded-md animate-pulse mb-7"></div>
               <div className="bg-neutral-300 animate-pulse mb-16 rounded-md w-40 h-4"></div>

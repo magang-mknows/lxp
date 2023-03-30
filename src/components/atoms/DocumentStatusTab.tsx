@@ -1,0 +1,30 @@
+"use client";
+import { ducumentStatus } from "@/utils/const";
+import { Tab } from "@headlessui/react";
+import { FC, ReactElement } from "react";
+
+const DocumentStatusTab: FC = (): ReactElement => {
+  return (
+    <Tab.List as="div" className="px-16 w-full border-b-2 border-neutral-200 flex gap-10">
+      {ducumentStatus.map((status, index) => {
+        return (
+          <Tab key={index}>
+            {({ selected }) => (
+              <button
+                className={`${
+                  selected
+                    ? "text-version3-500 border-b-2 border-version3-500 "
+                    : "text-neutral-900"
+                } font-bold py-4 focus:outline-none outline-none `}
+              >
+                {status}
+              </button>
+            )}
+          </Tab>
+        );
+      })}
+    </Tab.List>
+  );
+};
+
+export default DocumentStatusTab;
