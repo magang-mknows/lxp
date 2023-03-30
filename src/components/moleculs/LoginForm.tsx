@@ -13,8 +13,12 @@ import { z } from "zod";
 import ControlledTextField from "../atoms/ControlledInput";
 import ControlledCheckboxField from "../atoms/ControlledCheckbox";
 import { FcGoogle } from "react-icons/fc";
+import { useForgotPopup } from "@/hooks/ForgotPassword/usePopupForgot";
+import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
 
 const LoginForm: FC = (): ReactElement => {
+  const { setForgotPopup } = useForgotPopup();
+  const { setLoginPopup } = useLoginPopup();
   const validationSchema = z.object({
     email: z.string().min(1, { message: "Email harus diisi" }).email({
       message: "Email harus valid",
@@ -22,7 +26,10 @@ const LoginForm: FC = (): ReactElement => {
     password: z.string().min(1, { message: "Password harus diisi" }),
     remember: z.boolean(),
   });
-
+  const openForgot = () => {
+    setLoginPopup(false);
+    setForgotPopup(true);
+  };
   type ValidationSchema = z.infer<typeof validationSchema>;
 
   const {
@@ -56,14 +63,14 @@ const LoginForm: FC = (): ReactElement => {
         name={"email"}
         placeholder={"Email"}
         required
-        className="h-[60px] rounded-[8px]"
+        className="h-[60px] rounded-[8px] mb-5"
       />
       <ControlledTextField
         control={control}
         type={"password"}
         name={"password"}
         placeholder={"*********"}
-        className="h-[60px] rounded-[8px]"
+        className="h-[60px] rounded-[8px] mb-5"
         required
       />
 
@@ -74,12 +81,12 @@ const LoginForm: FC = (): ReactElement => {
           required={false}
           label={"Remember Me"}
         />
-        <Link
-          className="text-[#053D38] lg:text-[16px] text-[12px] font-[600]"
-          href={"/auth/forgot"}
+        <a
+          className="text-[#053D38] lg:text-[16px] text-[12px] font-[600] cursor-pointer"
+          onClick={() => openForgot()}
         >
           Lupa Password akun-mu?
-        </Link>
+        </a>
       </div>
       <div className="flex flex-col gap-y-1 my-4">
         <Button
