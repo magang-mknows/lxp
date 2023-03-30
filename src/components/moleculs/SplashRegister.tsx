@@ -11,7 +11,7 @@ const SplashRegister = (): ReactElement => {
   useEffect(() => {
     setTimeout(() => {
       setslider(slider + 1);
-    }, 2000);
+    }, 5000);
     return () => {
       if (slider === 3) {
         setslider(1);
@@ -40,7 +40,7 @@ const SplashRegister = (): ReactElement => {
           {slider == 1 ? (
             <>
               <h1 className="text-[28px] font-[700] text-center">Selamat Datang di LMS MKnows</h1>
-              <p className="text-base font-[400] text-center">
+              <p className="text-base font-[400] text-center h-10">
                 Platform pelatihan pertama di Indonesia, latihan mudah <br />
                 dengan Learning Experience Platform bisa diakses <br />
                 siapapun khususnya kaum marginal
@@ -49,14 +49,14 @@ const SplashRegister = (): ReactElement => {
           ) : slider == 2 ? (
             <>
               <h1 className="text-[28px] font-[700] text-center">Solusi Pelatihan Berkualitas</h1>
-              <p className="text-base font-[400] text-center">
+              <p className="text-base font-[400] text-center  h-10">
                 Kamu bisa raih jenjang pendidikan yang cemerlang tanpa <br />
                 perlu mengeluarkan biaya sedikitpun
               </p>
             </>
           ) : slider == 3 ? (
             <>
-              <h1 className="text-[28px] font-[700] text-center">
+              <h1 className="text-[28px] font-[700] text-center  h-10">
                 Terdapat 16 fitur yang membantu kamu
               </h1>
               <p className="text-base font-[400] text-center">
@@ -68,7 +68,7 @@ const SplashRegister = (): ReactElement => {
             ""
           )}
         </div>
-        <div className="flex justify-center gap-[15px] mt-[15px]">
+        <div className="flex justify-center gap-[15px] mt-[40px]">
           <button onClick={() => (slider != 1 ? setslider(1) : "")}>
             <div
               className={`${
