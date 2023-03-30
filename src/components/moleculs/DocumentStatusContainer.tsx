@@ -26,7 +26,7 @@ const DocumentStatusContainer: FC = (): ReactElement => {
     <nav className="mx-8 md:mx-16 lg:mx-40 mt-10 pb-10 bg-neutral-50 rounded-md shadow-sm min-h-[80vh]">
       <Tab.Group as="div" className="py-4">
         <DocumentStatusTab />
-        <Tab.Panels as="div" className="py-8 px-16">
+        <Tab.Panels as="div" className="py-8 px-8 md:px-14 lg:px-16">
           <Tab.Panel>
             {dummyStoredDocument.map((item, index) => {
               return (

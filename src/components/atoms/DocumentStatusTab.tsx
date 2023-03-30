@@ -5,7 +5,10 @@ import { FC, ReactElement } from "react";
 
 const DocumentStatusTab: FC = (): ReactElement => {
   return (
-    <Tab.List as="div" className="px-16 w-full border-b-2 border-neutral-200 flex gap-10">
+    <Tab.List
+      as="div"
+      className="px-8 md:px-14 lg:px-16 w-full border-b-2 border-neutral-300 flex flex-wrap gap-x-4 md:gap-x-6 lg:gap-x-10"
+    >
       {ducumentStatus.map((status, index) => {
         return (
           <Tab key={index}>

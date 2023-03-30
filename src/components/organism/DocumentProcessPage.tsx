@@ -1,6 +1,4 @@
-import DocumentFormLoading from "@/modules/consulting-service/service/document-process/DocumentFormLoading";
 import { DocProcessBreadCumbs } from "@/utils/const";
-import dynamic from "next/dynamic";
 import { FC, ReactElement, Suspense } from "react";
 import Breadcums from "../atoms/Breadcums";
 import DocumentProcessForm from "../moleculs/DocumentProcessForm";

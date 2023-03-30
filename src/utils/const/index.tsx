@@ -18,6 +18,16 @@ export const ConsultingBreadCumbs = [
     link: "/konsultasi",
   },
 ];
+export const DashboardBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Dashboard",
+    link: "/dashboard",
+  },
+];
 export const DocServiceBreadCumbs = [
   {
     name: "Home",

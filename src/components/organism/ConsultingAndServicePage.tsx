@@ -1,11 +1,17 @@
 import { ConsultingBreadCumbs } from "@/utils/const";
+import dynamic from "next/dynamic";
 import React, { FC, ReactElement } from "react";
 
 import Breadcums from "../atoms/Breadcums";
 import ConstultingQuestionsHeader from "../moleculs/ConstultingQuestionsHeader";
 import ConsultingAndServiceHeader from "../moleculs/ConsultingAndServiceHeader";
 import ConsultingAndServiceProduct from "../moleculs/ConsultingAndServiceProduct";
-import ConsultingAndServiceQuestions from "../moleculs/ConsultingAndServiceQuestions";
+const ConsultingAndServiceQuestions = dynamic(
+  () => import("../moleculs/ConsultingAndServiceQuestions"),
+  {
+    ssr: false,
+  },
+);
 
 const ConsultingPage: FC = (): ReactElement => {
   return (

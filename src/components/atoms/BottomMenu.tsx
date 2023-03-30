@@ -15,9 +15,10 @@ const BottomMenu: FC = (): ReactElement => {
             href={menu.link}
             key={index}
             className={`${
-              pathname.includes(menu.link) &&
-              "bg-version3-500 text-neutral-100 rounded-md shadow-sm cursor-pointer"
-            }  px-2 py-2.5 text-sm`}
+              pathname.includes(menu.link)
+                ? "bg-version3-500 text-neutral-100 hover:text-neutral-50 rounded-md shadow-sm cursor-pointer 0"
+                : "hover:text-version3-500 "
+            }  px-4 py-2.5 text-sm transition-all ease-in-out duration-300`}
           >
             <p>{menu.title}</p>
           </Link>
