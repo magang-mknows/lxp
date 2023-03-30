@@ -40,7 +40,7 @@ const RegisterForm: FC = (): ReactElement => {
   return (
     <Form
       onSubmit={"/"}
-      className="lg:w-full sm:w-[620px]flex flex-col justify-center px-[100px] py-[50px]"
+      className="lg:w-full sm:w-[620px]flex flex-col justify-center lg:px-[100px] px-10 py-[50px]"
     >
       <section className="flex flex-col w-full gap-y-2 mb-4">
         <h1 className="md:text-5xl text-[36px] text-left text-[#737373] font-[700]">Daftar Akun</h1>
@@ -48,38 +48,40 @@ const RegisterForm: FC = (): ReactElement => {
           Silahkan isi data berikut untuk melakukan pendaftaran
         </p>
       </section>
-      <ControlledTextField
-        control={control}
-        type={"text"}
-        name={"fullName"}
-        placeholder={"Nama Lengkap"}
-        required
-        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
-      />
-      <ControlledTextField
-        control={control}
-        type={"email"}
-        name={"email"}
-        placeholder={"Email"}
-        required
-        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
-      />
-      <ControlledTextField
-        control={control}
-        type={"password"}
-        name={"password"}
-        placeholder={"Kata Sandi"}
-        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
-        required
-      />
-      <ControlledTextField
-        control={control}
-        type={"password"}
-        name={"confirmPassword"}
-        placeholder={"Konfirmasi Kata Sandi"}
-        className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
-        required
-      />
+      <div className="flex flex-col gap-4">
+        <ControlledTextField
+          control={control}
+          type={"text"}
+          name={"fullName"}
+          placeholder={"Nama Lengkap"}
+          required
+          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
+        />
+        <ControlledTextField
+          control={control}
+          type={"email"}
+          name={"email"}
+          placeholder={"Email"}
+          required
+          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
+        />
+        <ControlledTextField
+          control={control}
+          type={"password"}
+          name={"password"}
+          placeholder={"Kata Sandi"}
+          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
+          required
+        />
+        <ControlledTextField
+          control={control}
+          type={"password"}
+          name={"confirmPassword"}
+          placeholder={"Konfirmasi Kata Sandi"}
+          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
+          required
+        />
+      </div>
 
       <div className="flex justify-between w-full">
         <Link

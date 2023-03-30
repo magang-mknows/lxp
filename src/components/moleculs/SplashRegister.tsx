@@ -20,18 +20,36 @@ const SplashRegister = (): ReactElement => {
   }, [slider]);
   return (
     <div className="bg-[#F5F5F5] w-full  ">
-      <div className="logo mt-[46px] mx-[70px]">
+      <div className="logo lg:mt-[46px] lg:mx-[70px] p-10 lg:p-0">
         <Image src={Logo} alt={"logo"} />
       </div>
 
-      <div className="pt-[50px] grid place-content-center">
-        <div className="image">
+      <div className="lg:pt-[50px] grid place-content-center p-10">
+        <div className="image grid place-content-center">
           {slider == 1 ? (
-            <Image src={Slider1} alt={"Slider"} className={" transition-all"} />
+            <Image
+              src={Slider1}
+              alt={"Slider"}
+              className={" transition-all"}
+              width={400}
+              height={400}
+            />
           ) : slider == 2 ? (
-            <Image src={Slider2} alt={"Slider"} className={" transition-all"} />
+            <Image
+              src={Slider2}
+              alt={"Slider"}
+              className={" transition-all"}
+              width={400}
+              height={400}
+            />
           ) : slider == 3 ? (
-            <Image src={Slider3} alt={"Slider"} className={" transition-all"} />
+            <Image
+              src={Slider3}
+              alt={"Slider"}
+              className={" transition-all"}
+              width={400}
+              height={400}
+            />
           ) : (
             ""
           )}
@@ -56,10 +74,10 @@ const SplashRegister = (): ReactElement => {
             </>
           ) : slider == 3 ? (
             <>
-              <h1 className="text-[28px] font-[700] text-center  h-10">
+              <h1 className="text-[28px] font-[700] text-center  ">
                 Terdapat 16 fitur yang membantu kamu
               </h1>
-              <p className="text-base font-[400] text-center">
+              <p className="text-base font-[400] text-center h-10">
                 Dibimbing oleh mentor yang profesional, Dukungan <br />
                 untuk karir masa depan
               </p>
@@ -68,7 +86,7 @@ const SplashRegister = (): ReactElement => {
             ""
           )}
         </div>
-        <div className="flex justify-center gap-[15px] mt-[40px]">
+        <div className="flex justify-center gap-[15px] mt-[50px]">
           <button onClick={() => (slider != 1 ? setslider(1) : "")}>
             <div
               className={`${
