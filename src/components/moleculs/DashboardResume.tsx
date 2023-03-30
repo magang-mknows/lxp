@@ -44,7 +44,7 @@ const DashbordResume: FC = (): ReactElement => {
           <span className="text-neutral-50/75">Pada semester ini</span>
           </section> */}
         </p>
-        <section className="absolute -bottom-64  grid grid-cols-2 gap-2 lg:gap-4">
+        <section className="absolute -bottom-64  grid grid-cols-2 gap-4 lg:gap-2">
           {dummySidebarItems.map(({ srcImg, desc, title }, index) => {
             return (
               <DashbordResumeCard
