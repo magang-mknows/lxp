@@ -1,4 +1,5 @@
 "use client";
+import { useForgotPopup } from "@/hooks/ForgotPassword/usePopupForgot";
 import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
 import ArticleLoading from "@/modules/landing/ArticleLoading";
 import BenefitsLoading from "@/modules/landing/BenefitsLoading";
@@ -9,6 +10,7 @@ import ParthnerLoading from "@/modules/landing/ParthnerLoading";
 import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";
+import ForgotPassword from "../moleculs/ForgotPassword";
 import LoginForm from "../moleculs/LoginForm";
 
 const LandingHero = dynamic(() => import("../moleculs/LandingHero"));
@@ -20,11 +22,17 @@ const LandingOffer = dynamic(() => import("../moleculs/LandingOffer"));
 
 const LandingPage: FC = (): ReactElement => {
   const { getLoginPopup, setLoginPopup } = useLoginPopup();
+  const { getForgotPopup, setForgotPopup } = useForgotPopup();
   return (
     <Fragment>
       <Modal withClose hasImage lookup={getLoginPopup} onClose={() => setLoginPopup(false)}>
         <Suspense>
           <LoginForm />
+        </Suspense>
+      </Modal>
+      <Modal withClose hasImage lookup={getForgotPopup} onClose={() => setForgotPopup(false)}>
+        <Suspense>
+          <ForgotPassword />
         </Suspense>
       </Modal>
       <Suspense fallback={<HeroLoading />}>

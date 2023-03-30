@@ -1,9 +1,10 @@
 import RegisterModules from "@/components/organism/Register";
+import RegisterModule from "@/modules/Register/RegisterModule";
 import { NextPage } from "next";
 import React, { ReactElement } from "react";
 
-const RegisterPage: NextPage = (): ReactElement => {
-  return <RegisterModules />;
+const Register: NextPage = (): ReactElement => {
+  return <RegisterModule />;
 };
 
-export default RegisterPage;
+export default Register;
