@@ -9,9 +9,9 @@ const DashbordResumeCard: FC<TCardContentProps> = ({ title, desc, srcImg }): Rea
         <Image
           className="w-8 mb-1"
           src={srcImg as unknown as string}
-          alt="kelas"
-          width={50}
-          height={50}
+          alt="resume"
+          width={100}
+          height={100}
         />
         <section>
           <h1 className=" text-4xl font-black text-neutral-500 mb-2">{desc}</h1>

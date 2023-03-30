@@ -1,5 +1,5 @@
 "use client";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, useEffect } from "react";
 import Image from "next/image";
 import { BsDot } from "react-icons/bs";
 import { useSelectedArticle } from "@/hooks/dashbaord/useSelectedArticle";
@@ -68,8 +68,10 @@ const DashboardArticleCard: FC = (): ReactElement => {
               <span
                 key={index}
                 className={`${
-                  getSelectedArticle == item.id ? " bg-secondary-blue-600" : " bg-neutral-300"
-                } h-2 cursor-pointer w-2  block rounded-lg transition-all ease-in-out duration-300`}
+                  getSelectedArticle == item.id
+                    ? "w-4  bg-secondary-blue-600"
+                    : "w-2  bg-neutral-300"
+                } h-2 cursor-pointer  block rounded-lg transition-all ease-in-out duration-300`}
                 onClick={() => {
                   setSelectedArticle(item.id);
                 }}
