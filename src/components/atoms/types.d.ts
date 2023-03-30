@@ -114,3 +114,12 @@ export interface UploadFieldProps {
   path?: File;
   type?: string;
 }
+
+export type TProgressCardProps = {
+  topic: string;
+  milestone: string;
+  title: string;
+  totalClass: number;
+  classAttended: number;
+  percentage: number;
+};

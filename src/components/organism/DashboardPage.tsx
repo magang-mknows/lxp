@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import React, { FC, ReactElement } from "react";
 import Breadcums from "../atoms/Breadcums";
 import DashboardCalendar from "../moleculs/DashboardCalendar";
+import DashboardProgress from "../moleculs/DashboardProgress";
 
 const DashbordResume = dynamic(() => import("../moleculs/DashboardResume"), { ssr: false });
 const DashboardArticle = dynamic(() => import("../moleculs/DashboardArticle"), { ssr: false });
@@ -33,7 +34,7 @@ const DashboardPage: FC = (): ReactElement => {
             <DashboardTask />
             <DashboardEvent />
           </div>
-          {/* <ProgressSection /> */}
+          <DashboardProgress />
           <DashboardCalendar />
         </div>
       </div>
