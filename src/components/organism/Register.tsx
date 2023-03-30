@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import RegisterForm from "../moleculs/RegisterForm";
 import SplashRegister from "../moleculs/SplashRegister";
 
-const RegisterModules = () => {
+const RegisterPage = () => {
   return (
     <div className="lg:flex">
       <Suspense>
@@ -15,4 +15,4 @@ const RegisterModules = () => {
   );
 };
 
-export default RegisterModules;
+export default RegisterPage;
