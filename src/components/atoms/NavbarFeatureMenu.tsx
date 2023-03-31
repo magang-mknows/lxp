@@ -11,7 +11,7 @@ import Link from "next/link";
 const NavbarFeatureMenu: FC = (): ReactElement => {
   return (
     <Menu as="div" className={"relative inline-block text-left z-50 left-0"}>
-      <Menu.Button as="button" name="feature-menu">
+      <Menu.Button as="button" aria-label="feature-menu" name="feature-menu" id="feature-menu">
         <div className="bg-neutral-100 w-9 h-9 flex items-center justify-center rounded-md shadow-sm">
           <BiCategoryAlt className="text-[20px] text-neutral-800 hover:text-version3-500 transition-colors ease-in-out duration-300" />
         </div>

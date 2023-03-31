@@ -16,9 +16,7 @@ import LoginForm from "../moleculs/LoginForm";
 const LandingHero = dynamic(() => import("../moleculs/LandingHero"), {
   ssr: true,
 });
-const LandingPartner = dynamic(() => import("../moleculs/LandingPartner"), {
-  ssr: true,
-});
+const LandingPartner = dynamic(() => import("../moleculs/LandingPartner"));
 const LandingCatalog = dynamic(() => import("../moleculs/LandingCatalog"), {
   ssr: true,
 });
@@ -28,9 +26,7 @@ const LandingBenefits = dynamic(() => import("../moleculs/LandingBenefits"), {
 const LandingArticle = dynamic(() => import("../moleculs/LandingArticle"), {
   ssr: true,
 });
-const LandingOffer = dynamic(() => import("../moleculs/LandingOffer"), {
-  ssr: true,
-});
+const LandingOffer = dynamic(() => import("../moleculs/LandingOffer"));
 
 const LandingPage: FC = (): ReactElement => {
   const { getLoginPopup, setLoginPopup } = useLoginPopup();

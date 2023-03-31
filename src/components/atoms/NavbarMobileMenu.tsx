@@ -11,6 +11,8 @@ const NavbarMobileMenu: FC = (): ReactElement => {
     <div className="lg:hidden">
       <button
         name="mobile-menu"
+        id="mobile-menu"
+        aria-label="mobile-menu"
         className="flex flex-col bg-neutral-100    h-9 w-9  p-2 rounded-md justify-center items-center group lg:hidden"
         onClick={() => setMobileNavbar(!getMobileNavbar)}
       >

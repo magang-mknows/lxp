@@ -35,7 +35,7 @@ const NavbarTheme: FC = (): ReactElement => {
 
   return (
     <Menu as="div" className="relative inline-block text z-50 ">
-      <Menu.Button as="button" name="feature-menu">
+      <Menu.Button as="button" name="theme-option" aria-label="theme-option">
         <div className="bg-neutral-100  h-9 w-9 flex items-center justify-center  overflow-hidden rounded-md cursor-pointer group">
           <Icon />
         </div>
