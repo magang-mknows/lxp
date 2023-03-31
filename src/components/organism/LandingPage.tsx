@@ -13,11 +13,19 @@ import Modal from "../atoms/Modal";
 import ForgotPassword from "../moleculs/ForgotPassword";
 import LoginForm from "../moleculs/LoginForm";
 
-const LandingHero = dynamic(() => import("../moleculs/LandingHero"));
+const LandingHero = dynamic(() => import("../moleculs/LandingHero"), {
+  ssr: true,
+});
 const LandingPartner = dynamic(() => import("../moleculs/LandingPartner"));
-const LandingCatalog = dynamic(() => import("../moleculs/LandingCatalog"));
-const LandingBenefits = dynamic(() => import("../moleculs/LandingBenefits"));
-const LandingArticle = dynamic(() => import("../moleculs/LandingArticle"));
+const LandingCatalog = dynamic(() => import("../moleculs/LandingCatalog"), {
+  ssr: true,
+});
+const LandingBenefits = dynamic(() => import("../moleculs/LandingBenefits"), {
+  ssr: true,
+});
+const LandingArticle = dynamic(() => import("../moleculs/LandingArticle"), {
+  ssr: true,
+});
 const LandingOffer = dynamic(() => import("../moleculs/LandingOffer"));
 
 const LandingPage: FC = (): ReactElement => {

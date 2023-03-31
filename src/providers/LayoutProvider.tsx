@@ -1,11 +1,13 @@
-import LandingFooter from "@/components/moleculs/LandingFooter";
 import dynamic from "next/dynamic";
 import { FC, ReactElement } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 
-const Navbar = dynamic(() => import("../components/moleculs/Navbar"), {
-  ssr: false,
+const Navbar = dynamic(() => import("@/components/moleculs/Navbar"), {
+  ssr: true,
+});
+const LandingFooter = dynamic(() => import("@/components/moleculs/LandingFooter"), {
+  ssr: true,
 });
 
 const LayoutProvider: FC<TProviderProps> = ({ children }): ReactElement => {

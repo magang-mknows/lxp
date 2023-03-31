@@ -1,10 +1,8 @@
 import { DashboardBreadCumbs } from "@/utils/const";
 import dynamic from "next/dynamic";
 import React, { FC, ReactElement } from "react";
-import Breadcums from "../atoms/Breadcums";
-import DashboardCalendar from "../moleculs/DashboardCalendar";
-import DashboardProgress from "../moleculs/DashboardProgress";
 
+const Breadcums = dynamic(() => import("../atoms/Breadcums"), { ssr: false });
 const DashbordResume = dynamic(() => import("../moleculs/DashboardResume"), { ssr: false });
 const DashboardArticle = dynamic(() => import("../moleculs/DashboardArticle"), { ssr: false });
 const DashboardLeaderBoard = dynamic(() => import("../moleculs/DashboardLeaderBoard"), {
@@ -14,6 +12,12 @@ const DashboardEvent = dynamic(() => import("../moleculs/DashboardEvent"), {
   ssr: false,
 });
 const DashboardTask = dynamic(() => import("../moleculs/DashboardTask"), {
+  ssr: false,
+});
+const DashboardProgress = dynamic(() => import("../moleculs/DashboardProgress"), {
+  ssr: false,
+});
+const DashboardCalendar = dynamic(() => import("../moleculs/DashboardCalendar"), {
   ssr: false,
 });
 
@@ -30,7 +34,7 @@ const DashboardPage: FC = (): ReactElement => {
           <DashboardArticle />
         </div>
         <div className="flex flex-col w-full col-span-3 lg:col-span-3  xl:col-span-2">
-          <div className="flex gap-6 w-full flex-wrap lg:flex-nowrap   mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
             <DashboardTask />
             <DashboardEvent />
           </div>
@@ -41,5 +45,4 @@ const DashboardPage: FC = (): ReactElement => {
     </section>
   );
 };
-
 export default DashboardPage;

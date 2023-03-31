@@ -4,7 +4,7 @@ import { TCardContentProps } from "./types";
 
 const DashbordResumeCard: FC<TCardContentProps> = ({ title, desc, srcImg }): ReactElement => {
   return (
-    <div className='className="h-40 bg-neutral-100 hover:bg-neutral-200 cursor-pointer transition-colors ease-in-out duration-300 rounded-lg shadow-sm w-[144px] md:w-32 lg:w-36'>
+    <div className="h-40 bg-neutral-100 hover:bg-neutral-200 cursor-pointer transition-colors ease-in-out duration-300 rounded-lg shadow-sm w-[12 0px] md:w-32 lg:w-36">
       <div className="flex  auto p-4 flex-col cursor-pointer  justify-between gap-y-4 text-neutral-500 hover:text-neutral-600 ">
         <Image
           className="w-8 mb-1"

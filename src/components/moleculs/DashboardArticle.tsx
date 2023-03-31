@@ -5,7 +5,7 @@ import DashboardArticleCard from "../atoms/DashboardArticleCard";
 
 const DashboardArticle: FC = (): ReactElement => {
   return (
-    <div className=" w-full  overflow-hidden ">
+    <div className=" w-full  overflow-hidden mb-10">
       <div className="flex flex-row items-center justify-between mb-4">
         <h1 className="text-lg font-bold">Sekilas Ilmu</h1>
         <Link className="text-sm text-blue-600 font-bold" href={"/"}>

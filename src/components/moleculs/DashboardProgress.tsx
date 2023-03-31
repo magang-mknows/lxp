@@ -42,7 +42,6 @@ const DashboardProgress = () => {
     <section className="bg-neutral-50 w-full px-6 py-4 rounded-md mb-10">
       <h1 className="font-semibold text-lg text-neutral-900">Lanjutkan Pelatihan Kamu</h1>
       <p className="text-neutral-400 text-sm mb-6">Batch I</p>
-
       <section>
         {dummyProgress
           .slice(0, !isViewMore ? 3 : 10)
