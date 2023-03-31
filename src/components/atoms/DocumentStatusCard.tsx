@@ -12,7 +12,7 @@ const DocumentStatusCard: FC<TCardContentProps> = ({ title, desc, subTitle }): R
           : desc === "rejected"
           ? "border-warning-400"
           : "border-blue-600"
-      } rounded-md mb-6 w-full border-l-8 flex-wrap  shadow-md flex justify-between min-h-[110px] items-center px-4 md:px-6 lg:px-8`}
+      } rounded-md mb-6 w-full border-l-8 flex-wrap py-4  shadow-md flex justify-between min-h-[110px] items-center px-4 md:px-6 lg:px-8`}
     >
       <section>
         <h1 className="text-lg font-bold mb-1">{title}</h1>
