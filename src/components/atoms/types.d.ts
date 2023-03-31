@@ -24,6 +24,7 @@ export type TCardContentProps = {
   isAvailable?: boolean;
   addtionalClass?: string;
   detailList?: Array<{ text: string; link?: string }>;
+  list?: Array<string>;
   link?: string;
 };
 export type CardAssigment = {
@@ -133,4 +134,8 @@ export type TProgressCardProps = {
   totalClass: number;
   classAttended: number;
   percentage: number;
+};
+
+export type TEventCardProps = {
+  isOrder: boolean;
 };
