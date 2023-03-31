@@ -1,8 +1,8 @@
 import { DashboardBreadCumbs } from "@/utils/const";
 import dynamic from "next/dynamic";
 import React, { FC, ReactElement } from "react";
-import Breadcums from "../atoms/Breadcums";
 
+const Breadcums = dynamic(() => import("../atoms/Breadcums"), { ssr: false });
 const DashbordResume = dynamic(() => import("../moleculs/DashboardResume"), { ssr: false });
 const DashboardArticle = dynamic(() => import("../moleculs/DashboardArticle"), { ssr: false });
 const DashboardLeaderBoard = dynamic(() => import("../moleculs/DashboardLeaderBoard"), {

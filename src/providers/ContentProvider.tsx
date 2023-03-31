@@ -12,7 +12,7 @@ const Navbar = dynamic(() => import("../components/moleculs/Navbar"), {
   ssr: false,
 });
 const BottomMenu = dynamic(() => import("../components/atoms/BottomMenu"), {
-  ssr: true,
+  ssr: false,
 });
 
 const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
@@ -23,9 +23,7 @@ const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
 
   return (
     <ClienProvider>
-      <Suspense>
-        <Navbar />
-      </Suspense>
+      <Navbar />
       <section className="pt-[74px] bg-neutral-100">
         {bottomMenuLink.includes(pathname) && <BottomMenu />}
         {children}
