@@ -26,6 +26,17 @@ export type TCardContentProps = {
   detailList?: Array<{ text: string; link?: string }>;
   link?: string;
 };
+export type CardAssigment = {
+  titleAssigment: string;
+  category: string;
+  date?: string;
+  time?: string;
+  titleCourse: string;
+  bgLine?: string;
+  classNameCategory?: string;
+  imgAssigment?: StaticImageData;
+  alt?: string;
+};
 export interface TextFieldProps {
   type: HTMLInputTypeAttribute;
   label?: string;
