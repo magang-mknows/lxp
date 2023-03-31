@@ -247,3 +247,10 @@ export const BottomNavMenu = [
 ];
 
 export const ducumentStatus = ["Semua Status", "Diproses", "Ditolak", "Selesai"];
+export const AssigmentStatus = [
+  "Semua Tugas",
+  "Ditugaskan",
+  "Terlambat",
+  "Sedang Dinilai",
+  "Selesai",
+];
