@@ -6,6 +6,7 @@ const Button: FC<TButtonProps> = ({
   text,
   size,
   icon,
+  iconPosition,
   className,
   disabled,
   onClick,
@@ -23,7 +24,9 @@ const Button: FC<TButtonProps> = ({
       } ${size === "large" && "text-sm py-2 w-[200px]"}
         ${size === "extraLarge" && "text-sm py-3 w-[200px] md:w-[240px] lg:w-[300px]"} ${
         size === "full" && "w-full text-sm py-4"
-      } font-bold transition-colors ease-in-out relative z-30 rounded-md duration-300  border-2 border-version2-500 flex items-center justify-center gap-2 ${className}`}
+      } ${
+        iconPosition === "left" ? "flex-row-reverse" : "flex-row"
+      } font-bold transition-colors ease-in-out relative z-30   rounded-md duration-300  border-2 border-version2-500 flex items-center justify-center gap-2 ${className}`}
       onClick={onClick}
     >
       <p>{text}</p>

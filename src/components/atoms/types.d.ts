@@ -8,6 +8,7 @@ export type TButtonProps = {
   className?: string;
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  iconPosition?: "right" | "left";
 };
 
 export type TImageIDProps = {

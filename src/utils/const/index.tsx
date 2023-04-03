@@ -94,6 +94,16 @@ export const UniqueEventBreadCumbs = [
     link: "/acara-unik",
   },
 ];
+export const ScoreSertificateBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Nilai & Sertikat",
+    link: "/nilai-serifikat",
+  },
+];
 
 export const FeaturesList = [
   {
@@ -247,8 +257,8 @@ export const BottomNavMenu = [
     link: "/rencana-pelatihan",
   },
   {
-    title: "Rencana Pelatihan",
-    link: "/rencana-pelatihan",
+    title: "Nilai & Sertifikat",
+    link: "/nilai-sertifikat",
   },
   {
     title: "Konsultasi & Layanan",
@@ -264,3 +274,6 @@ export const AssigmentStatus = [
   "Sedang Dinilai",
   "Selesai",
 ];
+
+export const ScoreSertificateMenu = ["Nilai", "Sertifikat"];
+export const SertificateFilterOptions = ["Semua", "Pelatihan", "Webinar"];

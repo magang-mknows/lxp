@@ -4,7 +4,7 @@ import ContentFooter from "@/components/moleculs/ContentFooter";
 import { BottomNavMenu } from "@/utils/const";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
-import { FC, ReactElement, Suspense } from "react";
+import { FC, ReactElement } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 

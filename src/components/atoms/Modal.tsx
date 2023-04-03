@@ -19,10 +19,11 @@ const Modal: FC<ModalProps> = ({
     <Fragment>
       {lookup && (
         <div
-          className="relative z-[999999999] "
+          className="relative z-50 "
           aria-labelledby="modal-title"
           role="dialog"
           aria-modal="true"
+          onClick={onClose}
         >
           <div className="fixed inset-0 transition-opacity bg-[#fff] bg-opacity-75 " />
           <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -46,7 +47,7 @@ const Modal: FC<ModalProps> = ({
                       />
                     )}
                   </div>
-                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                  <div className="mt-3 text-center  sm:text-left">
                     {title && (
                       <h3
                         className="text-base font-semibold leading-6 text-gray-900"
