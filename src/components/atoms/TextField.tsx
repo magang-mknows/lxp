@@ -5,6 +5,7 @@ import { RiErrorWarningFill, RiCheckFill } from "react-icons/ri";
 const TextField: FC<TextFieldProps> = forwardRef(
   (
     {
+      textAreaSize,
       hasLabel,
       isTextArea,
       type,
@@ -23,9 +24,9 @@ const TextField: FC<TextFieldProps> = forwardRef(
     ref: Ref<HTMLInputElement>,
   ): ReactElement => {
     return (
-      <section className="flex flex-col gap-y-1 my-2">
+      <section className="flex flex-col">
         {label && (
-          <label htmlFor={name} className="font-bold text-neutral-900 outline-version3-500 ">
+          <label htmlFor={name} className="font-bold  outline-version3-500 ">
             {label} {required && <span className="text-red-700 font-bold">*</span>}
           </label>
         )}
@@ -34,21 +35,21 @@ const TextField: FC<TextFieldProps> = forwardRef(
             value={value}
             name={name}
             disabled={disabled}
-            rows={12}
+            rows={textAreaSize == "medium" ? 4 : 12}
             id="question"
             className={`
           ${
             error &&
             !warning &&
             !success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 border-[0.5px] "
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800 border-[0.5px] "
           }
 
           ${
             error &&
             !warning &&
             success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 border-[0.5px] "
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800 border-[0.5px] "
           }
 
           ${
@@ -88,14 +89,14 @@ const TextField: FC<TextFieldProps> = forwardRef(
             error &&
             !warning &&
             !success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100  "
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800  "
           }
 
           ${
             error &&
             !warning &&
             success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100  "
+            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800  "
           }
 
           ${

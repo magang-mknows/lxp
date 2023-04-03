@@ -4,8 +4,8 @@ import { FC, ReactElement } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 
-const Navbar = dynamic(() => import("../components/moleculs/Navbar"), {
-  ssr: false,
+const Navbar = dynamic(() => import("@/components/moleculs/Navbar"), {
+  ssr: true,
 });
 
 const LayoutProvider: FC<TProviderProps> = ({ children }): ReactElement => {

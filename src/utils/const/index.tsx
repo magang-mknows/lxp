@@ -18,6 +18,16 @@ export const ConsultingBreadCumbs = [
     link: "/konsultasi",
   },
 ];
+export const DashboardBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Dashboard",
+    link: "/dashboard",
+  },
+];
 export const DocServiceBreadCumbs = [
   {
     name: "Home",
@@ -44,6 +54,44 @@ export const DocProcessBreadCumbs = [
   {
     name: "Proses Dokumen",
     link: "/proses-dokumen",
+  },
+];
+export const DocStatusBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+  {
+    name: "Cek Status Dokumen",
+    link: "/status-dokumen",
+  },
+];
+export const CareerConsultingBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+  {
+    name: "Konsultasi Karir & Cita-cita",
+    link: "/konsultasi-karir",
+  },
+];
+export const UniqueEventBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Acara Unik",
+    link: "/acara-unik",
   },
 ];
 
@@ -183,4 +231,36 @@ export const AboutJobList = [
     title: "Hybrid Officer Developement Crash Program for Financial Industry",
     srcImg: "/assets/about/Hybrid.webp",
   },
+];
+
+export const BottomNavMenu = [
+  {
+    title: "Dashboard",
+    link: "/dashboard",
+  },
+  {
+    title: "Pelatihan-Ku",
+    link: "/pelatihan-ku",
+  },
+  {
+    title: "Rencana Pelatihan",
+    link: "/rencana-pelatihan",
+  },
+  {
+    title: "Rencana Pelatihan",
+    link: "/rencana-pelatihan",
+  },
+  {
+    title: "Konsultasi & Layanan",
+    link: "/konsultasi-layanan",
+  },
+];
+
+export const ducumentStatus = ["Semua Status", "Diproses", "Ditolak", "Selesai"];
+export const AssigmentStatus = [
+  "Semua Tugas",
+  "Ditugaskan",
+  "Terlambat",
+  "Sedang Dinilai",
+  "Selesai",
 ];

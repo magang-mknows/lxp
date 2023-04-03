@@ -6,10 +6,10 @@ const LandingOfferThumb: FC = (): ReactElement => {
     <Image
       src={`/assets/landing/waiting.webp`}
       alt="offer-view"
-      className=" w-full relative z-20  "
-      height={1000}
-      width={1000}
-      loading="eager"
+      className=" w-full h-full relative z-20  "
+      height={200}
+      width={200}
+      loading="lazy"
     />
   );
 };

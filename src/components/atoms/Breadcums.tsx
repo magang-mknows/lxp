@@ -23,9 +23,9 @@ const Breadcums: FC<TBreadCrumbProps> = ({ items }): ReactElement => {
               );
             } else {
               return (
-                <span className="text-neutral-400 cursor-pointer" key={index}>
-                  {crumb.name}
-                </span>
+                <Link key={index} href={crumb.link}>
+                  <span className="text-neutral-400 cursor-pointer">{crumb.name}</span>
+                </Link>
               );
             }
           })}

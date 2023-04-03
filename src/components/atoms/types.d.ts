@@ -24,7 +24,19 @@ export type TCardContentProps = {
   isAvailable?: boolean;
   addtionalClass?: string;
   detailList?: Array<{ text: string; link?: string }>;
+  list?: Array<string>;
   link?: string;
+};
+export type CardAssigment = {
+  titleAssigment: string;
+  category: string;
+  date?: string;
+  time?: string;
+  titleCourse: string;
+  bgLine?: string;
+  classNameCategory?: string;
+  imgAssigment?: StaticImageData;
+  alt?: string;
 };
 export interface TextFieldProps {
   type: HTMLInputTypeAttribute;
@@ -44,6 +56,7 @@ export interface TextFieldProps {
   hasLabel?: boolean;
   control: Control<any, T>;
   isTextArea?: boolean;
+  textAreaSize?: "small" | "medium";
 }
 
 export interface FormProps {
@@ -91,3 +104,38 @@ export interface CheckboxFieldProps {
   onChange?: ChangeEventHandler<HTMLInputElement>;
   control: Control<any, T>;
 }
+
+export interface UploadFieldProps {
+  multiple?: boolean;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  name: string;
+  className?: string;
+  error?: string;
+  success?: string;
+  warning?: string;
+  disabled?: boolean;
+  required?: boolean;
+  label?: string;
+  hasLabel?: boolean;
+  ref?: Ref<HTMLInputElement>;
+  files?: string;
+  value?: string;
+  accepted?: string;
+  control?: Control<any, T>;
+  onDrop?: (acceptedFiles: any) => void;
+  path?: File;
+  type?: string;
+}
+
+export type TProgressCardProps = {
+  topic: string;
+  milestone: string;
+  title: string;
+  totalClass: number;
+  classAttended: number;
+  percentage: number;
+};
+
+export type TEventCardProps = {
+  isOrder: boolean;
+};
