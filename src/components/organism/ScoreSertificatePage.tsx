@@ -45,7 +45,7 @@ const ScoreSertificatePage: FC = (): ReactElement => {
           </Tab.List>
           <Tab.Panels>
             {!getShowDetail ? (
-              <Tab.Panel as="section" className="py-2 grid grid-cols-2 gap-10">
+              <Tab.Panel as="section" className="py-2 grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <ScoreChart />
                 <ScoreSummaryTable />
               </Tab.Panel>

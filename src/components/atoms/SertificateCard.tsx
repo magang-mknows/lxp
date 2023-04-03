@@ -8,7 +8,7 @@ import SertificateModal from "./SertificateModal";
 const SertificateCard: FC = (): ReactElement => {
   const [isModalOpen, setModalOpen] = useState(false);
   return (
-    <main className="flex  px-4 py-3 bg-neutral-50 rounded-md shadow-sm overflow-hidden flex-col items-center justify-center">
+    <main className="flex  px-4 py-3 bg-neutral-50 rounded-md shadow-sm overflow-hidden flex-col items-center justify-start">
       <Image
         src={"/assets/score-sertificate/sertificate.svg"}
         alt="sertificate-view"
@@ -18,8 +18,10 @@ const SertificateCard: FC = (): ReactElement => {
         className="h-full bg-neutral-200 w-full mb-2 rounded-md cursor-pointer"
         onClick={() => setModalOpen(true)}
       />
-      <p className="text-neutral-900 font-bold text-base">Pelatihan Keterampilan Manajerial</p>
-      <p className="text-neutral-600 text-sm">Pelatihan</p>
+      <p className="text-neutral-900 w-full text-sm font-bold md:text-base">
+        Pelatihan Keterampilan Manajerial
+      </p>
+      <p className="text-neutral-600 text-xs md:text-sm  w-full">Pelatihan</p>
       <Modal
         withClose={false}
         hasImage={false}

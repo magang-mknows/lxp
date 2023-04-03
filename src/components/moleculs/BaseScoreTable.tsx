@@ -2,7 +2,7 @@ import { FC, ReactElement } from "react";
 
 const BaseScoreTable: FC = (): ReactElement => {
   return (
-    <div className="mb-10 px-10 py-2">
+    <div className="mb-10 lg:px-10 py-2">
       <div className="flex flex-col w-auto ">
         <div className=" overflow-x-scroll scrollbar-hide md:scrollbar-default">
           <div className="p-1.5 min-w-full inline-block align-middle">
