@@ -24,7 +24,7 @@ const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
   return (
     <ClienProvider>
       <Navbar />
-      <section className="pt-[74px] bg-neutral-100">
+      <section className="pt-[74px] bg-neutral-100 ">
         {bottomMenuLink.includes(pathname) && <BottomMenu />}
         {children}
         <ContentFooter />

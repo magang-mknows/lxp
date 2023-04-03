@@ -11,22 +11,13 @@ import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";
 import ForgotPassword from "../moleculs/ForgotPassword";
+import LandingArticle from "../moleculs/LandingArticle";
+import LandingBenefits from "../moleculs/LandingBenefits";
+import LandingCatalog from "../moleculs/LandingCatalog";
+import LandingHero from "../moleculs/LandingHero";
+import LandingOffer from "../moleculs/LandingOffer";
+import LandingPartner from "../moleculs/LandingPartner";
 import LoginForm from "../moleculs/LoginForm";
-
-const LandingHero = dynamic(() => import("../moleculs/LandingHero"), {
-  ssr: true,
-});
-const LandingPartner = dynamic(() => import("../moleculs/LandingPartner"));
-const LandingCatalog = dynamic(() => import("../moleculs/LandingCatalog"), {
-  ssr: true,
-});
-const LandingBenefits = dynamic(() => import("../moleculs/LandingBenefits"), {
-  ssr: true,
-});
-const LandingArticle = dynamic(() => import("../moleculs/LandingArticle"), {
-  ssr: true,
-});
-const LandingOffer = dynamic(() => import("../moleculs/LandingOffer"));
 
 const LandingPage: FC = (): ReactElement => {
   const { getLoginPopup, setLoginPopup } = useLoginPopup();

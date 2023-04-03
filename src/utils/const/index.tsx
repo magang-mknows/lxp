@@ -84,6 +84,16 @@ export const CareerConsultingBreadCumbs = [
     link: "/konsultasi-karir",
   },
 ];
+export const UniqueEventBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Acara Unik",
+    link: "/acara-unik",
+  },
+];
 
 export const guideBreadCumbs = [
   { name: "Home", link: "/" },
