@@ -105,6 +105,17 @@ export const ScoreSertificateBreadCumbs = [
   },
 ];
 
+export const guideBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Panduan", link: "/panduan" },
+];
+
+export const guideBookBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Panduan", link: "/panduan" },
+  { name: "Buku Panduan", link: "/panduan/buku-panduan" },
+];
+
 export const FeaturesList = [
   {
     title: "Administrasi",
