@@ -1,11 +1,11 @@
 "use client";
 import { showDetailSertificate } from "@/store/score-sertificate";
 import Image from "next/image";
-import { FC, ReactElement } from "react";
+import { FC, lazy, ReactElement } from "react";
 import { useRecoilState } from "recoil";
 import Modal from "./Modal";
 
-import SertificateModal from "./SertificateModal";
+const SertificateModal = lazy(() => import("./SertificateModal"));
 
 const SertificateCard: FC = (): ReactElement => {
   const [isModalOpen, setModalOpen] = useRecoilState(showDetailSertificate);
@@ -16,7 +16,7 @@ const SertificateCard: FC = (): ReactElement => {
         alt="sertificate-view"
         height={100}
         width={100}
-        loading="lazy"
+        loading="eager"
         className="h-full bg-neutral-200 w-full mb-2 rounded-md cursor-pointer"
         onClick={() => setModalOpen(true)}
       />
