@@ -1,14 +1,14 @@
+"use client";
 import { DashboardBreadCumbs } from "@/utils/const";
-import React, { FC, lazy, ReactElement } from "react";
-
-const Breadcums = lazy(() => import("../atoms/Breadcums"));
-const DashbordResume = lazy(() => import("../moleculs/DashboardResume"));
-const DashboardArticle = lazy(() => import("../moleculs/DashboardArticle"));
-const DashboardLeaderBoard = lazy(() => import("../moleculs/DashboardLeaderBoard"));
-const DashboardEvent = lazy(() => import("../moleculs/DashboardEvent"));
-const DashboardTask = lazy(() => import("../moleculs/DashboardTask"));
-const DashboardProgress = lazy(() => import("../moleculs/DashboardProgress"));
-const DashboardCalendar = lazy(() => import("../moleculs/DashboardCalendar"));
+import React, { FC, ReactElement } from "react";
+import Breadcums from "../atoms/Breadcums";
+import DashboardArticle from "../moleculs/DashboardArticle";
+import DashboardCalendar from "../moleculs/DashboardCalendar";
+import DashboardEvent from "../moleculs/DashboardEvent";
+import DashboardLeaderBoard from "../moleculs/DashboardLeaderBoard";
+import DashboardProgress from "../moleculs/DashboardProgress";
+import DashbordResume from "../moleculs/DashboardResume";
+import DashboardTask from "../moleculs/DashboardTask";
 
 const DashboardPage: FC = (): ReactElement => {
   return (
