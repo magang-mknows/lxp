@@ -5,7 +5,7 @@ import { TProviderProps } from "./types";
 import LandingFooter from "@/components/moleculs/LandingFooter";
 
 const Navbar = dynamic(() => import("@/components/moleculs/Navbar"), {
-  ssr: true,
+  ssr: false,
 });
 
 const LayoutProvider: FC<TProviderProps> = ({ children, className }): ReactElement => {

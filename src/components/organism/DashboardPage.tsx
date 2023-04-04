@@ -1,25 +1,14 @@
 import { DashboardBreadCumbs } from "@/utils/const";
-import dynamic from "next/dynamic";
-import React, { FC, ReactElement } from "react";
+import React, { FC, lazy, ReactElement } from "react";
 
-const Breadcums = dynamic(() => import("../atoms/Breadcums"), { ssr: false });
-const DashbordResume = dynamic(() => import("../moleculs/DashboardResume"), { ssr: false });
-const DashboardArticle = dynamic(() => import("../moleculs/DashboardArticle"), { ssr: false });
-const DashboardLeaderBoard = dynamic(() => import("../moleculs/DashboardLeaderBoard"), {
-  ssr: false,
-});
-const DashboardEvent = dynamic(() => import("../moleculs/DashboardEvent"), {
-  ssr: false,
-});
-const DashboardTask = dynamic(() => import("../moleculs/DashboardTask"), {
-  ssr: false,
-});
-const DashboardProgress = dynamic(() => import("../moleculs/DashboardProgress"), {
-  ssr: false,
-});
-const DashboardCalendar = dynamic(() => import("../moleculs/DashboardCalendar"), {
-  ssr: false,
-});
+const Breadcums = lazy(() => import("../atoms/Breadcums"));
+const DashbordResume = lazy(() => import("../moleculs/DashboardResume"));
+const DashboardArticle = lazy(() => import("../moleculs/DashboardArticle"));
+const DashboardLeaderBoard = lazy(() => import("../moleculs/DashboardLeaderBoard"));
+const DashboardEvent = lazy(() => import("../moleculs/DashboardEvent"));
+const DashboardTask = lazy(() => import("../moleculs/DashboardTask"));
+const DashboardProgress = lazy(() => import("../moleculs/DashboardProgress"));
+const DashboardCalendar = lazy(() => import("../moleculs/DashboardCalendar"));
 
 const DashboardPage: FC = (): ReactElement => {
   return (
