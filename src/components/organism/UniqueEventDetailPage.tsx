@@ -2,7 +2,6 @@ import { UniqueEventBreadCumbs } from "@/utils/const";
 import { FC, ReactElement } from "react";
 import Breadcums from "../atoms/Breadcums";
 import EventDetailBanner from "../moleculs/EventDetailBanner";
-import EventDetailPanel from "../moleculs/EventDetailPanel";
 import EventDetailTab from "../moleculs/EventDetailTab";
 
 const UniqueEventDetailPage: FC = (): ReactElement => {
