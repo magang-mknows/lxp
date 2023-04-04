@@ -1,40 +1,51 @@
 import React, { ReactElement } from "react";
-import Book from "../../../../public/assets/guide/book.svg";
 import Image from "next/image";
 import Link from "next/link";
 
 const dummyGuide = [
-  { title: "Panduan pendaftaran", img: Book, href: "/panduan/buku-panduan/panduan-pendaftaran" },
-  { title: "Panduan masuk", img: Book, href: "/panduan/buku-panduan/panduan-pendaftaran" },
+  {
+    title: "Panduan pendaftaran",
+    img: "/assets/guide/book.svg",
+    href: "/panduan/buku-panduan/panduan-pendaftaran",
+  },
+  {
+    title: "Panduan masuk",
+    img: "/assets/guide/book.svg",
+    href: "/panduan/buku-panduan/panduan-pendaftaran",
+  },
   {
     title: "Bagaimana caranya jika mengalami kesulitan",
-    img: Book,
+    img: "/assets/guide/book.svg",
     href: "/panduan/buku-panduan/panduan-pendaftaran",
   },
   {
     title: "Bagaimana caranya jika saya ingin melakukan diskusi pada dosen",
-    img: Book,
+    img: "/assets/guide/book.svg",
     href: "/panduan/buku-panduan/panduan-pendaftaran",
   },
   {
     title: "Panduan mendaftar studi",
-    img: Book,
+    img: "/assets/guide/book.svg",
     href: "/panduan/buku-panduan/panduan-pendaftaran",
   },
   {
     title: "Hal apa saja yang saya lakukan saat melakukan quiz",
-    img: Book,
+    img: "/assets/guide/book.svg",
     href: "/panduan/buku-panduan/panduan-pendaftaran",
   },
-  { title: "Panduan diskusi global", img: Book, href: "/panduan/buku-panduan/panduan-pendaftaran" },
+  {
+    title: "Panduan diskusi global",
+    img: "/assets/guide/book.svg",
+    href: "/panduan/buku-panduan/panduan-pendaftaran",
+  },
   {
     title: "Panduan  perencanaan karir",
-    img: Book,
+    img: "/assets/guide/book.svg",
     href: "/panduan/buku-panduan/panduan-pendaftaran",
   },
   {
     title: "Panduan mendapatkan sertifikat",
-    img: Book,
+    img: "/assets/guide/book.svg",
     href: "/panduan/buku-panduan/panduan-pendaftaran",
   },
 ];
@@ -49,9 +60,9 @@ const ContentSection = (): ReactElement => {
         {dummyGuide.map((item, index) => {
           return (
             <Link key={index} href={item.href}>
-              <div className="content bg-white dark:bg-[#232529]  w-full h-[54px] shadow-md rounded-[8px] flex justify-between items-center p-[24px] mt-[16px]">
+              <div className="content bg-white dark:bg-[#232529]  w-full h-[54px] shadow-neutral-300 shadow-sm sha rounded-[8px] flex justify-between items-center p-[24px] mt-[16px]">
                 <h1 className="font-[600] text-[16px] dark:text-white">{item.title}</h1>
-                <Image src={item.img} alt={"book"} />
+                <Image src={item.img} alt={"book"} width={30} height={30} />
               </div>
             </Link>
           );
