@@ -7,7 +7,6 @@ import CatalogLoading from "@/modules/landing/CatalogLoading";
 import HeroLoading from "@/modules/landing/HeroLoading";
 import OfferLoading from "@/modules/landing/OfferLoading";
 import ParthnerLoading from "@/modules/landing/ParthnerLoading";
-import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";
 import ForgotPassword from "../moleculs/ForgotPassword";

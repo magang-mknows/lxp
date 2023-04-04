@@ -2,7 +2,7 @@
 
 import { UniqueEventBreadCumbs } from "@/utils/const";
 import { usePathname, redirect } from "next/navigation";
-import React, { FC, ReactElement, useEffect } from "react";
+import React, { FC, ReactElement } from "react";
 import Breadcums from "../atoms/Breadcums";
 import UniqueEventSearch from "../atoms/UniqueEventSearch";
 import UniqueEventContent from "../moleculs/UniqueEventContent";
