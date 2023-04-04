@@ -37,8 +37,8 @@ const dataLine = {
       backgroundColor: (context: any) => {
         const ctx = context.chart.ctx;
         const gradient = ctx.createLinearGradient(0, 0, 0, 200);
-        gradient.addColorStop(0, "#053d38d7");
-        gradient.addColorStop(1, "#053d3872");
+        gradient.addColorStop(0, "#053d38ef");
+        gradient.addColorStop(1, "#053d383b");
         return gradient;
       },
       hoverBackgroundColor: "#3b83f67e",

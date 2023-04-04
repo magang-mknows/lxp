@@ -1,12 +1,14 @@
 "use client";
+import { showDetailSertificate } from "@/store/score-sertificate";
 import Image from "next/image";
-import { FC, ReactElement, useState } from "react";
+import { FC, ReactElement } from "react";
+import { useRecoilState } from "recoil";
 import Modal from "./Modal";
 
 import SertificateModal from "./SertificateModal";
 
 const SertificateCard: FC = (): ReactElement => {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useRecoilState(showDetailSertificate);
   return (
     <main className="flex  px-4 py-3 bg-neutral-50 rounded-md shadow-sm overflow-hidden flex-col items-center justify-start">
       <Image

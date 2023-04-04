@@ -101,7 +101,7 @@ export const ScoreSertificateBreadCumbs = [
   },
   {
     name: "Nilai & Sertikat",
-    link: "/nilai-serifikat",
+    link: "/nilai-sertifikat",
   },
 ];
 

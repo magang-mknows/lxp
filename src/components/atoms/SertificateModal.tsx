@@ -1,10 +1,15 @@
+"use client";
+import { showDetailSertificate } from "@/store/score-sertificate";
 import Image from "next/image";
 import { FC, ReactElement } from "react";
 import { ImCloudDownload } from "react-icons/im";
+import { useSetRecoilState } from "recoil";
 import Button from "./Button";
 import { TCardContentProps } from "./types";
 
 const SertificateModal: FC<TCardContentProps> = ({ srcImg }): ReactElement => {
+  const setModalOpen = useSetRecoilState(showDetailSertificate);
+
   return (
     <section className="flex flex-col gap-2">
       <Image
@@ -21,8 +26,18 @@ const SertificateModal: FC<TCardContentProps> = ({ srcImg }): ReactElement => {
           text="Unduh"
           type="primary"
           size="full"
+          onClick={() => {
+            setModalOpen(false);
+          }}
         />
-        <Button text="Kembali" type="secondary" size="full" />
+        <Button
+          text="Kembali"
+          type="secondary"
+          size="full"
+          onClick={() => {
+            setModalOpen(false);
+          }}
+        />
       </div>
     </section>
   );
