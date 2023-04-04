@@ -115,6 +115,12 @@ export const guideBookBreadCumbs = [
   { name: "Panduan", link: "/panduan" },
   { name: "Buku Panduan", link: "/panduan/buku-panduan" },
 ];
+export const guideVideoBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Panduan", link: "/panduan" },
+  { name: "Video Panduan", link: "/panduan/video-panduan" },
+];
+
 
 export const FeaturesList = [
   {
