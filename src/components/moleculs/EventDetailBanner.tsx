@@ -20,7 +20,7 @@ const EventDetailBanner: FC = (): ReactElement => {
     <section className="lg:flex items-center block gap-36 mb-10">
       <Image
         src={"/assets/event/event.svg"}
-        className="w-[720px] mb-2"
+        className="w-full lg:w-[720px] mb-2"
         height={100}
         width={100}
         alt="event-view"
