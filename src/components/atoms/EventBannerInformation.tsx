@@ -1,17 +1,13 @@
 "use client";
 import { EventRegModalState } from "@/store/unique-event";
-import dynamic from "next/dynamic";
-import Image from "next/image";
-import { FC, ReactElement, Suspense } from "react";
+import { FC, lazy, ReactElement, Suspense } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { useRecoilState } from "recoil";
 import Button from "./Button";
 import Modal from "./Modal";
 import { TCardContentProps } from "./types";
 
-const RegisteredEventModal = dynamic(() => import("./RegisteredEventModal"), {
-  ssr: false,
-});
+const RegisteredEventModal = lazy(() => import("./RegisteredEventModal"));
 
 const EventBannerInformation: FC<TCardContentProps> = ({
   title,
