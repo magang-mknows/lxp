@@ -4,7 +4,7 @@ import { ImSearch } from "react-icons/im";
 
 const HeroSection = (): ReactElement => {
   return (
-    <div className="lg:grid lg:grid-cols-2 container lg:mx-auto mt-[30px] px-10 lg:px-8 mb-[50px]">
+    <div className="lg:grid lg:grid-cols-2 container mt-[30px] px-10 lg:px-8 mb-[50px]">
       <div className="col-span-1 ">
         <div className="title">
           <h1 className=" text-[50px] font-[700]">Video panduan </h1>
