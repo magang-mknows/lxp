@@ -1,5 +1,7 @@
-import { FC, Fragment, ReactElement } from "react";
-import ConsultingQuestionsList from "../atoms/ConsultingQuestionsList";
+"use client";
+import { FC, lazy, ReactElement, Suspense } from "react";
+
+const ConsultingQuestionsList = lazy(() => import("../atoms/ConsultingQuestionsList"));
 
 const ConsultingAndServiceQuestions: FC = (): ReactElement => {
   const dummyQuestionsList = [
@@ -35,7 +37,9 @@ const ConsultingAndServiceQuestions: FC = (): ReactElement => {
       <section className="px-8 md:px-14 lg:px-16 pb-40 flex flex-col gap-6 ">
         {dummyQuestionsList.map((question, index) => {
           return (
-            <ConsultingQuestionsList key={index} title={question.title} desc={question.desc} />
+            <Suspense key={index}>
+              <ConsultingQuestionsList title={question.title} desc={question.desc} />
+            </Suspense>
           );
         })}
       </section>
