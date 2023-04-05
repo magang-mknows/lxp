@@ -120,7 +120,10 @@ export const guideVideoBreadCumbs = [
   { name: "Panduan", link: "/panduan" },
   { name: "Video Panduan", link: "/panduan/video-panduan" },
 ];
-
+export const discussionRoomBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Ruang Diskusi", link: "/ruang-diskusi" },
+];
 
 export const FeaturesList = [
   {
