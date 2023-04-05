@@ -1,13 +1,14 @@
+"use client";
 import React, { FC, Fragment, ReactElement, Suspense, lazy } from "react";
 import Breadcums from "@/components/atoms/Breadcums";
 import { guideBreadCumbs } from "@/utils/const";
 import HeroSectionLoading from "../../../modules/Guide/HeroSectionLoading";
 import GuideSectionLoading from "../../../modules/Guide/GuideSectionLoading";
 import FaqSectionLoading from "@/modules/Guide/FaqSectionLoading";
+import HeroSection from "./HeroSection";
+import FaqSection from "./FaqSection";
+import GuideSection from "./GuideSection";
 
-const HeroSection = lazy(() => import("./HeroSection"));
-const FaqSection = lazy(() => import("./FaqSection"));
-const GuideSection = lazy(() => import("./GuideSection"));
 const GuidePages: FC = (): ReactElement => {
   return (
     <Fragment>
