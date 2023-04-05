@@ -1,9 +1,9 @@
 import { FC, lazy, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
-import LandingFooter from "@/components/moleculs/LandingFooter";
 
 const Navbar = lazy(() => import("@/components/moleculs/Navbar"));
+const LandingFooter = lazy(() => import("@/components/moleculs/LandingFooter"));
 const LayoutProvider: FC<TProviderProps> = ({ children, className }): ReactElement => {
   return (
     <ClienProvider>
@@ -12,7 +12,9 @@ const LayoutProvider: FC<TProviderProps> = ({ children, className }): ReactEleme
       </Suspense>
       <section className={`pt-[74px] bg-neutral-100 ${className}`}>
         {children}
-        <LandingFooter />
+        <Suspense>
+          <LandingFooter />
+        </Suspense>
       </section>
     </ClienProvider>
   );
