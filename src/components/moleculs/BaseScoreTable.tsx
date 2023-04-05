@@ -1,3 +1,4 @@
+"use client";
 import { FC, ReactElement } from "react";
 
 const BaseScoreTable: FC = (): ReactElement => {
