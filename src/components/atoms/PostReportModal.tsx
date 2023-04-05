@@ -53,7 +53,7 @@ const PostReportModal: FC = (): ReactElement => {
           return (
             <section key={index} className="w-full flex justify-between gap-4">
               <div className="text-neutral-800 w-full text-left">
-                <p>{item.title}</p>
+                <p>{item.title} update branch ds room</p>
               </div>
               <BiRightArrow className="text-neutral-400" />
             </section>

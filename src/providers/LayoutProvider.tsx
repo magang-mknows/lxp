@@ -1,8 +1,12 @@
+"use client";
+import dynamic from "next/dynamic";
 import { FC, lazy, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 
-const Navbar = lazy(() => import("@/components/moleculs/Navbar"));
+const Navbar = dynamic(() => import("@/components/moleculs/Navbar"), {
+  ssr: false,
+});
 const LandingFooter = lazy(() => import("@/components/moleculs/LandingFooter"));
 const LayoutProvider: FC<TProviderProps> = ({ children, className }): ReactElement => {
   return (
