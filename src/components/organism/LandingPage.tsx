@@ -7,17 +7,16 @@ import CatalogLoading from "@/modules/landing/CatalogLoading";
 import HeroLoading from "@/modules/landing/HeroLoading";
 import OfferLoading from "@/modules/landing/OfferLoading";
 import ParthnerLoading from "@/modules/landing/ParthnerLoading";
-import { FC, Fragment, lazy, ReactElement, Suspense } from "react";
+import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";
 import ForgotPassword from "../moleculs/ForgotPassword";
+import LandingArticle from "../moleculs/LandingArticle";
+import LandingBenefits from "../moleculs/LandingBenefits";
+import LandingCatalog from "../moleculs/LandingCatalog";
+import LandingHero from "../moleculs/LandingHero";
+import LandingOffer from "../moleculs/LandingOffer";
+import LandingPartner from "../moleculs/LandingPartner";
 import LoginForm from "../moleculs/LoginForm";
-
-const LandingHero = lazy(() => import("../moleculs/LandingHero"));
-const LandingOffer = lazy(() => import("../moleculs/LandingOffer"));
-const LandingPartner = lazy(() => import("../moleculs/LandingPartner"));
-const LandingCatalog = lazy(() => import("../moleculs/LandingCatalog"));
-const LandingArticle = lazy(() => import("../moleculs/LandingArticle"));
-const LandingBenefits = lazy(() => import("../moleculs/LandingBenefits"));
 
 const LandingPage: FC = (): ReactElement => {
   const { getLoginPopup, setLoginPopup } = useLoginPopup();

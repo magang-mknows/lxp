@@ -5,11 +5,11 @@ import { Tab } from "@headlessui/react";
 import { FC, Fragment, lazy, ReactElement } from "react";
 import { useRecoilState } from "recoil";
 import Breadcums from "../atoms/Breadcums";
+import BaseScoreTable from "../moleculs/BaseScoreTable";
+import SertificateList from "../moleculs/SertificateList";
 
-const SertificateList = lazy(() => import("../moleculs/SertificateList"));
 const ScoreSummaryTable = lazy(() => import("../moleculs/ScoreSummaryTable"));
 const ScoreChart = lazy(() => import("../moleculs/ScoreChart"));
-const BaseScoreTable = lazy(() => import("../moleculs/BaseScoreTable"));
 
 const ScoreSertificatePage: FC = (): ReactElement => {
   const [getShowDetail, setShowDetail] = useRecoilState(showDetailState);
