@@ -5,9 +5,8 @@ import { guideBreadCumbs } from "@/utils/const";
 import HeroSectionLoading from "@/modules/Guide/HeroSectionLoading";
 import GuideSectionLoading from "@/modules/Guide/GuideSectionLoading";
 import FaqSectionLoading from "@/modules/Guide/FaqSectionLoading";
-import HeroSection from "./HeroSection";
-import FaqSection from "./FaqSection";
-import GuideSection from "./GuideSection";
+import dynamic from "next/dynamic";
+
 
 const HeroSection = dynamic(() => import("./HeroSection"), {
   ssr: true,
