@@ -1,11 +1,8 @@
 import RegistrationGuideBookModule from "@/components/organism/RegistrationGuide";
-import { ReactElement, Suspense } from "react";
-const Page = (): ReactElement => {
-  return (
-    <Suspense>
-      <RegistrationGuideBookModule />
-    </Suspense>
-  );
+import { NextPage } from "next";
+import { ReactElement } from "react";
+const Page: NextPage = (): ReactElement => {
+  return <RegistrationGuideBookModule />;
 };
 
 export default Page;

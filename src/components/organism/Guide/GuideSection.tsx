@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ReactElement } from "react";
 import BukuPanduan from "../../../../public/assets/guide/buku-panduan.svg";
 import VideoPlayer from "../../../../public/assets/guide/video-player.svg";

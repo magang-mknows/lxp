@@ -1,3 +1,4 @@
+"use client";
 import React, { ReactElement } from "react";
 import Image from "next/image";
 import PanduanHero from "../../../../public/assets/guide/panduan-hero.svg";
