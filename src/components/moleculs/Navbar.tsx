@@ -40,14 +40,13 @@ const Navbar = () => {
         <NavbarFeatureMenu />
         <NavbarThemeOption />
         <section className="lg:flex gap-4 hidden">
-          <Link href={"/masuk"} passHref>
-            <NavButton
-              type="secondary"
-              text="Masuk"
-              size="small"
-              onClick={() => setLoginPopup(true)}
-            />
-          </Link>
+          <NavButton
+            type="secondary"
+            text="Masuk"
+            size="small"
+            onClick={() => setLoginPopup(true)}
+          />
+
           <Link href={"daftar"} passHref>
             <NavButton type="primary" text="Daftar" size="small" />
           </Link>
