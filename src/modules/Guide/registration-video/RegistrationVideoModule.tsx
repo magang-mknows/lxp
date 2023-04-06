@@ -1,4 +1,3 @@
-import GuideBookPages from "@/components/organism/GuideBook/GuideBook";
 import RegistrationVideoPages from "@/components/organism/RegistrationVideo/RegistrationVideoPages";
 import LayoutProvider from "@/providers/LayoutProvider";
 import React, { ReactElement } from "react";

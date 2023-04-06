@@ -6,7 +6,6 @@ const YoutubeSection = (props: videoGuideTypes): ReactElement => {
   const { videoId } = props;
 
   const onPlayerReady: YouTubeProps["onReady"] = (event) => {
-    // access to player in all event handlers via event.target
     event.target.pauseVideo();
   };
   const opts: YouTubeProps["opts"] = {
