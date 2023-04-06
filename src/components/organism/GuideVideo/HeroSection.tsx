@@ -1,4 +1,5 @@
-import React, { ReactElement } from "react";
+"use client";
+import { ReactElement } from "react";
 import Image from "next/image";
 import { ImSearch } from "react-icons/im";
 

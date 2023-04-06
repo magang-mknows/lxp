@@ -1,7 +1,8 @@
 import GuideModule from "@/modules/Guide/GuideModule";
-import React, { FC, ReactElement } from "react";
+import { NextPage } from "next";
+import React, { ReactElement } from "react";
 
-const page: FC = (): ReactElement => {
+const page: NextPage = (): ReactElement => {
   return <GuideModule />;
 };
 

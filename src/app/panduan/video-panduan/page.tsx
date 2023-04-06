@@ -1,12 +1,9 @@
 import GuideVideoModule from "@/modules/Guide/guide-video/GuideVideoModule";
-import React, { ReactElement, Suspense } from "react";
+import { NextPage } from "next";
+import React, { ReactElement } from "react";
 
-const Page = (): ReactElement => {
-  return (
-    <Suspense>
-      <GuideVideoModule />
-    </Suspense>
-  );
+const Page: NextPage = (): ReactElement => {
+  return <GuideVideoModule />;
 };
 
 export default Page;
