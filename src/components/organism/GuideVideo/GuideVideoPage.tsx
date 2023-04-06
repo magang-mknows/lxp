@@ -1,25 +1,25 @@
-import React, { ReactElement, Suspense } from "react";
-import ContentSection from "./ContentSection";
-import HeroSection from "./HeroSection";
+"use client";
+import { Fragment, ReactElement, Suspense } from "react";
 import Breadcums from "@/components/atoms/Breadcums";
-import LayoutProvider from "@/providers/LayoutProvider";
 import { guideVideoBreadCumbs } from "@/utils/const";
+import dynamic from "next/dynamic";
+
+const HeroSection = dynamic(() => import("./HeroSection"), {
+  ssr: true,
+});
+const ContentSection = dynamic(() => import("./ContentSection"), {
+  ssr: true,
+});
 
 const GuideVideoPages = (): ReactElement => {
   return (
-    <div>
-      <LayoutProvider className="!bg-[#fff]">
-        <Suspense>
-          <Breadcums items={guideVideoBreadCumbs} />
-        </Suspense>
-        <Suspense>
-          <HeroSection />
-        </Suspense>
-        <Suspense>
-          <ContentSection />
-        </Suspense>
-      </LayoutProvider>
-    </div>
+    <Fragment>
+      <Breadcums items={guideVideoBreadCumbs} />
+      <Suspense>
+        <HeroSection />
+        <ContentSection />
+      </Suspense>
+    </Fragment>
   );
 };
 

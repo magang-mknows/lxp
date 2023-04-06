@@ -2,8 +2,8 @@
 import React, { FC, Fragment, ReactElement, Suspense, lazy } from "react";
 import Breadcums from "@/components/atoms/Breadcums";
 import { guideBreadCumbs } from "@/utils/const";
-import HeroSectionLoading from "../../../modules/Guide/HeroSectionLoading";
-import GuideSectionLoading from "../../../modules/Guide/GuideSectionLoading";
+import HeroSectionLoading from "@/modules/Guide/HeroSectionLoading";
+import GuideSectionLoading from "@/modules/Guide/GuideSectionLoading";
 import FaqSectionLoading from "@/modules/Guide/FaqSectionLoading";
 import dynamic from "next/dynamic";
 
