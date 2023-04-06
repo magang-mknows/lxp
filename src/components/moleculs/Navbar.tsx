@@ -10,6 +10,7 @@ import NavbarMobileMenu from "../atoms/NavbarMobileMenu";
 import dynamic from "next/dynamic";
 import useWindowScroll from "@/hooks/navabar/useWindowScroll";
 import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
+import Link from "next/link";
 
 const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
   ssr: false,
@@ -45,7 +46,10 @@ const Navbar = () => {
             size="small"
             onClick={() => setLoginPopup(true)}
           />
-          <NavButton type="primary" text="Daftar" size="small" />
+
+          <Link href={"daftar"} passHref>
+            <NavButton type="primary" text="Daftar" size="small" />
+          </Link>
         </section>
       </div>
     </nav>
