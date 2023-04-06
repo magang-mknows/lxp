@@ -1,3 +1,4 @@
+"use client";
 import AboutHeroLoading from "@/modules/about/AboutHeroLoading";
 import AboutJobsLoading from "@/modules/about/AboutJobsLoading";
 import dynamic from "next/dynamic";

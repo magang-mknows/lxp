@@ -52,7 +52,7 @@ const dummyGuide = [
 
 const ContentSection = (): ReactElement => {
   return (
-    <div className="w-full px-6 md:px-8 lg:px10  container lg:mx-auto mt-[30px] lg:px-0 mb-[50px]">
+    <div className="w-full px-6 md:px-8 lg:px10  container lg:mx-auto mt-[30px] lg:px-16 mb-[50px]">
       <div className="title">
         <h1 className="font-[700] text-[16px]">Buku panduan lainnya</h1>
       </div>

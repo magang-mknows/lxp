@@ -9,6 +9,15 @@ import HeroSection from "./HeroSection";
 import FaqSection from "./FaqSection";
 import GuideSection from "./GuideSection";
 
+const HeroSection = dynamic(() => import("./HeroSection"), {
+  ssr: true,
+});
+const FaqSection = dynamic(() => import("./FaqSection"), {
+  ssr: true,
+});
+const GuideSection = dynamic(() => import("./GuideSection"), {
+  ssr: true,
+});
 const GuidePages: FC = (): ReactElement => {
   return (
     <Fragment>
