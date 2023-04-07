@@ -1,16 +1,14 @@
+"use client";
+
 import { ConsultingBreadCumbs } from "@/utils/const";
-import dynamic from "next/dynamic";
-import React, { FC, ReactElement } from "react";
+import React, { FC, lazy, ReactElement, Suspense } from "react";
 
 import Breadcums from "../atoms/Breadcums";
 import ConstultingQuestionsHeader from "../moleculs/ConstultingQuestionsHeader";
 import ConsultingAndServiceHeader from "../moleculs/ConsultingAndServiceHeader";
 import ConsultingAndServiceProduct from "../moleculs/ConsultingAndServiceProduct";
-const ConsultingAndServiceQuestions = dynamic(
+const ConsultingAndServiceQuestions = lazy(
   () => import("../moleculs/ConsultingAndServiceQuestions"),
-  {
-    ssr: false,
-  },
 );
 
 const ConsultingPage: FC = (): ReactElement => {
@@ -20,7 +18,9 @@ const ConsultingPage: FC = (): ReactElement => {
       <ConsultingAndServiceHeader />
       <ConsultingAndServiceProduct />
       <ConstultingQuestionsHeader />
-      <ConsultingAndServiceQuestions />
+      <Suspense>
+        <ConsultingAndServiceQuestions />
+      </Suspense>
     </section>
   );
 };

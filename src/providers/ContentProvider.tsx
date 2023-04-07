@@ -1,19 +1,17 @@
 "use client";
 
-import ContentFooter from "@/components/moleculs/ContentFooter";
 import { BottomNavMenu } from "@/utils/const";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
-import { FC, ReactElement, Suspense } from "react";
+import { FC, lazy, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 
-const Navbar = dynamic(() => import("../components/moleculs/Navbar"), {
+const Navbar = dynamic(() => import("@/components/moleculs/Navbar"), {
   ssr: false,
 });
-const BottomMenu = dynamic(() => import("../components/atoms/BottomMenu"), {
-  ssr: false,
-});
+const BottomMenu = lazy(() => import("@/components/atoms/BottomMenu"));
+const ContentFooter = lazy(() => import("@/components/moleculs/ContentFooter"));
 
 const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
   const pathname = usePathname();
@@ -23,11 +21,19 @@ const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
 
   return (
     <ClienProvider>
-      <Navbar />
+      <Suspense>
+        <Navbar />
+      </Suspense>
       <section className="pt-[74px] bg-neutral-100 ">
-        {bottomMenuLink.includes(pathname) && <BottomMenu />}
+        {bottomMenuLink.includes(pathname) && (
+          <Suspense>
+            <BottomMenu />
+          </Suspense>
+        )}
         {children}
-        <ContentFooter />
+        <Suspense>
+          <ContentFooter />
+        </Suspense>
       </section>
     </ClienProvider>
   );

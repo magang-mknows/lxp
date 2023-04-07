@@ -1,3 +1,4 @@
+"use client";
 import { DocServiceBreadCumbs } from "@/utils/const";
 import { FC, ReactElement } from "react";
 import Breadcums from "../atoms/Breadcums";

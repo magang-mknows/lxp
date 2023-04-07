@@ -94,6 +94,36 @@ export const UniqueEventBreadCumbs = [
     link: "/acara-unik",
   },
 ];
+export const ScoreSertificateBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Nilai & Sertikat",
+    link: "/nilai-sertifikat",
+  },
+];
+
+export const guideBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Panduan", link: "/panduan" },
+];
+
+export const guideBookBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Panduan", link: "/panduan" },
+  { name: "Buku Panduan", link: "/panduan/buku-panduan" },
+];
+export const guideVideoBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Panduan", link: "/panduan" },
+  { name: "Video Panduan", link: "/panduan/video-panduan" },
+];
+export const discussionRoomBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Ruang Diskusi", link: "/ruang-diskusi" },
+];
 
 export const FeaturesList = [
   {
@@ -247,8 +277,8 @@ export const BottomNavMenu = [
     link: "/rencana-pelatihan",
   },
   {
-    title: "Rencana Pelatihan",
-    link: "/rencana-pelatihan",
+    title: "Nilai & Sertifikat",
+    link: "/nilai-sertifikat",
   },
   {
     title: "Konsultasi & Layanan",
@@ -264,3 +294,6 @@ export const AssigmentStatus = [
   "Sedang Dinilai",
   "Selesai",
 ];
+
+export const ScoreSertificateMenu = ["Nilai", "Sertifikat"];
+export const SertificateFilterOptions = ["Semua", "Pelatihan", "Webinar"];

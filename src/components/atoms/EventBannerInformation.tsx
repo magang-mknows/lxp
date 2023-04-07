@@ -1,7 +1,13 @@
-import { FC, ReactElement } from "react";
+"use client";
+import { EventRegModalState } from "@/store/unique-event";
+import { FC, lazy, ReactElement, Suspense } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
+import { useRecoilState } from "recoil";
 import Button from "./Button";
+import Modal from "./Modal";
 import { TCardContentProps } from "./types";
+
+const RegisteredEventModal = lazy(() => import("./RegisteredEventModal"));
 
 const EventBannerInformation: FC<TCardContentProps> = ({
   title,
@@ -9,6 +15,8 @@ const EventBannerInformation: FC<TCardContentProps> = ({
   list,
   subTitle,
 }): ReactElement => {
+  const [getModalState, setModalState] = useRecoilState(EventRegModalState);
+
   return (
     <div className="py-4">
       <h1 className="text-2xl font-bold mb-7 text-neutral-900">{title}</h1>
@@ -25,7 +33,19 @@ const EventBannerInformation: FC<TCardContentProps> = ({
       </div>
       <h1 className="text-version3-500 font-bold text-2xl mb-7">{subTitle}</h1>
       <p className="text-sm text-neutral-600 mb-7">{desc}</p>
-      <Button type="primary" text="Daftar Sekarang" size="extraLarge" />
+      <Button
+        type="primary"
+        text="Daftar Sekarang"
+        size="extraLarge"
+        onClick={() => {
+          setModalState(true);
+        }}
+      />
+      <Modal lookup={getModalState} onClose={() => setModalState(false)}>
+        <Suspense>
+          <RegisteredEventModal />
+        </Suspense>
+      </Modal>
     </div>
   );
 };

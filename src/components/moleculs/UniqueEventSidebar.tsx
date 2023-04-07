@@ -8,7 +8,7 @@ const UniqueSidebarOptions = dynamic(() => import("../atoms/UniqueSidebarOptions
 
 const UniqueEventSidebar: FC = (): ReactElement => {
   return (
-    <section className="col-span-1">
+    <section className="col-span-2 lg:col-span-1">
       <UniqueSidebaerHeader />
       <UniqueSidebarOptions />
     </section>

@@ -1,25 +1,14 @@
+"use client";
 import { DashboardBreadCumbs } from "@/utils/const";
-import dynamic from "next/dynamic";
 import React, { FC, ReactElement } from "react";
-
-const Breadcums = dynamic(() => import("../atoms/Breadcums"), { ssr: false });
-const DashbordResume = dynamic(() => import("../moleculs/DashboardResume"), { ssr: false });
-const DashboardArticle = dynamic(() => import("../moleculs/DashboardArticle"), { ssr: false });
-const DashboardLeaderBoard = dynamic(() => import("../moleculs/DashboardLeaderBoard"), {
-  ssr: false,
-});
-const DashboardEvent = dynamic(() => import("../moleculs/DashboardEvent"), {
-  ssr: false,
-});
-const DashboardTask = dynamic(() => import("../moleculs/DashboardTask"), {
-  ssr: false,
-});
-const DashboardProgress = dynamic(() => import("../moleculs/DashboardProgress"), {
-  ssr: false,
-});
-const DashboardCalendar = dynamic(() => import("../moleculs/DashboardCalendar"), {
-  ssr: false,
-});
+import Breadcums from "../atoms/Breadcums";
+import DashboardArticle from "../moleculs/DashboardArticle";
+import DashboardCalendar from "../moleculs/DashboardCalendar";
+import DashboardEvent from "../moleculs/DashboardEvent";
+import DashboardLeaderBoard from "../moleculs/DashboardLeaderBoard";
+import DashboardProgress from "../moleculs/DashboardProgress";
+import DashbordResume from "../moleculs/DashboardResume";
+import DashboardTask from "../moleculs/DashboardTask";
 
 const DashboardPage: FC = (): ReactElement => {
   return (

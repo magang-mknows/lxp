@@ -1,20 +1,24 @@
-import LandingFooter from "@/components/moleculs/LandingFooter";
+"use client";
 import dynamic from "next/dynamic";
-import { FC, ReactElement } from "react";
+import { FC, lazy, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 
 const Navbar = dynamic(() => import("@/components/moleculs/Navbar"), {
   ssr: true,
 });
-
-const LayoutProvider: FC<TProviderProps> = ({ children }): ReactElement => {
+const LandingFooter = lazy(() => import("@/components/moleculs/LandingFooter"));
+const LayoutProvider: FC<TProviderProps> = ({ children, className }): ReactElement => {
   return (
     <ClienProvider>
-      <Navbar />
-      <section className="pt-[74px] bg-neutral-100">
+      <Suspense>
+        <Navbar />
+      </Suspense>
+      <section className={`pt-[74px] bg-neutral-100 ${className}`}>
         {children}
-        <LandingFooter />
+        <Suspense>
+          <LandingFooter />
+        </Suspense>
       </section>
     </ClienProvider>
   );
