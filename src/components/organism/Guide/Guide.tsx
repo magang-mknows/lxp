@@ -7,6 +7,7 @@ import GuideSectionLoading from "@/modules/Guide/GuideSectionLoading";
 import FaqSectionLoading from "@/modules/Guide/FaqSectionLoading";
 import dynamic from "next/dynamic";
 
+
 const HeroSection = dynamic(() => import("./HeroSection"), {
   ssr: true,
 });

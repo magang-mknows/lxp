@@ -1,7 +1,6 @@
-import React, { ReactElement } from "react";
 import GuideModulesLoading from "@/modules/Guide/GuideModulesLoading";
 
-const loading = (): ReactElement => {
+const loading = () => {
   return <GuideModulesLoading />;
 };
 
