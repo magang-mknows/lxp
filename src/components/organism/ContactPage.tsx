@@ -9,7 +9,7 @@ const ContactContainer = dynamic(() => import("../moleculs/ContactContainer"), {
 
 const ContactPage: FC = (): ReactElement => {
   return (
-    <section className=" bg-neutral-100/70">
+    <section className=" bg-neutral-100/70 min-h-[100vh]">
       <Suspense fallback={<ContactLoading />}>
         <ContactContainer />
       </Suspense>

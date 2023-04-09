@@ -125,6 +125,11 @@ export const discussionRoomBreadCumbs = [
   { name: "Ruang Diskusi", link: "/ruang-diskusi" },
 ];
 
+export const RequestSimulationBreadCumbs = [
+  { name: "Drill, Simulasi & Assessmen", link: "/drill-simulasi" },
+  { name: "Pengajuan Jadwal Simulasi", link: "/drill-simulasi" },
+];
+
 export const FeaturesList = [
   {
     title: "Administrasi",
@@ -297,3 +302,5 @@ export const AssigmentStatus = [
 
 export const ScoreSertificateMenu = ["Nilai", "Sertifikat"];
 export const SertificateFilterOptions = ["Semua", "Pelatihan", "Webinar"];
+
+export const drillSimulationiType = ["Pengajuan Simulasi", "Riwayat Simulasi"];
