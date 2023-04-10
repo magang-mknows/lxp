@@ -5,11 +5,11 @@ import { useRecoilValue } from "recoil";
 import HistorySimulationCard from "../atoms/HistorySimulationCard";
 
 const HistorySimulation: FC = (): ReactElement => {
-  const registeresSimulation = useRecoilValue(dummyRegisteredSimulation);
-
+  const registeredSimulation = useRecoilValue(dummyRegisteredSimulation);
+  console.log(registeredSimulation);
   return (
     <Fragment>
-      {registeresSimulation.map((item, index) => {
+      {registeredSimulation.map((item, index) => {
         return (
           <HistorySimulationCard
             key={index}
@@ -19,6 +19,7 @@ const HistorySimulation: FC = (): ReactElement => {
             location={item.location}
             schedule={item.schedule}
             title={item.title}
+            status={item.status}
           />
         );
       })}

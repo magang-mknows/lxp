@@ -22,7 +22,7 @@ const RequestSceduleSuccessModal: FC<TDrillSimulationPopup> = ({
           loading="eager"
         />
       </figure>
-      <h1 className="text-neutral-900 font-bold text-sm mb-2">{title}</h1>
+      <h1 className="text-neutral-900 font-bold text-base">{title}</h1>
       {children}
     </section>
   );

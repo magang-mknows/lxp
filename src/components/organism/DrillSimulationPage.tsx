@@ -1,5 +1,5 @@
 "use client";
-import { drillSimulationiType } from "@/utils/const";
+import { drillSimulationType } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import dynamic from "next/dynamic";
 import { FC, ReactElement, Suspense } from "react";
@@ -18,7 +18,7 @@ const DrillSimulationPage: FC = (): ReactElement => {
       <DrillSimulationHeader />
       <Tab.Group>
         <Tab.List className="mx-8 md:mx-14 lg:mx-16  border-b-[1px] text-sm border-neutral-400">
-          {drillSimulationiType.map((type, index) => {
+          {drillSimulationType.map((type, index) => {
             return (
               <Tab key={index}>
                 {({ selected }) => (

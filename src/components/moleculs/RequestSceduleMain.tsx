@@ -149,9 +149,9 @@ const RequestSceduleMain: FC = (): ReactElement => {
                       ImgSrc: "/assets/drill/dummyImg.svg",
                       category: item.category,
                       location: item.location,
+                      status: "registered",
                     },
                   ]);
-                  setSelected({ date: "", time: "" });
                 }}
               />
             </div>
@@ -162,7 +162,9 @@ const RequestSceduleMain: FC = (): ReactElement => {
         withClose={false}
         hasImage={false}
         lookup={isShowPopup}
-        onClose={() => setShowPopup(false)}
+        onClose={() => {
+          setShowPopup(false);
+        }}
       >
         <RequestSceduleSuccessModal title="Berhasil Mengajukan Simulasi!" type="sent">
           <p className="text-neutral-500 text-sm text-center">

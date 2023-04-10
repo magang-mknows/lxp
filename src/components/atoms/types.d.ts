@@ -29,7 +29,7 @@ export type TCardContentProps = {
 };
 
 export type TDrillSimulationPopup = {
-  type: "sent" | "pending" | "finised";
+  type: "sent" | "pending" | "finished";
   title: string;
   children: ReactNode;
 };

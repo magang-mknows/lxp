@@ -37,14 +37,14 @@ const RequestSimulationCard: FC<TDrillSimulationType> = ({
         <Link
           href={`drill-simulasi/pengajuan-jadwal/${title}`}
           passHref
-          className="w-full flex justify-start lg:justify-end"
+          className="w-full flex justify-start xl:justify-end"
         >
           <Button
             type="primary"
             size="large"
             text={schedule.length !== 0 ? "Lihat Jadwal Simulasi" : "Tidak Ada Jadwal Tersedia"}
             className={`${
-              schedule.length === 0 && "!bg-neutral-300 !text-neutral-400 !border-none"
+              schedule.length === 0 && "!bg-neutral-300 !text-neutral-400 !border-none !text-xs"
             }`}
           />
         </Link>

@@ -303,4 +303,4 @@ export const AssigmentStatus = [
 export const ScoreSertificateMenu = ["Nilai", "Sertifikat"];
 export const SertificateFilterOptions = ["Semua", "Pelatihan", "Webinar"];
 
-export const drillSimulationiType = ["Pengajuan Simulasi", "Riwayat Simulasi"];
+export const drillSimulationType = ["Pengajuan Simulasi", "Riwayat Simulasi"];

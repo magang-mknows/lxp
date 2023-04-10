@@ -11,4 +11,5 @@ export type TDrillSimulationType = {
   category: string;
   title: string;
   location: string;
+  status?: string;
 };

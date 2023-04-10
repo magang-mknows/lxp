@@ -1,9 +1,14 @@
 "use client";
+import { finishPopupState } from "@/store/drill-simulation";
 import { TDrillSimulationType } from "@/store/drill-simulation/type";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactElement } from "react";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { useRecoilState } from "recoil";
 import Button from "./Button";
+import Modal from "./Modal";
+import RequestSceduleSuccessModal from "./RequestSceduleSuccessModal";
 
 const HistorySimulationCard: FC<TDrillSimulationType> = ({
   ImgSrc,
@@ -12,12 +17,14 @@ const HistorySimulationCard: FC<TDrillSimulationType> = ({
   location,
   schedule,
   title,
+  status,
 }): ReactElement => {
-  console.log(schedule);
+  const [isShowFinishPopup, setShowFinishPopup] = useRecoilState(finishPopupState);
+
   return (
-    <section className="w-full h-[140px] bg-neutral-50 flex justify-between items-center ">
-      <section className="flex items-center gap-10 border-l-[10px] border-version3-500 px-4 py-4 rounded-md shadow-sm ">
-        <figure className="h-[80px] rounded-md overflow-hidden  w-52 grid place-items-center shadow-sm ">
+    <section className="w-full h-[140px] bg-neutral-50 shadow-sm hover:shadow-md hover:bg-neutral-100 transition-all ease-in-out duration-150 flex justify-between items-center border-l-[10px] border-version3-500 rounded-md overflow-hidden cursor-pointer">
+      <section className="flex items-center bg-neutral-50/0 gap-10 px-4 py-4 rounded-md ">
+        <figure className="h-[80px] rounded-md overflow-hidden  w-52 grid place-items-center ">
           <Image
             src={"/assets/drill/dummyImg.svg"}
             alt="dummy-view"
@@ -33,14 +40,26 @@ const HistorySimulationCard: FC<TDrillSimulationType> = ({
         </main>
       </section>
       <section className="px-4 py-4 flex flex-col items-center gap-2 ">
-        <Link passHref href={`drill-simulasi/perubahan-jadwal/${title}`}>
-          <Button
-            text="Ajukan Perubahan Jadwal"
-            type="primary"
-            size="large"
-            className="!py-2 !text-xs"
-          />
-        </Link>
+        {status === "finished" ? (
+          <div
+            className="flex items-center flex-col gap-1"
+            onClick={() => {
+              setShowFinishPopup(true);
+            }}
+          >
+            <AiFillCheckCircle className="text-xl text-[#3EB449]" />
+            <h1 className="text-sm font-bold text-[#3EB449]">SELESAI</h1>
+          </div>
+        ) : (
+          <Link passHref href={`drill-simulasi/perubahan-jadwal/${title}`}>
+            <Button
+              text="Ajukan Perubahan Jadwal"
+              type="primary"
+              size="large"
+              className="!py-2 !text-xs"
+            />
+          </Link>
+        )}
         {schedule.map((item, index) => {
           return (
             <h1 className="text-sm text-neutral-700" key={index}>
@@ -55,6 +74,43 @@ const HistorySimulationCard: FC<TDrillSimulationType> = ({
           );
         })}
       </section>
+      <Modal
+        withClose={false}
+        hasImage={false}
+        lookup={isShowFinishPopup}
+        onClose={() => {
+          setShowFinishPopup(false);
+        }}
+      >
+        <RequestSceduleSuccessModal title="Anda Telah Selesai Melakukan Simulasi!" type="finished">
+          <p className="text-neutral-500 text-sm text-center">
+            Kamu telah melakukan simulasi di tanggal{" "}
+            {schedule.map((item, index) => {
+              return (
+                <span key={index} className="font-bold">
+                  {item.time.map((time, index) => {
+                    return (
+                      <span key={index}>
+                        {time.title} pukul {time.value}
+                      </span>
+                    );
+                  })}
+                </span>
+              );
+            })}
+          </p>
+          <section className="w-full flex justify-center pt-4">
+            <Button
+              type="primary"
+              text="tutup"
+              size="medium"
+              onClick={() => {
+                setShowFinishPopup(false);
+              }}
+            />
+          </section>
+        </RequestSceduleSuccessModal>
+      </Modal>
     </section>
   );
 };
