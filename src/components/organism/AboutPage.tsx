@@ -15,7 +15,7 @@ const AboutJobs = dynamic(() => import("../moleculs/AboutJobs"), {
 
 const AboutPage: FC = (): ReactElement => {
   return (
-    <Fragment>
+    <section className="min-h-[100vh]">
       <Suspense fallback={<AboutHeroLoading />}>
         <AboutHero />
       </Suspense>
@@ -25,7 +25,7 @@ const AboutPage: FC = (): ReactElement => {
       <Suspense fallback={<AboutJobsLoading />}>
         <AboutJobs />
       </Suspense>
-    </Fragment>
+    </section>
   );
 };
 

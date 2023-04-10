@@ -130,6 +130,7 @@ export const guideDictinoaryBreadCumbs = [
   { name: "Kamus LMS MKnows", link: "/panduan/video-panduan/kamus" },
 ];
 
+
 export const leaderBoardBreadCumbs = [
   {
     name: "Home",
@@ -143,6 +144,10 @@ export const leaderBoardBreadCumbs = [
     name: "Papan Skor",
     link: "/papan-skor",
   },
+];
+export const RequestSimulationBreadCumbs = [
+  { name: "Drill, Simulasi & Assessmen", link: "/drill-simulasi" },
+  { name: "Pengajuan Jadwal Simulasi", link: "/drill-simulasi" },
 ];
 export const FeaturesList = [
   {
@@ -316,3 +321,5 @@ export const AssigmentStatus = [
 
 export const ScoreSertificateMenu = ["Nilai", "Sertifikat"];
 export const SertificateFilterOptions = ["Semua", "Pelatihan", "Webinar"];
+
+export const drillSimulationType = ["Pengajuan Simulasi", "Riwayat Simulasi"];

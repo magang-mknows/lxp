@@ -27,6 +27,12 @@ export type TCardContentProps = {
   list?: Array<string>;
   link?: string;
 };
+
+export type TDrillSimulationPopup = {
+  type: "sent" | "pending" | "finished";
+  title: string;
+  children: ReactNode;
+};
 export type CardAssigment = {
   titleAssigment: string;
   category: string;
