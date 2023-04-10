@@ -22,7 +22,7 @@ const HistorySimulationCard: FC<TDrillSimulationType> = ({
   const [isShowFinishPopup, setShowFinishPopup] = useRecoilState(finishPopupState);
 
   return (
-    <section className="w-full h-[140px] bg-neutral-50 shadow-sm hover:shadow-md hover:bg-neutral-100 transition-all ease-in-out duration-150 flex justify-between items-center border-l-[10px] border-version3-500 rounded-md overflow-hidden cursor-pointer">
+    <section className="w-full min-h-[140px] mb-4 bg-neutral-50 shadow-sm hover:shadow-md hover:bg-neutral-100 transition-all ease-in-out duration-150 flex flex-wrap justify-between items-center border-l-[10px] border-version3-500 rounded-md overflow-hidden cursor-pointer">
       <section className="flex items-center bg-neutral-50/0 gap-10 px-4 py-4 rounded-md ">
         <figure className="h-[80px] rounded-md overflow-hidden  w-52 grid place-items-center ">
           <Image
@@ -42,7 +42,7 @@ const HistorySimulationCard: FC<TDrillSimulationType> = ({
       <section className="px-4 py-4 flex flex-col items-center gap-2 ">
         {status === "finished" ? (
           <div
-            className="flex items-center flex-col gap-1"
+            className="flex  w-full items-start lg:items-center flex-col gap-1"
             onClick={() => {
               setShowFinishPopup(true);
             }}
