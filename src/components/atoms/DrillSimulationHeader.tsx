@@ -1,0 +1,20 @@
+"use client";
+import { FC, ReactElement } from "react";
+import DrillSimulationSearch from "./DrillSimulationSearch";
+
+const DrillSimulationHeader: FC = (): ReactElement => {
+  return (
+    <section className="py-20 px-8 md:px-14 lg:px-16">
+      <div className="text-center">
+        <h1 className="text-3xl text-neutral-900 font-bold mb-2">Simulasi, Drill & Assessment</h1>
+        <p className="text-neutral-700 text-sm">
+          Simulasi, Drill & Assessment meningkatkan kemampuan individu dan membantu mencari bakat
+          terbaik untuk posisi yang tepat.
+        </p>
+      </div>
+      <DrillSimulationSearch />
+    </section>
+  );
+};
+
+export default DrillSimulationHeader;
