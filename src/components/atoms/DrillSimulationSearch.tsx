@@ -8,7 +8,7 @@ const DrillSimulationSearch: FC = (): ReactElement => {
   const [query, setQuery] = useRecoilState(queryScheduleSimulation);
 
   return (
-    <div className="bg-neutral-100 h-[56px] mt-10 mb-10 w-full rounded-md shadow-sm">
+    <div className="bg-neutral-100 h-[56px] mt-10 w-full rounded-md shadow-sm">
       <div className="flex items-center px-4 md:px-6 gap-4 py-4">
         <AiOutlineSearch className="text-neutral-400 text-xl" />
         <input

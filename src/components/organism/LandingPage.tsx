@@ -7,16 +7,36 @@ import CatalogLoading from "@/modules/landing/CatalogLoading";
 import HeroLoading from "@/modules/landing/HeroLoading";
 import OfferLoading from "@/modules/landing/OfferLoading";
 import ParthnerLoading from "@/modules/landing/ParthnerLoading";
+import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";
 import ForgotPassword from "../moleculs/ForgotPassword";
-import LandingArticle from "../moleculs/LandingArticle";
-import LandingBenefits from "../moleculs/LandingBenefits";
-import LandingCatalog from "../moleculs/LandingCatalog";
-import LandingHero from "../moleculs/LandingHero";
-import LandingOffer from "../moleculs/LandingOffer";
-import LandingPartner from "../moleculs/LandingPartner";
 import LoginForm from "../moleculs/LoginForm";
+
+const LandingHero = dynamic(() => import("../moleculs/LandingHero"), {
+  ssr: false,
+  loading: () => <HeroLoading />,
+});
+const LandingArticle = dynamic(() => import("../moleculs/LandingArticle"), {
+  ssr: false,
+  loading: () => <ArticleLoading />,
+});
+const LandingBenefits = dynamic(() => import("../moleculs/LandingBenefits"), {
+  ssr: false,
+  loading: () => <BenefitsLoading />,
+});
+const LandingCatalog = dynamic(() => import("../moleculs/LandingCatalog"), {
+  ssr: false,
+  loading: () => <CatalogLoading />,
+});
+const LandingOffer = dynamic(() => import("../moleculs/LandingOffer"), {
+  ssr: false,
+  loading: () => <OfferLoading />,
+});
+const LandingPartner = dynamic(() => import("../moleculs/LandingPartner"), {
+  ssr: false,
+  loading: () => <ParthnerLoading />,
+});
 
 const LandingPage: FC = (): ReactElement => {
   const { getLoginPopup, setLoginPopup } = useLoginPopup();
