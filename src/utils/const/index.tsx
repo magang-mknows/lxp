@@ -124,12 +124,31 @@ export const discussionRoomBreadCumbs = [
   { name: "Home", link: "/" },
   { name: "Ruang Diskusi", link: "/ruang-diskusi" },
 ];
+export const guideDictinoaryBreadCumbs = [
+  { name: "Home", link: "/" },
+  { name: "Panduan", link: "/panduan" },
+  { name: "Kamus LMS MKnows", link: "/panduan/video-panduan/kamus" },
+];
 
+
+export const leaderBoardBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Dashboard",
+    link: "/dashboard",
+  },
+  {
+    name: "Papan Skor",
+    link: "/papan-skor",
+  },
+];
 export const RequestSimulationBreadCumbs = [
   { name: "Drill, Simulasi & Assessmen", link: "/drill-simulasi" },
   { name: "Pengajuan Jadwal Simulasi", link: "/drill-simulasi" },
 ];
-
 export const FeaturesList = [
   {
     title: "Administrasi",
