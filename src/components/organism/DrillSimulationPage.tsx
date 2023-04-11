@@ -1,4 +1,5 @@
 "use client";
+import DrillSimulationHeaderLoading from "@/modules/drill-simulation/DrillSimulationHeaderLoading";
 import { drillSimulationType } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, ReactElement, Suspense } from "react";
@@ -9,9 +10,7 @@ import RequestSimulation from "../moleculs/RequestSimulation";
 const DrillSimulationPage: FC = (): ReactElement => {
   return (
     <section className="bg-neutral-50/60 min-h-[100vh] pb-20 ">
-      <Suspense>
-        <DrillSimulationHeader />
-      </Suspense>
+      <DrillSimulationHeader />
       <Tab.Group>
         <Tab.List className="mx-8 md:mx-14 lg:mx-16  border-b-[1px] text-sm border-neutral-400">
           {drillSimulationType.map((type, index) => {
