@@ -3,11 +3,7 @@
 import { FC, ReactElement, Suspense } from "react";
 import { RequestSimulationBreadCumbs } from "@/utils/const";
 import Breadcums from "../atoms/Breadcums";
-import dynamic from "next/dynamic";
-
-const RequestSceduleMain = dynamic(() => import("../moleculs/RequestSceduleMain"), {
-  ssr: false,
-});
+import RequestSceduleMain from "../moleculs/RequestSceduleMain";
 
 const RequestScedulePage: FC = (): ReactElement => {
   return (
