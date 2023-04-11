@@ -1,18 +1,16 @@
 import { FC, ReactElement } from "react";
+import DrillSimulationHeaderLoading from "./DrillSimulationHeaderLoading";
 import RequestSimulationCardLoading from "./RequestSimulationCardLoading";
 
 const DrillSimulationLoading: FC = (): ReactElement => {
   return (
     <section className="pt-[74px] bg-neutral-100/70">
-      <section className="pt-20 px-8 md:px-14 lg:px-16 mb-10">
-        <div className="flex w-full justify-center flex-col items-center">
-          <div className=" rounded-mdtext-3xl h-9 bg-neutral-200 animate-pulse rounded-md w-80 text-neutral-900 font-bold mb-2"></div>
-          <p className="text-neutral-700 h-4 w-[600px] bg-neutral-200 animate-pulse rounded-md mb-1"></p>
-          <p className="text-neutral-700 h-4 w-96 bg-neutral-200 animate-pulse rounded-md mb-1"></p>
-        </div>
-        <div className="bg-neutral-200 animate-pulse h-[56px] mt-10 w-full rounded-md shadow-sm"></div>
+      <DrillSimulationHeaderLoading />
+      <section className="pt-10 grid px-8 md:px-14 lg:px-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {[...Array(6)].map((item, index) => {
+          return <RequestSimulationCardLoading key={index} />;
+        })}
       </section>
-      <RequestSimulationCardLoading />
     </section>
   );
 };

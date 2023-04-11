@@ -35,12 +35,12 @@ const RequestSceduleMain: FC = (): ReactElement => {
   return (
     <main className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-5">
       <aside>
-        <figure className="h-[220px]rounded-md overflow-hidden mb-4  w-full">
+        <figure className="h-[220px]  rounded-md overflow-hidden mb-4  w-full">
           <Image
             src={"/assets/drill/dummyImg.svg"}
             alt="dummy-view"
-            width={1000}
-            height={100}
+            width={100}
+            height={70}
             className="w-full"
           />
         </figure>
