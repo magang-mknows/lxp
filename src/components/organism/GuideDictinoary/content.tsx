@@ -9,7 +9,7 @@ const ContentSection = (): ReactElement => {
     <div className="flex flex-col px-6 md:px-8 lg:px10 mt-[30px] mb-[50px]">
       <div className="col-span-1 ">
         <div className="title">
-          <h1 className=" text-[50px] font-[700]">Kamus Kampus Gratis </h1>
+          <h1 className=" text-[50px] font-[700]">Kamus LMS M-KNOWS </h1>
           <p className="text-[14px] font-[400] text-[#737373] dark:text-white">
             Berupa kumpulan istilah yang sering digunakan yang berkaitan dengan penggunaan dan
             fungsi fitur <br /> yang ada di Website LMS M-Knows
