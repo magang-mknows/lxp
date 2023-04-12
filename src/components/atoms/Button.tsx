@@ -10,6 +10,7 @@ const Button: FC<TButtonProps> = ({
   className,
   disabled,
   onClick,
+  iconPosition,
 }): ReactElement => {
   return (
     <button
@@ -27,8 +28,17 @@ const Button: FC<TButtonProps> = ({
       } font-bold transition-colors ease-in-out relative z-10 rounded-md duration-300  border-2 border-version2-500 flex items-center justify-center gap-2 ${className}`}
       onClick={onClick}
     >
-      <p>{text}</p>
-      {icon && icon}
+      {iconPosition === "left" ? (
+        <>
+          {icon && icon}
+          <p>{text}</p>
+        </>
+      ) : (
+        <>
+          <p>{text}</p>
+          {icon && icon}
+        </>
+      )}
     </button>
   );
 };

@@ -130,7 +130,6 @@ export const guideDictinoaryBreadCumbs = [
   { name: "Kamus LMS MKnows", link: "/panduan/video-panduan/kamus" },
 ];
 
-
 export const leaderBoardBreadCumbs = [
   {
     name: "Home",
@@ -148,6 +147,21 @@ export const leaderBoardBreadCumbs = [
 export const RequestSimulationBreadCumbs = [
   { name: "Drill, Simulasi & Assessmen", link: "/drill-simulasi" },
   { name: "Pengajuan Jadwal Simulasi", link: "/drill-simulasi" },
+];
+export const TrainingPlanBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  { name: "Pelatihan", link: "/rencana-pelatihan" },
+];
+export const TrainingContractBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  { name: "Pelatihan", link: "/rencana-pelatihan" },
+  { name: "Kontrak Pelatihan", link: "/kontrak-pelatihan" },
 ];
 export const FeaturesList = [
   {
