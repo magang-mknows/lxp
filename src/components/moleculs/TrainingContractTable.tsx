@@ -10,7 +10,7 @@ const TrainingContractTable: FC = (): ReactElement => {
   return (
     <div className="flex flex-col">
       <div className="-m-1.5 overflow-x-auto mb-6">
-        <div className="p-1.5 min-w-full inline-block align-middle">
+        <div className="p-1.5 min-w-full inline-block align-middle  scrollbar-hide md:scrollbar-default">
           <div className=" rounded-lg shadow overflow-hidden ">
             <table className="min-w-full  divide-neutral-400 ">
               <thead className="bg-secondary-blue-100/20 border-b-2 border-neutral-200">
@@ -38,8 +38,8 @@ const TrainingContractTable: FC = (): ReactElement => {
                   </th>
                 </tr>
               </thead>
-              <tbody className=" text-center  text-neutral-800 font-bold">
-                <tr>
+              <tbody className=" text-center   text-neutral-800 font-bold">
+                <tr className="bg-neutral-100/80">
                   <td className="px-6 py-4  border-b-2 border-neutral-200 dark:border-r-white whitespace-nowrap text-sm dark:text-neutral-50 ">
                     1
                   </td>
