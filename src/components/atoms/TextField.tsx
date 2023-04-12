@@ -89,38 +89,38 @@ const TextField: FC<TextFieldProps> = forwardRef(
             error &&
             !warning &&
             !success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800  "
+            " text-xs md:text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800  "
           }
 
           ${
             error &&
             !warning &&
             success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800  "
+            " text-xs md:text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800  "
           }
 
           ${
             success &&
             !warning &&
             !error &&
-            " text-sm focus:border-green-400 border-green-400  bg-green-50 border-[0.5px] "
+            " text-xs md:text-sm focus:border-green-400 border-green-400  bg-green-50 border-[0.5px] "
           }
           
           ${
             warning &&
             !success &&
             !error &&
-            " text-sm focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px] "
+            " text-xs md:text-sm focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px] "
           }
           
           ${
             !warning &&
             !error &&
             !success &&
-            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-sm"
+            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-xs md:text-sm"
           }
           ${className}
-          border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-sm
+          border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-xs md:text-sm
           `}
             placeholder={placeholder}
             onChange={onChange}

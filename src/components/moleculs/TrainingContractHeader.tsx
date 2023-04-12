@@ -12,10 +12,9 @@ const TrainingContractHeader: FC = (): ReactElement => {
         <aside>
           <Button
             iconPosition="left"
-            icon={<IoIosAdd className="text-2xl" />}
             type="primary"
-            text="Mengajukan"
-            size="large"
+            text="Lihat Detail"
+            size="medium"
             className="!bg-[#3EB449] !border-none hover:!bg-[#319a3b]"
           />
         </aside>

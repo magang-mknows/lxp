@@ -3,7 +3,6 @@
 import { TrainingPlanBreadCumbs } from "@/utils/const";
 import { FC, ReactElement } from "react";
 import Breadcums from "../atoms/Breadcums";
-import Card from "../atoms/Card";
 import TrainingPlanHeader from "../moleculs/TrainingPlanHeader";
 import TrainingPlanMain from "../moleculs/TrainingPlanMain";
 

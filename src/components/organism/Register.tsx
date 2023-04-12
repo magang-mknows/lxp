@@ -5,7 +5,7 @@ import SplashRegisterLoading from "../moleculs/SplashRegisterLoading";
 
 const RegisterPage = () => {
   return (
-    <div className="lg:flex">
+    <div className="grid grid-cols-1 lg:grid-cols-2">
       <Suspense fallback={<SplashRegisterLoading />}>
         <SplashRegister />
       </Suspense>

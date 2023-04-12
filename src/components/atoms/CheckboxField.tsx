@@ -17,25 +17,20 @@ const CheckboxField: FC<CheckboxFieldProps> = forwardRef(
     ref: Ref<HTMLInputElement>,
   ): ReactElement => {
     return (
-      <section className="flex flex-col">
-        <div className="flex justify-start gap-x-4 items-center">
+      <section className="flex flex-col pt-2 md:pt-4">
+        <div className="flex justify-start gap-x-2 items-center">
           <input
             type="checkbox"
             name={name}
             value={value}
-            className={
-              "w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-            }
+            className={"w-4 h-4  outline-none border-blue-600 rounded "}
             required={required}
             checked={checked}
             onChange={onChange}
             disabled={disabled}
             ref={ref}
           />
-          <label
-            htmlFor={name}
-            className={"font-medium text-neutral-800 lg:text-[16px] text-[12px]"}
-          >
+          <label htmlFor={name} className={"font-medium text-neutral-800 text-xs md:text-sm"}>
             {label}
           </label>
         </div>

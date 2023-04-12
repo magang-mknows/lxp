@@ -9,10 +9,10 @@ const TrainingDetail: FC = (): ReactElement => {
   return (
     <div
       className={`${
-        isShowDetail ? "bottom-0" : "-bottom-[100%] hidden"
-      } transition-all bg-neutral-700/50 ease-in-out  flex justify-center items-end duration-300  z-50 lg:px-48  flex-wrap absolute top-0 left-0 right-0 `}
+        isShowDetail ? " top-0 bottom-0 " : "-bottom-[200%]"
+      } transition-all bg-neutral-700/50 ease-in-out  flex justify-center items-end duration-300  z-50 lg:px-48  flex-wrap absolute `}
     >
-      <section className="px-8 md:px-14 py-6 bg-neutral-50 ">
+      <section className="px-8 md:px-14 py-8 bg-neutral-50 rounded-sm ">
         <header className="mb-4">
           <h1 className="text-base font-bold text-neutral-800">Kompetensi yang dikembangkan</h1>
           <p className="text-sm etxt-text-neutral-700">Mata Kuliah Satu</p>

@@ -161,7 +161,7 @@ export const TrainingContractBreadCumbs = [
     link: "/",
   },
   { name: "Pelatihan", link: "/rencana-pelatihan" },
-  { name: "Kontrak Pelatihan", link: "/kontrak-pelatihan" },
+  { name: "Kontrak Pelatihan", link: "/rencana-pelatihan" },
 ];
 export const FeaturesList = [
   {
@@ -337,3 +337,20 @@ export const ScoreSertificateMenu = ["Nilai", "Sertifikat"];
 export const SertificateFilterOptions = ["Semua", "Pelatihan", "Webinar"];
 
 export const drillSimulationType = ["Pengajuan Simulasi", "Riwayat Simulasi"];
+
+export const resgisterSplashData = [
+  {
+    title: "Selamat Datang di LMS MKnows",
+    description:
+      "Platform pelatihan pertama di Indonesia, latihan mudah dengan Learning Experience Platform bisa diakses siapapun khususnya kaum marginal",
+  },
+  {
+    title: "Solusi Pelatihan Berkualitas",
+    description:
+      "Kamu bisa raih jenjang pendidikan yang cemerlang tanpa perlu mengeluarkan biaya sedikitpun",
+  },
+  {
+    title: "Terdapat 16 fitur yang membantu kamu",
+    description: "Dibimbing oleh mentor yang profesional, Dukungan untuk karir masa depan",
+  },
+];

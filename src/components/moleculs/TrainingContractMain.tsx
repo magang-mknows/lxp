@@ -5,7 +5,7 @@ import TrainingContractTable from "./TrainingContractTable";
 
 const TrainingContractMain: FC = (): ReactElement => {
   return (
-    <main className="px-8 md:px-14 lg:px-16">
+    <main className="px-8 md:px-14 lg:px-16  ">
       <TrainingContractAlert />
       <TrainingContractTable />
     </main>

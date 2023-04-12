@@ -1,25 +1,14 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { ReactElement } from "react";
 
 const SplashRegisterLoading = (): ReactElement => {
   return (
-    <div className="bg-[#F5F5F5] w-full rounded-md  ">
-      <div className="logo mt-[46px] mx-[70px]">
-        <div className="w-[180px] h-[88px] bg-neutral-200 animate-pulse rounded-md"></div>
-      </div>
-
-      <div className="pt-[50px] grid place-content-center animate-pulse">
-        <div className="image">
-          <div className="bg-neutral-200 w-[450px] h-[450px] rounded-md"></div>
-        </div>
-        <div className="desc bg-neutral-200">
-          <div className="h-[38px] bg-neutral-200"></div>
-          <div className="text-base font-[400] text-center h-[24px] bg-neutral-200"></div>
-        </div>
-        <div className="flex justify-center gap-[15px] mt-[15px]">
-          <div className="w-12 h-3 transition-all rounded-full bg-neutral-200"></div>
-          <div className="w-3 h-3 transition-all rounded-full bg-neutral-200"></div>
-          <div className="w-3 h-3 transition-all rounded-full bg-neutral-200"></div>
-        </div>
+    <div className="bg-neutral-50  px-8 md:px-14 pt-10 lg:px-16 rounded-md shadow-sm">
+      <div className="logo h-[40px] rounded-md w-[130px] bg-neutral-200 animate-pulse"></div>
+      <div className="h-[400px] bg-neutral-200 animate-pulse rounded-md mt-6 md:mt-10 lg:mt-16 mb-4"></div>
+      <div className="flex justify-center flex-col items-center">
+        <div className="h-4 md:h-6 bg-neutral-200 animate-pulse rounded-md w-[80%] mb-1"></div>
+        <div className="h-4 md:h-6 bg-neutral-200 animate-pulse rounded-md w-[60%]  mb-1"></div>
+        <div className="h-4 md:h-6 bg-neutral-200 animate-pulse rounded-md w-[40%] "></div>
       </div>
     </div>
   );
