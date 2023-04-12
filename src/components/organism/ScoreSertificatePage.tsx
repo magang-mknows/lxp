@@ -2,14 +2,13 @@
 import { showDetailState } from "@/store/score-sertificate";
 import { ScoreSertificateBreadCumbs, ScoreSertificateMenu } from "@/utils/const";
 import { Tab } from "@headlessui/react";
-import { FC, Fragment, lazy, ReactElement } from "react";
+import { FC, Fragment, ReactElement, Suspense } from "react";
 import { useRecoilState } from "recoil";
 import Breadcums from "../atoms/Breadcums";
 import BaseScoreTable from "../moleculs/BaseScoreTable";
+import ScoreChart from "../moleculs/ScoreChart";
+import ScoreSummaryTable from "../moleculs/ScoreSummaryTable";
 import SertificateList from "../moleculs/SertificateList";
-
-const ScoreSummaryTable = lazy(() => import("../moleculs/ScoreSummaryTable"));
-const ScoreChart = lazy(() => import("../moleculs/ScoreChart"));
 
 const ScoreSertificatePage: FC = (): ReactElement => {
   const [getShowDetail, setShowDetail] = useRecoilState(showDetailState);
@@ -45,18 +44,24 @@ const ScoreSertificatePage: FC = (): ReactElement => {
             })}
           </Tab.List>
           <Tab.Panels>
-            {!getShowDetail ? (
-              <Tab.Panel as="section" className="py-2 grid grid-cols-1 lg:grid-cols-2 gap-10">
-                <ScoreChart />
-                <ScoreSummaryTable />
-              </Tab.Panel>
-            ) : (
-              <Tab.Panel as="section" className="py-2">
+            <Tab.Panel
+              as="section"
+              className={`${getShowDetail ? "" : "grid grid-cols-1 lg:grid-cols-2 gap-10"} py-2 `}
+            >
+              {getShowDetail ? (
                 <BaseScoreTable />
-              </Tab.Panel>
-            )}
+              ) : (
+                <Suspense>
+                  <ScoreChart />
+                  <ScoreSummaryTable />
+                </Suspense>
+              )}
+            </Tab.Panel>
+
             <Tab.Panel as="section" className="py-2">
-              <SertificateList />
+              <Suspense>
+                <SertificateList />
+              </Suspense>
             </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>

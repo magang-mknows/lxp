@@ -39,6 +39,28 @@ export const dummySceduleSimulation = atom<Array<TDrillSimulationType>>({
       location: "G Meeting",
     },
     {
+      lecture: "Pak Sumanto",
+      schedule: [
+        {
+          date: "Senin, 17 Januari 2023",
+          time: [
+            {
+              title: "siang",
+              value: ["14.40", "15.10"],
+            },
+            {
+              title: "malam",
+              value: ["18.40", "20.10"],
+            },
+          ],
+        },
+      ],
+      title: "Sejarah Malay",
+      ImgSrc: "/assets/drill/dummyImg.svg",
+      category: "Simulasi",
+      location: "G Meeting",
+    },
+    {
       lecture: "Pak Rungkad",
       schedule: [
         {

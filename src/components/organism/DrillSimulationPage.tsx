@@ -1,16 +1,11 @@
 "use client";
+import DrillSimulationHeaderLoading from "@/modules/drill-simulation/DrillSimulationHeaderLoading";
 import { drillSimulationType } from "@/utils/const";
 import { Tab } from "@headlessui/react";
-import dynamic from "next/dynamic";
 import { FC, ReactElement, Suspense } from "react";
 import DrillSimulationHeader from "../atoms/DrillSimulationHeader";
-
-const RequestSimulation = dynamic(() => import("../moleculs/RequestSimulation"), {
-  ssr: false,
-});
-const HistorySimulation = dynamic(() => import("../moleculs/HistorySimulation"), {
-  ssr: false,
-});
+import HistorySimulation from "../moleculs/HistorySimulation";
+import RequestSimulation from "../moleculs/RequestSimulation";
 
 const DrillSimulationPage: FC = (): ReactElement => {
   return (
