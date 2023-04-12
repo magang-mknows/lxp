@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import ControlledTextField from "../atoms/ControlledInput";
 import { FcGoogle } from "react-icons/fc";
+import CheckboxField from "../atoms/CheckboxField";
 
 const RegisterForm: FC = (): ReactElement => {
   const validationSchema = z
@@ -32,19 +33,18 @@ const RegisterForm: FC = (): ReactElement => {
     resolver: zodResolver(validationSchema),
     mode: "all",
     defaultValues: {
+      fullName: "",
       email: "",
       password: "",
+      confirmPassword: "",
     },
   });
 
   return (
-    <Form
-      onSubmit={"/"}
-      className="lg:w-full sm:w-[620px]flex flex-col justify-center lg:px-[100px] px-10 py-[50px]"
-    >
-      <section className="flex flex-col w-full gap-y-2 mb-4">
-        <h1 className="md:text-5xl text-[36px] text-left text-[#737373] font-[700]">Daftar Akun</h1>
-        <p className="text-left text-[16px] md:text-base font-[400] mb-[30px]">
+    <Form onSubmit={"/"} className="flex flex-col justify-center px-8 md:px-14 lg:px-16 pt-10">
+      <section className="flex flex-col w-full mb-4">
+        <h1 className="text-4xl font-bold text-left text-neutral-700 mb-1">Daftar Akun</h1>
+        <p className="text-sm text-neutral-900 mb-4">
           Silahkan isi data berikut untuk melakukan pendaftaran
         </p>
       </section>
@@ -55,7 +55,7 @@ const RegisterForm: FC = (): ReactElement => {
           name={"fullName"}
           placeholder={"Nama Lengkap"}
           required
-          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
+          className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
         />
         <ControlledTextField
           control={control}
@@ -63,14 +63,14 @@ const RegisterForm: FC = (): ReactElement => {
           name={"email"}
           placeholder={"Email"}
           required
-          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
+          className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
         />
         <ControlledTextField
           control={control}
           type={"password"}
           name={"password"}
           placeholder={"Kata Sandi"}
-          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
+          className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
           required
         />
         <ControlledTextField
@@ -78,40 +78,41 @@ const RegisterForm: FC = (): ReactElement => {
           type={"password"}
           name={"confirmPassword"}
           placeholder={"Konfirmasi Kata Sandi"}
-          className="!h-[60px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
+          className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
           required
         />
       </div>
 
-      <div className="flex justify-between w-full">
-        <Link
-          className="text-[#053D38] lg:text-[16px] text-[12px] font-[600]"
-          href={"/auth/forgot"}
-        >
-          Lupa Password akun-mu?
-        </Link>
+      <div className="flex justify-between w-full pt-2">
+        <CheckboxField
+          name="agrement"
+          control={control}
+          label="Saya setuju dengan syarat & ketentuan"
+          className=" !bg-primary-200"
+        />
       </div>
-      <div className="flex flex-col gap-y-1 my-4">
+      <div className="flex flex-col my-6 md:py-8">
         <Button
           disabled={!isValid}
-          className="!my-4 !w-full !disabled:bg-slate-400 !disabled:text-gray-300 !bg-[#053D38] !text-white !font-bold p-3 !text-1xl !rounded-md !border-0 !text-[#ffff] h-[56px] cursor-pointer"
-          text={"Daftar"}
+          text="Daftar"
+          type="primary"
+          size="full"
+          className="!bg-version2-400 !border-none"
         />
-
         <DashedText />
-
         <Button
-          className="!my-4 !w-full  !border-[#000] !font-bold p-3 !text-1xl !rounded-md !bg-[#FAFAFA] !border-1 !text-[#A3A3A3] h-[56px] cursor-pointer"
-          text="Daftar Dengan Google"
-          type={"primary"}
-          icon={<FcGoogle width={100} h-={100} />}
+          icon={<FcGoogle className="text-xl mr-1" />}
+          iconPosition="left"
+          text="Daftar dengan Google"
+          type="secondary"
+          size="full"
+          className="!border-neutral-600/70 !text-neutral-600/70 "
         />
-        <div className="flex justify-center">
-          <h1 className="text-black">
-            Sudah punya akun ?{" "}
-            <span className="text-[#053D38] text-[18px] font-[600]">
-              {" "}
-              <Link href={"/"}>Masuk disini</Link>{" "}
+        <div className="flex justify-center text-neutral-900 text-xs md:text-sm pt-4">
+          <h1>
+            Sudah punya akun ?
+            <span className="text-version2-400 hover:underline text-xs md:text-sm font-bold">
+              <Link href={"/"}> Masuk disini</Link>
             </span>
           </h1>
         </div>
