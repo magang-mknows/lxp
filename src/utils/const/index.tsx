@@ -129,6 +129,16 @@ export const guideDictinoaryBreadCumbs = [
   { name: "Panduan", link: "/panduan" },
   { name: "Kamus LMS MKnows", link: "/panduan/video-panduan/kamus" },
 ];
+export const AnalyticBreadcumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Analitik",
+    link: "/analytic",
+  },
+];
 
 export const leaderBoardBreadCumbs = [
   {
