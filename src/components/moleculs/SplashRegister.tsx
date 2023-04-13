@@ -10,7 +10,7 @@ import { resgisterSplashData } from "@/utils/const";
 const SplashRegister: FC = (): ReactElement => {
   return (
     <div className="bg-neutral-50  px-6 md:px-14 pt-10 lg:px-16 rounded-md shadow-sm">
-      <Link href={"/"} passHref className="logo">
+      <Link href={"/"} passHref>
         <Image src={"./assets/navbar/logo.svg"} alt={"logo"} height={100} width={130} />
       </Link>
       <Carousel
