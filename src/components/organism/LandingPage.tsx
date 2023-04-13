@@ -11,7 +11,6 @@ import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";
 import ForgotPassword from "../moleculs/ForgotPassword";
-import LoginForm from "../moleculs/LoginForm";
 
 const LandingHero = dynamic(() => import("../moleculs/LandingHero"), {
   ssr: false,
@@ -39,15 +38,9 @@ const LandingPartner = dynamic(() => import("../moleculs/LandingPartner"), {
 });
 
 const LandingPage: FC = (): ReactElement => {
-  const { getLoginPopup, setLoginPopup } = useLoginPopup();
   const { getForgotPopup, setForgotPopup } = useForgotPopup();
   return (
     <Fragment>
-      <Modal withClose hasImage lookup={getLoginPopup} onClose={() => setLoginPopup(false)}>
-        <Suspense>
-          <LoginForm />
-        </Suspense>
-      </Modal>
       <Modal withClose hasImage lookup={getForgotPopup} onClose={() => setForgotPopup(false)}>
         <Suspense>
           <ForgotPassword />
