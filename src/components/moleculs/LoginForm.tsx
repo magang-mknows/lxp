@@ -47,34 +47,33 @@ const LoginForm: FC = (): ReactElement => {
   });
 
   return (
-    <Form
-      onSubmit={"/"}
-      className="lg:w-[720px] sm:w-[620px] lg:h-[800px] sm:h-[600px] flex flex-col justify-center p-8"
-    >
-      <section className="flex flex-col w-full gap-y-2 mb-4">
-        <h1 className="md:text-5xl text-2xl text-center font-black-900 font-[700]">Masuk</h1>
-        <p className="text-center text-[14px] md:text-base">
+    <Form onSubmit={"/"} className=" flex flex-col px-20 py-12">
+      <section className="flex flex-col w-full gap-y-1 mb-6 mt-10">
+        <h1 className="text-center font-bold text-4xl">Masuk</h1>
+        <p className="text-center text-sm">
           Silahkan masuk menggunakan email dan kata sandi yang terdaftar{" "}
         </p>
       </section>
-      <ControlledTextField
-        control={control}
-        type={"email"}
-        name={"email"}
-        placeholder={"Email"}
-        required
-        className="h-[60px] rounded-[8px] mb-5"
-      />
-      <ControlledTextField
-        control={control}
-        type={"password"}
-        name={"password"}
-        placeholder={"*********"}
-        className="h-[60px] rounded-[8px] mb-5"
-        required
-      />
+      <section className="flex flex-col gap-4 mb-4">
+        <ControlledTextField
+          control={control}
+          type={"email"}
+          name={"email"}
+          placeholder={"email"}
+          required
+          className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
+        />
+        <ControlledTextField
+          control={control}
+          type={"password"}
+          name={"password"}
+          placeholder={"*******"}
+          required
+          className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
+        />
+      </section>
 
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between items-center w-full pt-1 mb-6">
         <ControlledCheckboxField
           control={control}
           name={"remember"}
@@ -82,33 +81,38 @@ const LoginForm: FC = (): ReactElement => {
           label={"Remember Me"}
         />
         <a
-          className="text-[#053D38] lg:text-[16px] text-[12px] font-[600] cursor-pointer"
+          className="text-version2-400 font-bold text-xs md:text-sm  hover:underline cursor-pointer"
           onClick={() => openForgot()}
         >
           Lupa Password akun-mu?
         </a>
       </div>
-      <div className="flex flex-col gap-y-1 my-4">
+
+      <div className="flex flex-col gap-y-1 ">
         <Button
           disabled={!isValid}
-          className="!my-4 !w-full !disabled:bg-slate-400 !disabled:text-gray-300 !bg-[#053D38] !text-white !font-bold p-3 !text-1xl !rounded-md !border-0 !text-[#ffff] h-[56px] cursor-pointer"
-          text={"Masuk"}
+          type="primary"
+          text="Masuk"
+          className="!bg-version2-400 disabled:!bg-version2-400/60 !border-none"
+          size="full"
         />
 
         <DashedText />
 
         <Button
-          className="!my-4 !w-full  !border-[#000] !font-bold p-3 !text-1xl !rounded-md !bg-[#FAFAFA] !border-1 !text-[#A3A3A3] h-[56px] cursor-pointer"
-          text="Daftar Dengan Google"
-          type={"primary"}
-          icon={<FcGoogle width={100} h-={100} />}
+          icon={<FcGoogle className="text-xl" />}
+          iconPosition="left"
+          disabled={!isValid}
+          type="secondary"
+          text="Masuk dengan google"
+          className="bg-neutral-50 !border-neutral-500 border-[1px] !text-neutral-500 "
+          size="full"
         />
-        <div className="flex justify-center">
-          <h1 className="text-black">
+        <div className="flex justify-center pt-2">
+          <h1 className="text-xs md:text-sm">
             Belum punya akun ?{" "}
-            <span className="text-[#053D38] text-[18px] font-[600]">
-              {" "}
-              <Link href={"/"}>Daftar disini</Link>{" "}
+            <span className="text-version2-400 font-bold  ">
+              <Link href={"/"}>Daftar disini</Link>
             </span>
           </h1>
         </div>

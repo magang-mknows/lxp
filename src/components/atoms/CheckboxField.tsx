@@ -17,7 +17,7 @@ const CheckboxField: FC<CheckboxFieldProps> = forwardRef(
     ref: Ref<HTMLInputElement>,
   ): ReactElement => {
     return (
-      <section className="flex flex-col pt-2 md:pt-4">
+      <section className="flex flex-col ">
         <div className="flex justify-start gap-x-2 items-center">
           <input
             type="checkbox"

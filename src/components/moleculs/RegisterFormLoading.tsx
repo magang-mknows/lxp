@@ -15,8 +15,8 @@ const RegisterFormLoading: FC = (): ReactElement => {
         );
       })}
       <div className="h-4 bg-neutral-200 w-full rounded-md animate-pulse mt-4 mb-14"></div>
-      <div className="h-12 w-full bg-neutral-200 animate-pulse rounded-md mb-8"></div>
-      <div className="h-2 w-full bg-neutral-200 animate-pulse rounded-md mb-8"></div>
+      <div className="h-12 w-full bg-neutral-200 animate-pulse rounded-md mb-6"></div>
+      <div className="h-2 w-full bg-neutral-200 animate-pulse rounded-md mb-6"></div>
       <div className="h-12 w-full bg-neutral-200 animate-pulse rounded-md mb-8"></div>
       <div className="h-2 w-full bg-neutral-200 animate-pulse rounded-md "></div>
     </div>
