@@ -9,7 +9,7 @@ const LandingOfferThumb: FC = (): ReactElement => {
       className=" w-full h-full relative z-20  "
       height={200}
       width={200}
-      loading="lazy"
+      loading="eager"
     />
   );
 };
