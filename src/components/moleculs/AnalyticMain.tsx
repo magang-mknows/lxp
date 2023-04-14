@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, Suspense } from "react";
 import AnalyticGraph from "../atoms/AnalyticGraph";
 import AnalyticIcon from "../atoms/AnalyticIcon";
 import AnalyticPerformance from "../atoms/AnalyticPerformance";
@@ -19,12 +18,7 @@ const AnalyticMain: FC = (): ReactElement => {
       </section>
       <section className="grid grid-cols-3 gap-7 min-h-[300px]">
         <AnalyticRecentPerformance />
-        <section className="col-span-3 lg:col-span-2 bg-neutral-50 px-8 py-3">
-          <header className="border-b-[0.5px] border-neutral-200 py-2">
-            <h1 className="text-sm font-bold">Analisa Performa Karyawan</h1>
-          </header>
-          <AnalyticPerformance />
-        </section>
+        <AnalyticPerformance />
       </section>
     </main>
   );
