@@ -1,4 +1,5 @@
 "use client";
+import AnalyticSidebarLoading from "@/modules/analytic/AnalyticSidebarLoading";
 import { AnalyticBreadcumbs } from "@/utils/const";
 import { FC, ReactElement } from "react";
 import Breadcums from "../atoms/Breadcums";
