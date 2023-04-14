@@ -170,6 +170,7 @@ export type TDiscussinCardProps = {
   title: string;
   time: string;
   type: string;
+  children: ReactNode;
   countLikes: number;
 };
 

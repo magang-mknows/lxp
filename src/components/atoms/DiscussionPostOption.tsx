@@ -1,11 +1,18 @@
+"use client";
 import { FC, ReactElement, useState } from "react";
 import { GoKebabVertical } from "react-icons/go";
 import { AiFillFlag } from "react-icons/ai";
 import { Menu, Transition } from "@headlessui/react";
 import { BsPencilFill } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
+import ReportSuccessModal from "./ReportSuccessModal";
+import Modal from "./Modal";
 
-const DiscussionPostOption: FC = (): ReactElement => {
+type TOption = {
+  id: string;
+};
+
+const DiscussionPostOption: FC<TOption> = ({ id }): ReactElement => {
   const options = [
     {
       title: "Report",
@@ -21,8 +28,16 @@ const DiscussionPostOption: FC = (): ReactElement => {
     },
   ];
 
+  const [isShow, setShow] = useState(false);
+
   return (
-    <Menu as="div" className={" inline-block bg-neutral-50/0   text-left left-0 mt-1.5"}>
+    <Menu
+      as="div"
+      className={" inline-block bg-neutral-50/0   text-left left-0 mt-1.5"}
+      onClick={() => {
+        console.log("clikeds id :", id);
+      }}
+    >
       <Menu.Button>
         <div className="cursor-pointer text-neutral-800 group">
           <GoKebabVertical />
@@ -47,6 +62,9 @@ const DiscussionPostOption: FC = (): ReactElement => {
               className={
                 "flex gap-3 items-center px-4 py-3 cursor-pointer  hover:bg-neutral-100 transition-all duration-300 ease-in-out"
               }
+              onClick={() => {
+                setShow(true);
+              }}
             >
               {icon}
               <h1 id="post-option" className="text-neutral-800  text-xs text-center">
@@ -56,6 +74,9 @@ const DiscussionPostOption: FC = (): ReactElement => {
           ))}
         </Menu.Items>
       </Transition>
+      <Modal withClose={false} hasImage={false} lookup={isShow} onClose={() => setShow(false)}>
+        {/* <ReportSuccessModal /> */}
+      </Modal>
     </Menu>
   );
 };

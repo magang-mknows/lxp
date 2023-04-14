@@ -6,7 +6,6 @@ import Image from "next/image";
 import { AiFillCloseCircle, AiFillLike } from "react-icons/ai";
 import { GoCommentDiscussion } from "react-icons/go";
 
-import DiscussionPostOption from "./DiscussionPostOption";
 import { TDiscussinCardProps } from "./types";
 
 const DiscussionCard: FC<TDiscussinCardProps> = ({
@@ -18,13 +17,14 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
   time,
   type,
   countLikes,
+  children,
 }): ReactElement => {
   return (
     <Fragment>
       <div
         className={`${
           type === "post" ? "bg-neutral-50" : "bg-neutral-100"
-        } px-5 md:px-8 lg:px-10 py-5  dark:bg-[#222529] border-neutral-100 border-2 dark:border-none rounded-md shadow-sm`}
+        } px-5 md:px-8 lg:px-10 py-5 mb-4   dark:bg-[#222529] border-neutral-100 border-2 dark:border-none rounded-md shadow-sm`}
       >
         <div className="flex justify-between relative">
           <section className=" border-neutral-100/60 flex gap-4 items-center mb-6">
@@ -41,7 +41,7 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
               <p className="text-neutral-400 dark:text-white/80 text-xs">{time}</p>
             </div>
           </section>
-          <DiscussionPostOption />
+          {children}
         </div>
         <section className="text-neutral-900 text-sm">
           {hasImage && (
@@ -70,7 +70,7 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
           </div>
         </section>
       </div>
-      {type == "post" && (
+      {/* {type == "post" && (
         <section className="relative w-fit my-5">
           <Image
             src={"/assets/dashboard/dummyCourse.png"}
@@ -84,7 +84,7 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
             <span className="h-full w-[65%] bg-[#3EB449] dark:bg-[#17A2B8] block"></span>
           </div>
         </section>
-      )}
+      )} */}
     </Fragment>
   );
 };
