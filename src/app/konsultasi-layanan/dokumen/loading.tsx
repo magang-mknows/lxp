@@ -1,4 +1,4 @@
-import DocumentServiceLoading from "@/modules/consulting-service/service/document/DocumentServiceLoading";
+import DocumentServiceLoading from "@/modules/consulting-service/service/document/loading";
 
 const loading = () => {
   return <DocumentServiceLoading />;

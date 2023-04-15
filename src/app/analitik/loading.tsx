@@ -1,4 +1,4 @@
-import AnalyticLoading from "@/modules/analytic/AnalyticLoading";
+import AnalyticLoading from "@/modules/analytic/loading/analytic-loading";
 
 const loading = () => {
   return <AnalyticLoading />;

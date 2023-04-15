@@ -1,4 +1,4 @@
-import UniqueEventLoading from "@/modules/unique-event/UniqueEventLoading";
+import UniqueEventLoading from "@/modules/unique-event/loading";
 
 const loading = () => {
   return <UniqueEventLoading />;

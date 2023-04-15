@@ -5,7 +5,7 @@ import search from "/public/assets/guide/search.svg";
 import { useRecoilValue } from "recoil";
 import LayoutProvider from "@/providers/LayoutProvider";
 import { filterOptionDictionary } from "@/store/Guide";
-import Breadcums from "@/components/atoms/Breadcums";
+import Breadcums from "@/components/atoms/breadcums";
 import Sidebar from "@/components/organism/GuideDictinoary/sidebar";
 import { usePathname } from "next/navigation";
 

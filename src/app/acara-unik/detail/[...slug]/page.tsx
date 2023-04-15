@@ -1,4 +1,4 @@
-import UniqueEventDetailModule from "@/modules/unique-event/unique-event-detail/UniqueEventDetailModule";
+import UniqueEventDetailModule from "@/modules/unique-event/unique-event-detail";
 import { FC, ReactElement } from "react";
 
 const page: FC = (): ReactElement => {

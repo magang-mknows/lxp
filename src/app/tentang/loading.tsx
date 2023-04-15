@@ -1,4 +1,4 @@
-import AboutLoading from "@/modules/about/AboutLoading";
+import AboutLoading from "@/modules/about/loading/about-loading";
 import React from "react";
 
 const loading = () => {

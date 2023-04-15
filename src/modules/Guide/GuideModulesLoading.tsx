@@ -1,5 +1,5 @@
 import React, { FC, Fragment, ReactElement } from "react";
-import Breadcums from "@/components/atoms/Breadcums";
+import Breadcums from "@/components/atoms/breadcums";
 import { guideBreadCumbs } from "@/utils/const";
 import FaqSectionLoading from "@/modules/Guide/FaqSectionLoading";
 import HeroSectionLoading from "./HeroSectionLoading";

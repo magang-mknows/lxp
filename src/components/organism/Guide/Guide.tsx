@@ -1,12 +1,11 @@
 "use client";
 import React, { FC, Fragment, ReactElement, Suspense, lazy } from "react";
-import Breadcums from "@/components/atoms/Breadcums";
+import Breadcums from "@/components/atoms/breadcums";
 import { guideBreadCumbs } from "@/utils/const";
 import HeroSectionLoading from "@/modules/Guide/HeroSectionLoading";
 import GuideSectionLoading from "@/modules/Guide/GuideSectionLoading";
 import FaqSectionLoading from "@/modules/Guide/FaqSectionLoading";
 import dynamic from "next/dynamic";
-
 
 const HeroSection = dynamic(() => import("./HeroSection"), {
   ssr: true,

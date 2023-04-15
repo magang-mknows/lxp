@@ -10,7 +10,7 @@ import Modal from "@/components/atoms/Modal";
 const Navbar = dynamic(() => import("@/components/moleculs/Navbar"), {
   ssr: true,
 });
-const LandingFooter = lazy(() => import("@/components/moleculs/LandingFooter"));
+const LandingFooter = lazy(() => import("@/components/moleculs/landing-footer"));
 const LayoutProvider: FC<TProviderProps> = ({ children, className }): ReactElement => {
   const { getLoginPopup, setLoginPopup } = useLoginPopup();
 

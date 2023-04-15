@@ -1,4 +1,4 @@
-import DocumentStatusLoading from "@/modules/consulting-service/service/document-status/DocumentStatusLoading";
+import DocumentStatusLoading from "@/modules/consulting-service/service/document-status/loading";
 
 const loading = () => {
   return <DocumentStatusLoading />;

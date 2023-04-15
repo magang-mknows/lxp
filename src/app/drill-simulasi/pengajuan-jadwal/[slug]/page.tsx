@@ -1,4 +1,4 @@
-import RequestSceduleModule from "@/modules/drill-simulation/request-scedule/RequestSceduleModule";
+import RequestSceduleModule from "@/modules/drill-simulation/request-scedule";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

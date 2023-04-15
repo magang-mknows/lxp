@@ -1,4 +1,4 @@
-import ConsultingAndServiceModule from "@/modules/consulting-service/ConsultingAndServiceModule";
+import ConsultingAndServiceModule from "@/modules/consulting-service";
 import { NextPage } from "next";
 import React, { ReactElement } from "react";
 

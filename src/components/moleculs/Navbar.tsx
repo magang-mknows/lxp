@@ -1,18 +1,18 @@
 "use client";
 
 import React from "react";
-import NavbarAskMenu from "../atoms/NavbarAskMenu";
-import NavbarFeatureMenu from "../atoms/NavbarFeatureMenu";
-import CompanyLogo from "../atoms/CompanyLogo";
-import NavButton from "../atoms/Button";
-import NavbarMenu from "../atoms/NavbarMenu";
-import NavbarMobileMenu from "../atoms/NavbarMobileMenu";
+import NavbarAskMenu from "../atoms/navbar-ask-menu";
+import NavbarFeatureMenu from "../atoms/navbar-feature-menu";
+import CompanyLogo from "../atoms/company-logo";
+import NavButton from "../atoms/button";
+import NavbarMenu from "../atoms/navbar-menu";
+import NavbarMobileMenu from "../atoms/navbar-mobile-menu";
 import dynamic from "next/dynamic";
-import useWindowScroll from "@/hooks/navabar/useWindowScroll";
 import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
 import Link from "next/link";
+import useWindowScroll from "@/modules/navbar/hook";
 
-const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
+const NavbarThemeOption = dynamic(() => import("../atoms/navbar-theme-option"), {
   ssr: false,
 });
 

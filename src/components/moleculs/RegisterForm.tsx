@@ -1,13 +1,13 @@
 "use client";
-import Button from "@/components/atoms/Button";
+import Button from "@/components/atoms/button";
 import DashedText from "@/components/atoms/DashedText";
-import Form from "@/components/atoms/CommonForm";
+import Form from "@/components/atoms/common-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { FC, ReactElement } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import ControlledTextField from "../atoms/ControlledInput";
+import ControlledTextField from "../atoms/controlled-input";
 import { FcGoogle } from "react-icons/fc";
 import CheckboxField from "../atoms/CheckboxField";
 

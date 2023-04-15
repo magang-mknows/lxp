@@ -1,4 +1,4 @@
-import CareerConsultingModule from "@/modules/consulting-service/consulting/career/CareerConsultingModule";
+import CareerConsultingModule from "@/modules/consulting-service/consulting/career";
 import React from "react";
 
 export const metadata = {

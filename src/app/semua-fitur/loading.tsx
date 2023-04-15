@@ -1,4 +1,4 @@
-import FeturesLoading from "@/modules/features/FeturesLoading";
+import FeturesLoading from "@/modules/features/loading";
 import React from "react";
 
 const loading = () => {

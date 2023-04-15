@@ -1,4 +1,4 @@
-import DiscussionRoomLoading from "@/modules/discussion-room/DiscussionRoomLoading";
+import DiscussionRoomLoading from "@/modules/discussion-room/loading";
 
 const loading = () => {
   return <DiscussionRoomLoading />;

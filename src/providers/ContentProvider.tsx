@@ -1,15 +1,14 @@
 "use client";
 
 import { BottomNavMenu } from "@/utils/const";
-import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { FC, lazy, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 
 const Navbar = lazy(() => import("@/components/moleculs/Navbar"));
-const BottomMenu = lazy(() => import("@/components/atoms/BottomMenu"));
-const ContentFooter = lazy(() => import("@/components/moleculs/ContentFooter"));
+const BottomMenu = lazy(() => import("@/components/atoms/bottom-menu"));
+const ContentFooter = lazy(() => import("@/components/moleculs/content-footer"));
 
 const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
   const pathname = usePathname();

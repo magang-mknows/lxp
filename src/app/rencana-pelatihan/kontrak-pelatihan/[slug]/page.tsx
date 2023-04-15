@@ -1,4 +1,4 @@
-import TrainingContractModule from "@/modules/training-plan/training-contract/TrainingContractModule";
+import TrainingContractModule from "@/modules/training-plan/training-contract";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

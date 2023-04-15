@@ -1,4 +1,4 @@
-import ContactModule from "@/modules/contact/ContactModule";
+import ContactModule from "@/modules/contact";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 
