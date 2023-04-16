@@ -1,6 +1,6 @@
 import React, { Fragment, ReactElement, Suspense } from "react";
 import LayoutProvider from "@/providers/LayoutProvider";
-import AssigmentStatus from "@/components/organism/Assigment/AssigmentStatus";
+import AssigmentStatus from "@/modules/Assigment/AssigmentStatus";
 import BannerAssigmentSection from "@/components/organism/Assigment/BannerAssigmentSection";
 import AssigmentPageLoading from "./loading";
 import BannerLoading from "./BannerLoading";

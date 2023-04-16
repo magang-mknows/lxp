@@ -1,13 +1,10 @@
 "use client";
 import { Tab } from "@headlessui/react";
 import { ReactElement } from "react";
-import AssigmentAssigned from "../../../../public/assets/assigment/assigned-assigment.svg";
-import AssigmentDone from "../../../../public/assets/assigment/assigned-done.svg";
-import AssignedAssesment from "../../../../public/assets/assigment/assigned-assesment.svg";
-import AssignedLate from "../../../../public/assets/assigment/assigned-late.svg";
-import AssigmentStatusCard from "./AssigmentStatusCard";
-import AssigmentStatusTab from "./AssigmenttStatusTab";
-import { useTabAssigment } from "@/modules/Assigment/hooks";
+
+import AssigmentStatusCard from "../../components/organism/Assigment/AssigmentStatusCard";
+import AssigmentStatusTab from "../../components/organism/Assigment/AssigmenttStatusTab";
+import { useTabAssigment } from "./hooks";
 
 const AssigmentStatus = (): ReactElement => {
   const { getTabAssigment } = useTabAssigment();
@@ -87,13 +84,13 @@ const AssigmentStatus = (): ReactElement => {
                     }
                     imgAssigment={
                       item.category === "Ditugaskan"
-                        ? AssigmentAssigned
+                        ? "/assets/assigment/assigned-assigment.svg"
                         : item.category === "Terlambat"
-                        ? AssignedLate
+                        ? "/assets/assigment/assigned-late.svg"
                         : item.category === "Selesai"
-                        ? AssigmentDone
+                        ? "/assets/assigment/assigned-done.svg"
                         : item.category === "Sedang Dinilai"
-                        ? AssignedAssesment
+                        ? "/assets/assigment/assigned-assesment.svg"
                         : ""
                     }
                   />
@@ -140,13 +137,13 @@ const AssigmentStatus = (): ReactElement => {
                       }
                       imgAssigment={
                         item.category === "Ditugaskan"
-                          ? AssigmentAssigned
+                          ? "/assets/assigment/assigned-assigment.svg"
                           : item.category === "Terlambat"
-                          ? AssignedLate
+                          ? "/assets/assigment/assigned-late.svg"
                           : item.category === "Selesai"
-                          ? AssigmentDone
+                          ? "/assets/assigment/assigned-done.svg"
                           : item.category === "Sedang Dinilai"
-                          ? AssignedAssesment
+                          ? "/assets/assigment/assigned-assesment.svg"
                           : ""
                       }
                     />
