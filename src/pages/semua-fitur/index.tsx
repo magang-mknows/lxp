@@ -1,4 +1,4 @@
-import FeaturesModule from "@/modules/features/FeaturesModule";
+import FeaturesModule from "@/modules/features";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

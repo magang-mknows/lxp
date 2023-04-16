@@ -1,9 +1,9 @@
 "use client";
-import UniqueEventDetailLoading from "@/modules/unique-event/unique-event-detail/UniqueEventDetailLoading";
 import { UniqueEventBreadCumbs } from "@/utils/const";
 import dynamic from "next/dynamic";
 import { FC, ReactElement, Suspense } from "react";
 import Breadcums from "../atoms/Breadcums";
+import UniqueEventDetailLoading from "@/modules/unique-event/unique-event-detail/loading";
 
 const EventDetailTab = dynamic(() => import("../moleculs/EventDetailTab"), {
   ssr: false,

@@ -1,9 +1,9 @@
-import DisscusionRoomModule from "@/modules/discussion-room/DisscusionRoomModule";
+import DiscussionRoomModule from "@/modules/discussion-room";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 
 const page: NextPage = (): ReactElement => {
-  return <DisscusionRoomModule />;
+  return <DiscussionRoomModule />;
 };
 
 export default page;

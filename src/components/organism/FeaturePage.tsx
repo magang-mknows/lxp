@@ -8,9 +8,9 @@ import FeaturesDesc from "../atoms/FeaturesDesc";
 import FeaturesSearch from "../atoms/FeaturesSearch";
 import FeaturesCards from "../atoms/FeaturesCards";
 import { useRecoilValue } from "recoil";
-import { FilteredFeatures } from "@/store/features";
 
 import FeaturesNotFound from "../moleculs/FeaturesNotFound";
+import { FilteredFeatures } from "@/modules/features/store";
 
 const FeaturePage: FC = (): ReactElement => {
   const filteredFeatures = useRecoilValue(FilteredFeatures);

@@ -1,9 +1,9 @@
 "use client";
-import { showDetailSertificate } from "@/store/score-sertificate";
 import Image from "next/image";
 import { FC, lazy, ReactElement } from "react";
 import { useRecoilState } from "recoil";
 import Modal from "./Modal";
+import { showDetailSertificate } from "@/modules/score-sertificate/store";
 
 const SertificateModal = lazy(() => import("./SertificateModal"));
 

@@ -1,4 +1,4 @@
-import LandingModule from "@/modules/landing/LandingModule";
+import LandingModule from "@/modules/landing";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

@@ -1,11 +1,11 @@
 "use client";
-import { EventRegModalState } from "@/store/unique-event";
 import { FC, lazy, ReactElement, Suspense } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { useRecoilState } from "recoil";
 import Button from "./Button";
 import Modal from "./Modal";
 import { TCardContentProps } from "./types";
+import { EventRegModalState } from "@/modules/unique-event/store";
 
 const RegisteredEventModal = lazy(() => import("./RegisteredEventModal"));
 

@@ -1,4 +1,4 @@
-import AnalyticModule from "@/modules/analytic/AnalyticModule";
+import AnalyticModule from "@/modules/analytic";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

@@ -1,4 +1,4 @@
-import { MobileNavbarState } from "@/store/navbar";
+import { MobileNavbarState } from "@/modules/navbar/store";
 import { FC, ReactElement } from "react";
 import { useRecoilState } from "recoil";
 const genericHamburgerLine =

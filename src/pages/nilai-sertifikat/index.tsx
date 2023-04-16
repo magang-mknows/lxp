@@ -1,4 +1,4 @@
-import ScoreSertificateModule from "@/modules/score-sertificate/ScoreSertificateModule";
+import ScoreSertificateModule from "@/modules/score-sertificate";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

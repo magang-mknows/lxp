@@ -1,5 +1,4 @@
 "use client";
-import DrillSimulationHeaderLoading from "@/modules/drill-simulation/DrillSimulationHeaderLoading";
 import { drillSimulationType } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, ReactElement, Suspense } from "react";

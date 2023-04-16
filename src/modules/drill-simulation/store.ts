@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { TDrillSimulationType } from "./type";
+import { TDrillSimulationType } from "../../modules/drill-simulation/type";
 
 export const queryScheduleSimulation = atom({
   key: "query-schedule-simulation",

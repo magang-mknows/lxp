@@ -1,9 +1,13 @@
-import UniqueEventModule from "@/modules/unique-event/UniqueEventModule";
-import { NextPage } from "next";
-import { ReactElement } from "react";
+import UniqueEventPage from "@/components/organism/UniqueEventPage";
+import ContentProvider from "@/providers/ContentProvider";
+import { FC, ReactElement } from "react";
 
-const page: NextPage = (): ReactElement => {
-  return <UniqueEventModule />;
+const UniqueEventModule: FC = (): ReactElement => {
+  return (
+    <ContentProvider>
+      <UniqueEventPage />
+    </ContentProvider>
+  );
 };
 
-export default page;
+export default UniqueEventModule;

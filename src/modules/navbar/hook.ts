@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { WindowScrollReturnTypes } from "./types";
+import { WindowScrollReturnTypes } from "../../modules/navbar/types";
 
 export default function useWindowScroll(): WindowScrollReturnTypes {
   const [isScrollY, setScrollY] = useState<string>("onRender");

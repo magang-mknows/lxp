@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { UserSearchState } from "@/store/features";
+import { UserSearchState } from "./store";
 
 type SearchReturnTypes = {
   setUserSearch: (val: string) => void;

@@ -1,4 +1,4 @@
-import DocumentStatusModule from "@/modules/consulting-service/service/document-status/DocumentStatusModule";
+import DocumentStatusModule from "@/modules/consulting-service/service/document-status";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

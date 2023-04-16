@@ -1,5 +1,5 @@
-import { useUserSearch } from "@/hooks/features/useUserSearch";
-import { FilteredFeatures } from "@/store/features";
+import { useUserSearch } from "@/modules/features/hook";
+import { FilteredFeatures } from "@/modules/features/store";
 import Image from "next/image";
 import React, { Fragment } from "react";
 import { useRecoilValue } from "recoil";

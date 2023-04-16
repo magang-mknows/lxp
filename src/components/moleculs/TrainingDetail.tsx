@@ -1,7 +1,7 @@
-import { showDetailTraining } from "@/store/training-plan";
 import { FC, ReactElement } from "react";
 import { useRecoilState } from "recoil";
 import Button from "../atoms/Button";
+import { showDetailTraining } from "@/modules/training-plan/store";
 
 const TrainingDetail: FC = (): ReactElement => {
   const [isShowDetail, setShowDetail] = useRecoilState(showDetailTraining);

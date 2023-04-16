@@ -1,15 +1,15 @@
 import { useForgotPopup } from "@/modules/auth/hooks/ForgotPassword/usePopupForgot";
-import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
-import ArticleLoading from "@/modules/landing/ArticleLoading";
-import BenefitsLoading from "@/modules/landing/BenefitsLoading";
-import CatalogLoading from "@/modules/landing/CatalogLoading";
-import HeroLoading from "@/modules/landing/HeroLoading";
-import OfferLoading from "@/modules/landing/OfferLoading";
-import ParthnerLoading from "@/modules/landing/ParthnerLoading";
+import ArticleLoading from "@/modules/landing/loading/ArticleLoading";
+
 import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";
 import ForgotPassword from "../moleculs/ForgotPassword";
+import HeroLoading from "@/modules/landing/loading/HeroLoading";
+import BenefitsLoading from "@/modules/landing/loading/BenefitsLoading";
+import CatalogLoading from "@/modules/landing/loading/CatalogLoading";
+import OfferLoading from "@/modules/landing/loading/OfferLoading";
+import ParthnerLoading from "@/modules/landing/loading/ParthnerLoading";
 
 const LandingHero = dynamic(() => import("../moleculs/LandingHero"), {
   ssr: false,

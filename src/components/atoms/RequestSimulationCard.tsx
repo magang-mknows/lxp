@@ -3,7 +3,7 @@ import { FC, ReactElement } from "react";
 
 import Image from "next/image";
 import Button from "../atoms/Button";
-import { TDrillSimulationType } from "@/store/drill-simulation/type";
+import { TDrillSimulationType } from "@/modules/drill-simulation/type";
 import Link from "next/link";
 
 const RequestSimulationCard: FC<TDrillSimulationType> = ({

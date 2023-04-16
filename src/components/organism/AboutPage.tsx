@@ -1,8 +1,9 @@
 "use client";
-import AboutHeroLoading from "@/modules/about/AboutHeroLoading";
-import AboutJobsLoading from "@/modules/about/AboutJobsLoading";
+import AboutHeroLoading from "@/modules/about/loading/AboutHeroLoading";
+import AboutJobsLoading from "@/modules/about/loading/AboutJobsLoading";
+import AboutTestimonialsLoading from "@/modules/about/loading/AboutTestimonialsLoading";
 import dynamic from "next/dynamic";
-import { FC, Fragment, ReactElement, Suspense } from "react";
+import { FC, ReactElement, Suspense } from "react";
 const AboutHero = dynamic(() => import("../moleculs/AboutHero"), {
   ssr: true,
 });
@@ -19,7 +20,7 @@ const AboutPage: FC = (): ReactElement => {
       <Suspense fallback={<AboutHeroLoading />}>
         <AboutHero />
       </Suspense>
-      <Suspense fallback={<AboutHeroLoading />}>
+      <Suspense fallback={<AboutTestimonialsLoading />}>
         <AboutTestimonials />
       </Suspense>
       <Suspense fallback={<AboutJobsLoading />}>
