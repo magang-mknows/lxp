@@ -1,4 +1,4 @@
-import GuideBookModule from "@/modules/Guide/GuideBook/GuideBookModule";
+import GuideBookModule from "@/modules/Guide/guide-book";
 import React, { ReactElement, Suspense } from "react";
 
 const Page = (): ReactElement => {

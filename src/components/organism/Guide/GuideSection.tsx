@@ -25,7 +25,7 @@ const GuideSection = (): ReactElement => {
       title: "Kamus Kampus Gratis",
       desc: "Panduan ini berisi konten kampus gratis.",
       img: Kamus,
-      href: "/panduan/kamus-kampus-gratis",
+      href: "/panduan/kamus",
     },
   ];
   return (

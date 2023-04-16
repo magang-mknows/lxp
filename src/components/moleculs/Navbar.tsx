@@ -9,7 +9,7 @@ import NavbarMenu from "../atoms/NavbarMenu";
 import NavbarMobileMenu from "../atoms/NavbarMobileMenu";
 import dynamic from "next/dynamic";
 import useWindowScroll from "@/hooks/navabar/useWindowScroll";
-import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
+import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
 import Link from "next/link";
 
 const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {

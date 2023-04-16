@@ -8,14 +8,13 @@ import { filterOptionDictionary } from "@/modules/Guide/store";
 import Breadcums from "@/components/atoms/Breadcums";
 import Sidebar from "@/components/organism/guide-dictinoary/sidebar";
 import { usePathname } from "next/navigation";
-import { NextPage } from "next";
 
-
-const Page: NextPage = (): ReactElement => {
+const DetailDictinoaryModule = (): ReactElement => {
   const pathname = usePathname();
   const slug = pathname.split("/");
   const getOption = useRecoilValue(filterOptionDictionary(slug[slug.length - 1]));
-  const EndpointBreadCrumb = slug[slug.length - 1];
+  const EndpointBreadCrumb = pathname[2];
+  console.log(slug[slug.length - 1]);
   const BreadCrumbEndpoint = [
     {
       name: "Home",
@@ -27,11 +26,11 @@ const Page: NextPage = (): ReactElement => {
     },
     {
       name: "Kamus Kampus Gratis",
-      link: "/panduan/kamus",
+      link: "/panduan/kamus-kampus-gratis",
     },
     {
       name: `${EndpointBreadCrumb}`,
-      link: `/panduan/kamus/${EndpointBreadCrumb}`,
+      link: `/panduan/kamus-kampus-gratis/${EndpointBreadCrumb}`,
     },
   ];
 
@@ -77,4 +76,4 @@ const Page: NextPage = (): ReactElement => {
   );
 };
 
-export default Page;
+export default DetailDictinoaryModule;

@@ -5,10 +5,10 @@ import Medal1 from "/public/assets/leaderboard/medal-1.svg";
 import Medal3 from "/public/assets/leaderboard/medal-3.svg";
 import Medal from "/public/assets/leaderboard/medal.svg";
 import Pagination from "@/components/atoms/Pagination";
-import { useRankLeaderboard } from "@/hooks/Leaderborad/useRankLeaderboard";
+import { useRankLeaderboard } from "@/modules/leaderboard/hooks/useRankLeaderboard";
 import dynamic from "next/dynamic";
-import { usePopupProfilLeaderboard } from "@/hooks/Leaderborad/usePopupProfilLeaderboard";
-import { usePopupGetUser } from "@/hooks/Leaderborad/usePopupGetUser";
+import { usePopupProfilLeaderboard } from "@/modules/leaderboard/hooks/usePopupProfilLeaderboard";
+import { usePopupGetUser } from "@/modules/leaderboard/hooks/usePopupGetUser";
 
 const RankingSection = dynamic(() => import("./RankingSection"));
 const Filter = dynamic(() => import("./filter"));

@@ -1,14 +1,13 @@
-"use client";
-import GuidePages from "@/components/organism/guide/Guide";
+import GuideVideoPages from "@/components/organism/guide-video/GuideVideoPage";
 import LayoutProvider from "@/providers/LayoutProvider";
 import React, { ReactElement } from "react";
 
-const GuideModule = (): ReactElement => {
+const GuideVideoModule = (): ReactElement => {
   return (
     <LayoutProvider className="!bg-[#fff]">
-      <GuidePages />
+      <GuideVideoPages />
     </LayoutProvider>
   );
 };
 
-export default GuideModule;
+export default GuideVideoModule;

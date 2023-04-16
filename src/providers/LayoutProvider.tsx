@@ -1,5 +1,5 @@
 "use client";
-import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
+import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
 import dynamic from "next/dynamic";
 import { FC, lazy, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
