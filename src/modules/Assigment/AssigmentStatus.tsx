@@ -3,7 +3,7 @@ import { Tab } from "@headlessui/react";
 import { ReactElement } from "react";
 
 import AssigmentStatusCard from "./AssigmentStatusCard";
-import { useBaunennen } from "./hooks";
+import { useBaunennen } from "./useBaunennen";
 import AssigmentStatusTab from "./AssigmenttStatusTab";
 
 const AssigmentStatus = (): ReactElement => {

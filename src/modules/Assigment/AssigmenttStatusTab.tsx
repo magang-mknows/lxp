@@ -2,7 +2,7 @@
 import { AssigmentStatus } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, ReactElement } from "react";
-import { useBaunennen } from "./hooks";
+import { useBaunennen } from "./useBaunennen";
 
 const AssigmentStatusTab: FC = (): ReactElement => {
   const { setTabAssigment } = useBaunennen();
