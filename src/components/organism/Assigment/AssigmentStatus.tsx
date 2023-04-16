@@ -48,7 +48,7 @@ const AssigmentStatus = (): ReactElement => {
   ];
 
   return (
-    <nav className="mx-8 md:mx-16 lg:mx-20 mt-10 pb-10 bg-neutral-50 rounded-md shadow-sm min-h-[80vh]">
+    <nav className="mx-8 md:mx-16 lg:mx-20 mt-10 pb-10 bg-neutral-50 rounded-md shadow-sm min-h-[82vh]">
       <Tab.Group as="div" className="py-4">
         <AssigmentStatusTab />
         <Tab.Panels as="div" className="px-8 md:px-14 lg:px-16 mt-5">

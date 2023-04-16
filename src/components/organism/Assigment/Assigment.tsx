@@ -1,8 +1,8 @@
 import React, { Fragment, ReactElement, Suspense } from "react";
 import AssigmentStatus from "./AssigmentStatus";
 import BannerAssigmentSection from "./BannerAssigmentSection";
-import AssigmentLoading from "@/modules/Assigment/loading";
 import BannerLoading from "@/modules/Assigment/BannerLoading";
+import AssigmentLoading from "@/modules/Assigment/loading";
 
 const AssigmentPage = (): ReactElement => {
   return (
