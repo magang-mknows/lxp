@@ -3,12 +3,12 @@ import { Tab } from "@headlessui/react";
 import { ReactElement } from "react";
 
 import AssigmentStatusCard from "../../components/organism/Assigment/AssigmentStatusCard";
-import { useTabAssigment } from "./hooks";
 import AssigmentStatusTab from "@/components/organism/Assigment/AssigmenttStatusTab";
+import { useTabAssigment } from "./hooks";
 
 const AssigmentStatus = (): ReactElement => {
   const { getTabAssigment } = useTabAssigment();
-  console.log(getTabAssigment);
+
   const dummyStoredDocument = [
     {
       id: 1,
