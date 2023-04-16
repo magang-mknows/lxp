@@ -3,7 +3,7 @@ import { tabAssigmentState } from "./store";
 
 type ReturnTypes = { getTabAssigment: string; setTabAssigment: (val: string) => void };
 
-export const useTabAssigment = (): ReturnTypes => {
+export const useBaunennen = (): ReturnTypes => {
   const [get, set] = useRecoilState(tabAssigmentState);
   return {
     getTabAssigment: get,

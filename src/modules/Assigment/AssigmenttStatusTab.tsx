@@ -2,10 +2,10 @@
 import { AssigmentStatus } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, ReactElement } from "react";
-import { useTabAssigment } from "./hooks";
+import { useBaunennen } from "./hooks";
 
 const AssigmentStatusTab: FC = (): ReactElement => {
-  const { setTabAssigment } = useTabAssigment();
+  const { setTabAssigment } = useBaunennen();
   return (
     <Tab.List
       as="div"
