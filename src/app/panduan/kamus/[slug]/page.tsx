@@ -4,14 +4,15 @@ import Image from "next/image";
 import search from "/public/assets/guide/search.svg";
 import { useRecoilValue } from "recoil";
 import LayoutProvider from "@/providers/LayoutProvider";
-import { filterOptionDictionary } from "@/store/Guide";
+import { filterOptionDictionary } from "@/modules/Guide/store";
 import Breadcums from "@/components/atoms/Breadcums";
-import Sidebar from "@/components/organism/GuideDictinoary/sidebar";
+import Sidebar from "@/components/organism/guide-dictinoary/sidebar";
 import { usePathname } from "next/navigation";
 import { NextPage } from "next";
 
-const Page: NextPage = (): ReactElement => {
-  const pathname = usePathname();
+
+const DetailPage: NextPage = (): ReactElement => {
+  const pathname = usePathname() as unknown as string;
   const slug = pathname.split("/");
   const getOption = useRecoilValue(filterOptionDictionary(slug[slug.length - 1]));
   const EndpointBreadCrumb = slug[slug.length - 1];
@@ -76,4 +77,4 @@ const Page: NextPage = (): ReactElement => {
   );
 };
 
-export default Page;
+export default DetailPage;

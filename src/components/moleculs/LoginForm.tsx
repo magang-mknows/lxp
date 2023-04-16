@@ -13,8 +13,8 @@ import { z } from "zod";
 import ControlledTextField from "../atoms/ControlledInput";
 import ControlledCheckboxField from "../atoms/ControlledCheckbox";
 import { FcGoogle } from "react-icons/fc";
-import { useForgotPopup } from "@/hooks/ForgotPassword/usePopupForgot";
-import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
+import { useForgotPopup } from "@/modules/auth/hooks/ForgotPassword/usePopupForgot";
+import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
 
 const LoginForm: FC = (): ReactElement => {
   const { setForgotPopup } = useForgotPopup();

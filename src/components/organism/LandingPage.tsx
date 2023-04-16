@@ -1,6 +1,5 @@
-"use client";
-import { useForgotPopup } from "@/hooks/ForgotPassword/usePopupForgot";
-import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
+import { useForgotPopup } from "@/modules/auth/hooks/ForgotPassword/usePopupForgot";
+import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
 import ArticleLoading from "@/modules/landing/ArticleLoading";
 import BenefitsLoading from "@/modules/landing/BenefitsLoading";
 import CatalogLoading from "@/modules/landing/CatalogLoading";

@@ -1,5 +1,5 @@
 "use client";
-import LeaderBoardModule from "@/modules/dashboard/leaderboard/LeaderBoardModule";
+import LeaderBoardModule from "@/modules/leaderboard/LeaderBoardModule";
 import { NextPage } from "next";
 import React, { ReactElement } from "react";
 

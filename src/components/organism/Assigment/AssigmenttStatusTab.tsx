@@ -1,5 +1,5 @@
 "use client";
-import { useTabAssigment } from "@/hooks/Assigment/useTabAssigment";
+import { useTabAssigment } from "@/modules/assigment/hooks";
 import { AssigmentStatus } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, ReactElement } from "react";

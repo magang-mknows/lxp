@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { FC, ReactElement } from "react";
-import { usePopupProfilLeaderboard } from "@/hooks/Leaderborad/usePopupProfilLeaderboard";
-import { useRankLeaderboard } from "@/hooks/Leaderborad/useRankLeaderboard";
-import { usePopupGetUser } from "@/hooks/Leaderborad/usePopupGetUser";
-import { leaderBoardRankProps } from "@/store/Leaderboard/type";
+import { usePopupProfilLeaderboard } from "@/modules/leaderboard/hooks/usePopupProfilLeaderboard";
+import { useRankLeaderboard } from "@/modules/leaderboard/hooks/useRankLeaderboard";
+import { usePopupGetUser } from "@/modules/leaderboard/hooks/usePopupGetUser";
+import { leaderBoardRankProps } from "@/modules/leaderboard/store/type";
 import PopupProfil from "@/components/atoms/PopupProfil";
 
 const RankingSection: FC = (): ReactElement => {

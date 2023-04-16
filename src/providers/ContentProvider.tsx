@@ -12,7 +12,7 @@ const BottomMenu = lazy(() => import("@/components/atoms/BottomMenu"));
 const ContentFooter = lazy(() => import("@/components/moleculs/ContentFooter"));
 
 const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
-  const pathname = usePathname();
+  const pathname = usePathname() as unknown as string;
   const bottomMenuLink = BottomNavMenu.map((menu) => {
     return menu.link;
   });

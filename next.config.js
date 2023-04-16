@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  reactStrictMode: true,
+  swcMinify: true,
   images: {
     domains: ["i.ytimg.com"],
     // formats: ["image/jpg"],
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

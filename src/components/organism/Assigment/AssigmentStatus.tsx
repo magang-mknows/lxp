@@ -1,5 +1,5 @@
 "use client";
-import { useTabAssigment } from "@/hooks/Assigment/useTabAssigment";
+import { useTabAssigment } from "@/modules/assigment/hooks";
 import { Tab } from "@headlessui/react";
 import { ReactElement } from "react";
 import AssigmentAssigned from "../../../../public/assets/assigment/assigned-assigment.svg";
