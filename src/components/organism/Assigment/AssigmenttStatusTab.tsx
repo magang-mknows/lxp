@@ -1,11 +1,11 @@
 "use client";
+import { useTabAssigment } from "@/modules/Assigment/hooks";
 import { AssigmentStatus } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, ReactElement } from "react";
-import { useBaunennen } from "./useBaunennen";
 
 const AssigmentStatusTab: FC = (): ReactElement => {
-  const { setTabAssigment } = useBaunennen();
+  const { setTabAssigment } = useTabAssigment();
   return (
     <Tab.List
       as="div"

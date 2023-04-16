@@ -2,8 +2,8 @@ import React, { Fragment, ReactElement, Suspense } from "react";
 import LayoutProvider from "@/providers/LayoutProvider";
 import AssigmentPageLoading from "./loading";
 import BannerLoading from "./BannerLoading";
-import BannerAssigmentSection from "./BannerAssigmentSection";
-import AssigmentStatus from "./AssigmentStatus";
+import BannerAssigmentSection from "@/components/organism/Assigment/BannerAssigmentSection";
+import AssigmentStatus from "@/components/organism/Assigment/AssigmentStatus";
 
 const AssigmentPage = (): ReactElement => {
   return (
