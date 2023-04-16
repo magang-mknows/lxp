@@ -3,7 +3,7 @@ import LayoutProvider from "@/providers/LayoutProvider";
 import AssigmentStatus from "@/modules/Assigment/AssigmentStatus";
 import AssigmentPageLoading from "./loading";
 import BannerLoading from "./BannerLoading";
-import BannerAssigmentSection from "./BannerAssigmentSection";
+import BannerAssigmentSection from "@/components/organism/Assigment/BannerAssigmentSection";
 
 const AssigmentPage = (): ReactElement => {
   return (

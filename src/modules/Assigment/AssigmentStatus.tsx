@@ -2,9 +2,9 @@
 import { Tab } from "@headlessui/react";
 import { ReactElement } from "react";
 
-import AssigmentStatusCard from "./AssigmentStatusCard";
+import AssigmentStatusCard from "../../components/organism/Assigment/AssigmentStatusCard";
 import { useTabAssigment } from "./hooks";
-import AssigmentStatusTab from "./AssigmenttStatusTab";
+import AssigmentStatusTab from "@/components/organism/Assigment/AssigmenttStatusTab";
 
 const AssigmentStatus = (): ReactElement => {
   const { getTabAssigment } = useTabAssigment();
