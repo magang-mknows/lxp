@@ -1,9 +1,9 @@
 import React, { Fragment, ReactElement, Suspense } from "react";
 import LayoutProvider from "@/providers/LayoutProvider";
-import AssigmentStatus from "@/modules/Assigment/AssigmentStatus";
 import AssigmentPageLoading from "./loading";
 import BannerLoading from "./BannerLoading";
-import BannerAssigmentSection from "@/components/organism/Assigment/BannerAssigmentSection";
+import BannerAssigmentSection from "./BannerAssigmentSection";
+import AssigmentStatus from "./AssigmentStatus";
 
 const AssigmentPage = (): ReactElement => {
   return (

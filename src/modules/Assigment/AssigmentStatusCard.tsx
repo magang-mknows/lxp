@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { FC, ReactElement } from "react";
-import { CardAssigment } from "../../atoms/types";
+import { CardAssigment } from "../../components/atoms/types";
 
 const AssigmentStatusCard: FC<CardAssigment> = ({
   titleAssigment,
