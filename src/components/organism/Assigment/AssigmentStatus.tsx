@@ -1,5 +1,4 @@
 "use client";
-import { useTabAssigment } from "@/modules/assigment/hooks";
 import { Tab } from "@headlessui/react";
 import { ReactElement } from "react";
 import AssigmentAssigned from "../../../../public/assets/assigment/assigned-assigment.svg";
@@ -8,6 +7,7 @@ import AssignedAssesment from "../../../../public/assets/assigment/assigned-asse
 import AssignedLate from "../../../../public/assets/assigment/assigned-late.svg";
 import AssigmentStatusCard from "./AssigmentStatusCard";
 import AssigmentStatusTab from "./AssigmenttStatusTab";
+import { useTabAssigment } from "@/modules/Assigment/hooks";
 
 const AssigmentStatus = (): ReactElement => {
   const { getTabAssigment } = useTabAssigment();

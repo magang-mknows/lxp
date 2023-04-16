@@ -1,4 +1,4 @@
-import AssigmentPage from "@/components/organism/assigment/Assigment";
+import AssigmentPage from "@/components/organism/Assigment/Assigment";
 import LayoutProvider from "@/providers/LayoutProvider";
 import React, { ReactElement } from "react";
 

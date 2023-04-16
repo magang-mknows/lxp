@@ -1,4 +1,4 @@
-import AssigmentModules from "@/modules/assigment";
+import AssigmentModules from "@/modules/Assigment";
 import React, { ReactElement } from "react";
 
 const page = (): ReactElement => {

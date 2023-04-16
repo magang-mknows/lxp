@@ -1,5 +1,5 @@
 "use client";
-import GuidePages from "@/components/organism/guide/Guide";
+import GuidePages from "@/components/organism/Guide/Guide";
 import LayoutProvider from "@/providers/LayoutProvider";
 import React, { ReactElement } from "react";
 

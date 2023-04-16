@@ -1,4 +1,4 @@
-import LeaderBoardPages from "@/components/organism/leaderboard/LeaderBoardPage";
+import LeaderBoardPages from "@/components/organism/Leaderboard/LeaderBoardPage";
 import React, { ReactElement } from "react";
 
 const LeaderBoardModule = (): ReactElement => {

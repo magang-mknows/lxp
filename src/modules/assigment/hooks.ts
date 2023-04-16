@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { tabAssigmentState } from "@/modules/assigment/store";
+import { tabAssigmentState } from "./store";
 
 type ReturnTypes = { getTabAssigment: string; setTabAssigment: (val: string) => void };
 
