@@ -20,7 +20,7 @@ import Modal from "../atoms/Modal";
 import RequestSceduleSuccessModal from "../atoms/RequestSceduleSuccessModal";
 
 const RequestSceduleMain: FC = (): ReactElement => {
-  const pathname = usePathname();
+  const pathname = usePathname() as unknown as string;
   const currentPath = decodeURIComponent(pathname).split("/");
   const getSelectedDrill = useRecoilValue(dummySceduleSimulation);
   const setSelectedSimulation = useSetRecoilState(dummyRegisteredSimulation);

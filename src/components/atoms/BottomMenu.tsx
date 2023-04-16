@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { FC, ReactElement } from "react";
 
 const BottomMenu: FC = (): ReactElement => {
-  const pathname = usePathname();
+  const pathname = usePathname() as unknown as string;
 
   return (
     <div className="bg-neutral-50 hidden border-b-2 border-t-2 border-neutral-100 py-3 w-full px-8 md:-px-14 lg:px-16 lg:flex gap-4">

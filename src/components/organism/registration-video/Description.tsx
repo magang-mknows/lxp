@@ -1,4 +1,4 @@
-import { videoGuideTypes } from "@/modules/Guide/store/Guide/type";
+import { videoGuideTypes } from "@/modules/Guide/store/type";
 import React, { ReactElement } from "react";
 
 const Description = (props: videoGuideTypes): ReactElement => {

@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
-import { useGuideVideo } from "@/modules/Guide/hooks/Guide/useVideoGuide";
 import Link from "next/link";
 import Image from "next/image";
+import { useGuideVideo } from "@/modules/Guide/hooks/useVideoGuide";
 
 const ListVideo = (): ReactElement => {
   const { getGuideVideo } = useGuideVideo();

@@ -1,20 +1,19 @@
 "use client";
 import React, { ReactElement } from "react";
 import Image from "next/image";
-import search from "/public/assets/guide/search.svg";
 import { useRecoilValue } from "recoil";
 import LayoutProvider from "@/providers/LayoutProvider";
-import { filterOptionDictionary } from "@/modules/Guide/store";
 import Breadcums from "@/components/atoms/Breadcums";
-import Sidebar from "@/components/organism/guide-dictinoary/sidebar";
 import { usePathname } from "next/navigation";
+import { NextPage } from "next";
+import Sidebar from "@/components/organism/guide-dictinoary/sidebar";
+import { filterOptionDictionary } from "../store";
 
-const DetailDictinoaryModule = (): ReactElement => {
-  const pathname = usePathname();
+const Page: NextPage = (): ReactElement => {
+  const pathname = usePathname() as unknown as string;
   const slug = pathname.split("/");
   const getOption = useRecoilValue(filterOptionDictionary(slug[slug.length - 1]));
-  const EndpointBreadCrumb = pathname[2];
-  console.log(slug[slug.length - 1]);
+  const EndpointBreadCrumb = slug[slug.length - 1];
   const BreadCrumbEndpoint = [
     {
       name: "Home",
@@ -26,11 +25,11 @@ const DetailDictinoaryModule = (): ReactElement => {
     },
     {
       name: "Kamus Kampus Gratis",
-      link: "/panduan/kamus-kampus-gratis",
+      link: "/panduan/kamus",
     },
     {
       name: `${EndpointBreadCrumb}`,
-      link: `/panduan/kamus-kampus-gratis/${EndpointBreadCrumb}`,
+      link: `/panduan/kamus/${EndpointBreadCrumb}`,
     },
   ];
 
@@ -49,7 +48,13 @@ const DetailDictinoaryModule = (): ReactElement => {
               </p>
             </div>
             <div className="seacrh lg:w-[700px] h-[56px] w-full bg-[#F5F5F5] dark:bg-[#232529] rounded-[8px] my-5 flex items-center gap-4  ">
-              <Image src={search} alt={"search"} className={"ml-[24px]"} />
+              <Image
+                src={"/assets/guide/search.svg"}
+                width={200}
+                height={200}
+                alt={"search"}
+                className={"ml-[24px] w-auto h-auto"}
+              />
               <input
                 type="text"
                 name=""
@@ -76,4 +81,4 @@ const DetailDictinoaryModule = (): ReactElement => {
   );
 };
 
-export default DetailDictinoaryModule;
+export default Page;

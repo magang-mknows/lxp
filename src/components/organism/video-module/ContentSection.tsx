@@ -10,7 +10,7 @@ type param = {
   type: string;
 };
 const ContentSection: FC = (): ReactElement => {
-  const pathName = usePathname();
+  const pathName = usePathname() as unknown as string;
   const videoId = pathName.split("/");
   const getOption = useRecoilValue(filterOption(videoId[videoId.length - 1]));
   console.log(videoId);

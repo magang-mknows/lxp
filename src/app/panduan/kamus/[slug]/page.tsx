@@ -11,8 +11,8 @@ import { usePathname } from "next/navigation";
 import { NextPage } from "next";
 
 
-const Page: NextPage = (): ReactElement => {
-  const pathname = usePathname();
+const DetailPage: NextPage = (): ReactElement => {
+  const pathname = usePathname() as unknown as string;
   const slug = pathname.split("/");
   const getOption = useRecoilValue(filterOptionDictionary(slug[slug.length - 1]));
   const EndpointBreadCrumb = slug[slug.length - 1];
@@ -77,4 +77,4 @@ const Page: NextPage = (): ReactElement => {
   );
 };
 
-export default Page;
+export default DetailPage;

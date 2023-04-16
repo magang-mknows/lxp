@@ -1,4 +1,3 @@
-"use client";
 import { useForgotPopup } from "@/modules/auth/hooks/ForgotPassword/usePopupForgot";
 import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
 import ArticleLoading from "@/modules/landing/ArticleLoading";

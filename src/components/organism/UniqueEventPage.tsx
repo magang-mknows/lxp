@@ -9,7 +9,7 @@ import UniqueEventContent from "../moleculs/UniqueEventContent";
 import UniqueEventSidebar from "../moleculs/UniqueEventSidebar";
 
 const UniqueEventPage: FC = (): ReactElement => {
-  const pathname = usePathname();
+  const pathname = usePathname() as unknown as string;
   const eventPath = ["/acara-unik", "/acara-unik/terdaftar", "/acara-unik/riwayat"];
 
   if (!eventPath.includes(pathname)) {
