@@ -1,9 +1,7 @@
-import { useUserSearch } from "@/hooks/features/useUserSearch";
-import { UserSearchState } from "@/store/features";
+import { useUserSearch } from "@/modules/features/hook";
 import Image from "next/image";
-import { FC, ReactElement, useState } from "react";
+import { FC, ReactElement } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
-import { useRecoilState } from "recoil";
 
 const FeaturesSearch: FC = (): ReactElement => {
   const { setUserSearch, getUserSearch } = useUserSearch();

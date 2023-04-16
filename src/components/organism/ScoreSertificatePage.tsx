@@ -1,5 +1,5 @@
 "use client";
-import { showDetailState } from "@/store/score-sertificate";
+import { showDetailState } from "@/modules/score-sertificate/store";
 import { ScoreSertificateBreadCumbs, ScoreSertificateMenu } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, Fragment, ReactElement, Suspense } from "react";

@@ -1,4 +1,4 @@
-import DashboardLoading from "@/modules/dashboard/DashboardLoading";
+import DashboardLoading from "@/modules/dashboard/loading";
 
 const loading = () => {
   return <DashboardLoading />;

@@ -1,4 +1,4 @@
-import DisscusionRoomModule from "@/modules/discussion-room/DisscusionRoomModule";
+import DisscusionRoomModule from "@/modules/discussion-room";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

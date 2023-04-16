@@ -1,5 +1,5 @@
 "use client";
-import { EventRegModalState } from "@/store/unique-event";
+import { EventRegModalState } from "@/modules/unique-event/store";
 import { FC, lazy, ReactElement, Suspense } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { useRecoilState } from "recoil";

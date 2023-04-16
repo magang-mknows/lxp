@@ -1,4 +1,4 @@
-import ContactLoading from "@/modules/contact/ContactLoading";
+import ContactLoading from "@/modules/contact/loading";
 
 const Loading = () => {
   return <ContactLoading />;

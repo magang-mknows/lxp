@@ -1,12 +1,12 @@
 "use client";
 import { useForgotPopup } from "@/hooks/ForgotPassword/usePopupForgot";
-import { useLoginPopup } from "@/hooks/Login/usePopupLogin";
-import ArticleLoading from "@/modules/landing/ArticleLoading";
-import BenefitsLoading from "@/modules/landing/BenefitsLoading";
-import CatalogLoading from "@/modules/landing/CatalogLoading";
-import HeroLoading from "@/modules/landing/HeroLoading";
-import OfferLoading from "@/modules/landing/OfferLoading";
-import ParthnerLoading from "@/modules/landing/ParthnerLoading";
+import ArticleLoading from "@/modules/landing/loading/ArticleLoading";
+import BenefitsLoading from "@/modules/landing/loading/BenefitsLoading";
+import CatalogLoading from "@/modules/landing/loading/CatalogLoading";
+import HeroLoading from "@/modules/landing/loading/HeroLoading";
+import OfferLoading from "@/modules/landing/loading/OfferLoading";
+import ParthnerLoading from "@/modules/landing/loading/ParthnerLoading";
+
 import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement, Suspense } from "react";
 import Modal from "../atoms/Modal";

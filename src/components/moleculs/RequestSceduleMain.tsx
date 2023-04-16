@@ -1,11 +1,6 @@
 "use client";
 import { FC, Fragment, ReactElement } from "react";
-import {
-  dummyRegisteredSimulation,
-  dummySceduleSimulation,
-  selectedDateSimulation,
-  successPopupState,
-} from "@/store/drill-simulation";
+
 import { Disclosure } from "@headlessui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -18,6 +13,12 @@ import SceduleInformationHeader from "../atoms/SceduleInformationHeader";
 import SceduleButton from "../atoms/SceduleButton";
 import Modal from "../atoms/Modal";
 import RequestSceduleSuccessModal from "../atoms/RequestSceduleSuccessModal";
+import {
+  dummyRegisteredSimulation,
+  dummySceduleSimulation,
+  selectedDateSimulation,
+  successPopupState,
+} from "@/modules/drill-simulation/store";
 
 const RequestSceduleMain: FC = (): ReactElement => {
   const pathname = usePathname();

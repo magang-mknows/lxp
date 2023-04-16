@@ -1,5 +1,5 @@
 "use client";
-import { showDetailSertificate } from "@/store/score-sertificate";
+import { showDetailSertificate } from "@/modules/score-sertificate/store";
 import Image from "next/image";
 import { FC, lazy, ReactElement } from "react";
 import { useRecoilState } from "recoil";

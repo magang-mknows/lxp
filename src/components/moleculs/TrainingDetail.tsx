@@ -1,4 +1,4 @@
-import { showDetailTraining } from "@/store/training-plan";
+import { showDetailTraining } from "@/modules/training-plan/store";
 import { FC, ReactElement } from "react";
 import { useRecoilState } from "recoil";
 import Button from "../atoms/Button";

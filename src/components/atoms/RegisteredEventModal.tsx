@@ -1,4 +1,4 @@
-import { EventRegModalState } from "@/store/unique-event";
+import { EventRegModalState } from "@/modules/unique-event/store";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactElement } from "react";

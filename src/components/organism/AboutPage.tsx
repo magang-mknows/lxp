@@ -1,8 +1,8 @@
 "use client";
-import AboutHeroLoading from "@/modules/about/AboutHeroLoading";
-import AboutJobsLoading from "@/modules/about/AboutJobsLoading";
+import AboutHeroLoading from "@/modules/about/loading/AboutHeroLoading";
+import AboutJobsLoading from "@/modules/about/loading/AboutJobsLoading";
 import dynamic from "next/dynamic";
-import { FC, Fragment, ReactElement, Suspense } from "react";
+import { FC, ReactElement, Suspense } from "react";
 const AboutHero = dynamic(() => import("../moleculs/AboutHero"), {
   ssr: true,
 });

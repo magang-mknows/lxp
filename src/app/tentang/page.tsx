@@ -1,4 +1,4 @@
-import AboutModule from "@/modules/about/AboutModule.tsx";
+import AboutModule from "@/modules/about";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

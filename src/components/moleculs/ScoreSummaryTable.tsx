@@ -1,5 +1,5 @@
 "use client";
-import { showDetailState } from "@/store/score-sertificate";
+import { showDetailState } from "@/modules/score-sertificate/store";
 import React, { FC, ReactElement } from "react";
 import { useSetRecoilState } from "recoil";
 import Button from "../atoms/Button";

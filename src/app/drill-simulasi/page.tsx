@@ -1,4 +1,4 @@
-import DrillSimulationModule from "@/modules/drill-simulation/DrillSimulationModule";
+import DrillSimulationModule from "@/modules/drill-simulation";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

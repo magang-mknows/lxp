@@ -1,6 +1,6 @@
 "use client";
-import { finishPopupState } from "@/store/drill-simulation";
-import { TDrillSimulationType } from "@/store/drill-simulation/type";
+import { finishPopupState } from "@/modules/drill-simulation/store";
+import { TDrillSimulationType } from "@/modules/drill-simulation/type";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactElement } from "react";

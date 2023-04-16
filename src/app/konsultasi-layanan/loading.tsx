@@ -1,4 +1,4 @@
-import ConsultingAndServiceLoading from "@/modules/consulting-service/ConsultingAndServiceLoading";
+import ConsultingAndServiceLoading from "@/modules/consulting-service/loading";
 
 const loading = () => {
   return <ConsultingAndServiceLoading />;

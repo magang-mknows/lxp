@@ -1,5 +1,5 @@
 "use client";
-import UniqueEventDetailLoading from "@/modules/unique-event/unique-event-detail/UniqueEventDetailLoading";
+import UniqueEventDetailLoading from "@/modules/unique-event/unique-event-detail/loading";
 import { UniqueEventBreadCumbs } from "@/utils/const";
 import dynamic from "next/dynamic";
 import { FC, ReactElement, Suspense } from "react";

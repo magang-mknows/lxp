@@ -1,6 +1,6 @@
 "use client";
+import { queryScheduleSimulation } from "@/modules/drill-simulation/store";
 import { FC, ReactElement } from "react";
-import { queryScheduleSimulation } from "@/store/drill-simulation";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useRecoilState } from "recoil";
 

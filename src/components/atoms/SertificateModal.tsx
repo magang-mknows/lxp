@@ -1,5 +1,5 @@
 "use client";
-import { showDetailSertificate } from "@/store/score-sertificate";
+import { showDetailSertificate } from "@/modules/score-sertificate/store";
 import Image from "next/image";
 import { FC, ReactElement } from "react";
 import { ImCloudDownload } from "react-icons/im";

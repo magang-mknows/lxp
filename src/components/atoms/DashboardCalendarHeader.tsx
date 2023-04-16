@@ -2,7 +2,7 @@ import { FC, Fragment, ReactElement } from "react";
 
 import Link from "next/link";
 import { useRecoilState } from "recoil";
-import { selectedDate } from "@/store/dashboard";
+import { selectedDate } from "@/modules/dashboard/store";
 
 const DashboardCalendarHeader: FC = (): ReactElement => {
   const days: string[] = [
