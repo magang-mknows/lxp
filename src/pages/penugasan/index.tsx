@@ -1,8 +1,8 @@
-import AssigmentModules from "@/modules/Assigment";
+import AssigmentPage from "@/modules/Assigment";
 import React, { ReactElement } from "react";
 
 const page = (): ReactElement => {
-  return <AssigmentModules />;
+  return <AssigmentPage />;
 };
 
 export default page;

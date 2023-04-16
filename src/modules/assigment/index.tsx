@@ -1,13 +1,21 @@
-import AssigmentPage from "@/components/organism/Assigment/Assigment";
+import React, { Fragment, ReactElement, Suspense } from "react";
 import LayoutProvider from "@/providers/LayoutProvider";
-import React, { ReactElement } from "react";
+import AssigmentStatus from "@/components/organism/Assigment/AssigmentStatus";
+import BannerAssigmentSection from "@/components/organism/Assigment/BannerAssigmentSection";
+import AssigmentPageLoading from "./AssigmentPageLoading";
+import BannerLoading from "./BannerLoading";
 
-const AssigmentModules = (): ReactElement => {
+const AssigmentPage = (): ReactElement => {
   return (
     <LayoutProvider>
-      <AssigmentPage />
+      <Suspense fallback={<BannerLoading />}>
+        <BannerAssigmentSection />
+      </Suspense>
+      <Suspense fallback={<AssigmentPageLoading />}>
+        <AssigmentStatus />
+      </Suspense>
     </LayoutProvider>
   );
 };
 
-export default AssigmentModules;
+export default AssigmentPage;
