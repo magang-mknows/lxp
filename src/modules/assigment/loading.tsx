@@ -2,7 +2,7 @@ import React, { Fragment, ReactElement } from "react";
 import BannerLoading from "./BannerLoading";
 import ContentLoading from "./ContentLoading";
 
-const AssigmentLoading = (): ReactElement => {
+const AssigmentPageLoading = (): ReactElement => {
   return (
     <div className="mt-[125px]">
       <BannerLoading />
@@ -11,4 +11,4 @@ const AssigmentLoading = (): ReactElement => {
   );
 };
 
-export default AssigmentLoading;
+export default AssigmentPageLoading;

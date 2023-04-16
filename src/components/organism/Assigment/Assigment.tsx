@@ -2,7 +2,7 @@ import React, { Fragment, ReactElement, Suspense } from "react";
 import AssigmentStatus from "./AssigmentStatus";
 import BannerAssigmentSection from "./BannerAssigmentSection";
 import BannerLoading from "@/modules/Assigment/BannerLoading";
-import AssigmentLoading from "@/modules/Assigment/loading";
+import AssigmentPageLoading from "@/modules/Assigment/loading";
 
 const AssigmentPage = (): ReactElement => {
   return (
@@ -10,7 +10,7 @@ const AssigmentPage = (): ReactElement => {
       <Suspense fallback={<BannerLoading />}>
         <BannerAssigmentSection />
       </Suspense>
-      <Suspense fallback={<AssigmentLoading />}>
+      <Suspense fallback={<AssigmentPageLoading />}>
         <AssigmentStatus />
       </Suspense>
     </Fragment>
