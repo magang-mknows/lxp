@@ -1,6 +1,6 @@
 "use client";
-import HistorySimulationCardLoading from "@/modules/drill-simulation/HistorySimulationCardLoading";
-import { dummyRegisteredSimulation } from "@/store/drill-simulation";
+import HistorySimulationCardLoading from "@/modules/drill-simulation/loading/HistorySimulationCardLoading";
+import { dummyRegisteredSimulation } from "@/modules/drill-simulation/store";
 import dynamic from "next/dynamic";
 import { FC, Fragment, ReactElement } from "react";
 import { useRecoilValue } from "recoil";

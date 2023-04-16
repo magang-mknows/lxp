@@ -1,5 +1,4 @@
 "use client";
-import { showDetailState } from "@/store/score-sertificate";
 import { ScoreSertificateBreadCumbs, ScoreSertificateMenu } from "@/utils/const";
 import { Tab } from "@headlessui/react";
 import { FC, Fragment, ReactElement, Suspense } from "react";
@@ -9,6 +8,7 @@ import BaseScoreTable from "../moleculs/BaseScoreTable";
 import ScoreChart from "../moleculs/ScoreChart";
 import ScoreSummaryTable from "../moleculs/ScoreSummaryTable";
 import SertificateList from "../moleculs/SertificateList";
+import { showDetailState } from "@/modules/score-sertificate/store";
 
 const ScoreSertificatePage: FC = (): ReactElement => {
   const [getShowDetail, setShowDetail] = useRecoilState(showDetailState);

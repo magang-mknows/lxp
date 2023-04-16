@@ -1,9 +1,9 @@
-import { EventRegModalState } from "@/store/unique-event";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactElement } from "react";
 import { useRecoilState } from "recoil";
 import Button from "./Button";
+import { EventRegModalState } from "@/modules/unique-event/store";
 
 const RegisteredEventModal: FC = (): ReactElement => {
   const [getModalState, setModalState] = useRecoilState(EventRegModalState);

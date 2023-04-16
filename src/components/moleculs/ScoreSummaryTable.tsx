@@ -1,8 +1,8 @@
 "use client";
-import { showDetailState } from "@/store/score-sertificate";
 import React, { FC, ReactElement } from "react";
 import { useSetRecoilState } from "recoil";
 import Button from "../atoms/Button";
+import { showDetailState } from "@/modules/score-sertificate/store";
 
 const ScoreSummaryTable: FC = (): ReactElement => {
   const setShowDetail = useSetRecoilState(showDetailState);

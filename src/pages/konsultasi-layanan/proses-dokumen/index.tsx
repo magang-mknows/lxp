@@ -1,4 +1,4 @@
-import DocumentProcessModule from "@/modules/consulting-service/service/document-process/DocumentProcessModule";
+import DocumentProcessModule from "@/modules/consulting-service/service/document-process";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

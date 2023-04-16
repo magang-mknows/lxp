@@ -1,11 +1,11 @@
 "use client";
-import { showDetailSertificate } from "@/store/score-sertificate";
 import Image from "next/image";
 import { FC, ReactElement } from "react";
 import { ImCloudDownload } from "react-icons/im";
 import { useSetRecoilState } from "recoil";
 import Button from "./Button";
 import { TCardContentProps } from "./types";
+import { showDetailSertificate } from "@/modules/score-sertificate/store";
 
 const SertificateModal: FC<TCardContentProps> = ({ srcImg }): ReactElement => {
   const setModalOpen = useSetRecoilState(showDetailSertificate);

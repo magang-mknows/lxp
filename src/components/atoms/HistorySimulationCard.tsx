@@ -1,6 +1,5 @@
 "use client";
-import { finishPopupState } from "@/store/drill-simulation";
-import { TDrillSimulationType } from "@/store/drill-simulation/type";
+import { TDrillSimulationType } from "@/modules/drill-simulation/type";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, ReactElement } from "react";
@@ -9,6 +8,7 @@ import { useRecoilState } from "recoil";
 import Button from "./Button";
 import Modal from "./Modal";
 import RequestSceduleSuccessModal from "./RequestSceduleSuccessModal";
+import { finishPopupState } from "@/modules/drill-simulation/store";
 
 const HistorySimulationCard: FC<TDrillSimulationType> = ({
   ImgSrc,

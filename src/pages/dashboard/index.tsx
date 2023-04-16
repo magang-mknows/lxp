@@ -1,4 +1,4 @@
-import DashboardModule from "@/modules/dashboard/DashboardModule";
+import DashboardModule from "@/modules/dashboard";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

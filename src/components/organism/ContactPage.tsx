@@ -1,5 +1,5 @@
 "use client";
-import ContactLoading from "@/modules/contact/ContactLoading";
+import ContactLoading from "@/modules/contact/loading";
 import dynamic from "next/dynamic";
 import { FC, ReactElement, Suspense } from "react";
 

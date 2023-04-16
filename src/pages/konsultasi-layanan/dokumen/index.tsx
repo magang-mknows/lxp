@@ -1,4 +1,4 @@
-import DocumentServiceModule from "@/modules/consulting-service/service/document/DocumentServiceModule";
+import DocumentServiceModule from "@/modules/consulting-service/service/document";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

@@ -1,4 +1,4 @@
-import TrainingPlanModule from "@/modules/training-plan/TrainingPlanModule";
+import TrainingPlanModule from "@/modules/training-plan";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

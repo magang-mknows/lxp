@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { selectedArticle } from "@/store/dashboard";
+import { selectedArticle } from "./store";
 type ReturnTypes = {
   setSelectedArticle: (val: number) => void;
   getSelectedArticle: number;

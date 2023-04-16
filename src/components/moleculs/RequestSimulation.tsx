@@ -1,7 +1,7 @@
 "use client";
 
-import RequestSimulationCardLoading from "@/modules/drill-simulation/RequestSimulationCardLoading";
-import { dummySceduleSimulation } from "@/store/drill-simulation";
+import RequestSimulationCardLoading from "@/modules/drill-simulation/loading/RequestSimulationCardLoading";
+import { dummySceduleSimulation } from "@/modules/drill-simulation/store";
 import dynamic from "next/dynamic";
 import { FC, ReactElement, Suspense } from "react";
 import { useRecoilValue } from "recoil";
