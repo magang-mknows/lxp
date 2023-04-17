@@ -1,13 +1,8 @@
 import "@/globals.css";
 import type { AppProps } from "next/app";
-import {
-  Hydrate,
-  QueryClient,
-  QueryClientProvider,
-  QueryErrorResetBoundary,
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider, QueryErrorResetBoundary } from "@tanstack/react-query";
 import { RecoilEnv, RecoilRoot } from "recoil";
-import { ReactElement, Suspense, useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { ThemeProvider } from "next-themes";
 
 const queryClient = new QueryClient();
@@ -15,6 +10,8 @@ const queryClient = new QueryClient();
 RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 
 import { Montserrat } from "next/font/google";
+import SuspenseError from "@/providers/SuspenseError";
+import SpinerLoading from "@/components/atoms/SpinerLoading";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,19 +25,24 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
     setMounted(true);
   }, []);
 
-  if (!mounted) return <span>Loading...</span>;
+  if (!mounted) return <SpinerLoading />;
+
   return (
-    <Suspense fallback="Loading...">
+    <SuspenseError>
       <ThemeProvider>
-        <RecoilRoot>
-          <style jsx global>{`
-            html {
-              font-family: ${montserrat.style.fontFamily};
-            }
-          `}</style>
-          <Component {...pageProps} />
-        </RecoilRoot>
+        <QueryClientProvider client={queryClient}>
+          <QueryErrorResetBoundary>
+            <RecoilRoot>
+              <style jsx global>{`
+                html {
+                  font-family: ${montserrat.style.fontFamily};
+                }
+              `}</style>
+              <Component {...pageProps} />
+            </RecoilRoot>
+          </QueryErrorResetBoundary>
+        </QueryClientProvider>
       </ThemeProvider>
-    </Suspense>
+    </SuspenseError>
   );
 }
