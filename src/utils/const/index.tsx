@@ -173,6 +173,7 @@ export const TrainingContractBreadCumbs = [
   { name: "Pelatihan", link: "/rencana-pelatihan" },
   { name: "Kontrak Pelatihan", link: "/rencana-pelatihan" },
 ];
+
 export const FeaturesList = [
   {
     title: "Administrasi",

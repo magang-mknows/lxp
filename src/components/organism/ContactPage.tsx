@@ -1,18 +1,15 @@
-"use client";
 import ContactLoading from "@/modules/contact/loading";
-import dynamic from "next/dynamic";
-import { FC, ReactElement, Suspense } from "react";
+import SuspenseError from "@/providers/SuspenseError";
+import { FC, ReactElement, lazy } from "react";
 
-const ContactContainer = dynamic(() => import("../moleculs/ContactContainer"), {
-  ssr: false,
-});
+const ContactContainer = lazy(() => import("../moleculs/ContactContainer"));
 
 const ContactPage: FC = (): ReactElement => {
   return (
     <section className=" bg-neutral-100/70 min-h-[100vh]">
-      <Suspense fallback={<ContactLoading />}>
+      <SuspenseError loadingFallback={<ContactLoading />}>
         <ContactContainer />
-      </Suspense>
+      </SuspenseError>
     </section>
   );
 };
