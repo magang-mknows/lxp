@@ -2,30 +2,24 @@
 import AboutHeroLoading from "@/modules/about/loading/AboutHeroLoading";
 import AboutJobsLoading from "@/modules/about/loading/AboutJobsLoading";
 import AboutTestimonialsLoading from "@/modules/about/loading/AboutTestimonialsLoading";
-import dynamic from "next/dynamic";
-import { FC, ReactElement, Suspense } from "react";
-const AboutHero = dynamic(() => import("../moleculs/AboutHero"), {
-  ssr: true,
-});
-const AboutTestimonials = dynamic(() => import("../moleculs/AboutTestimonials"), {
-  ssr: true,
-});
-const AboutJobs = dynamic(() => import("../moleculs/AboutJobs"), {
-  ssr: true,
-});
+import SuspenseError from "@/providers/SuspenseError";
+import { FC, ReactElement, lazy } from "react";
+const AboutHero = lazy(() => import("../moleculs/AboutHero"));
+const AboutTestimonials = lazy(() => import("../moleculs/AboutTestimonials"));
+const AboutJobs = lazy(() => import("../moleculs/AboutJobs"));
 
 const AboutPage: FC = (): ReactElement => {
   return (
     <section className="min-h-[100vh]">
-      <Suspense fallback={<AboutHeroLoading />}>
+      <SuspenseError loadingFallback={<AboutHeroLoading />}>
         <AboutHero />
-      </Suspense>
-      <Suspense fallback={<AboutTestimonialsLoading />}>
+      </SuspenseError>
+      <SuspenseError loadingFallback={<AboutTestimonialsLoading />}>
         <AboutTestimonials />
-      </Suspense>
-      <Suspense fallback={<AboutJobsLoading />}>
+      </SuspenseError>
+      <SuspenseError loadingFallback={<AboutJobsLoading />}>
         <AboutJobs />
-      </Suspense>
+      </SuspenseError>
     </section>
   );
 };

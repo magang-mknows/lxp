@@ -29,8 +29,8 @@ const SpinerLoading: FC = (): ReactElement => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(75 75) rotate(-60.0184) scale(75.0417)"
           >
-            <stop offset="0.169556" stop-color="#106FA4" />
-            <stop offset="0.919762" stop-color="#106FA4" stop-opacity="0" />
+            <stop offset="0.169556" stopColor="#106FA4" />
+            <stop offset="0.919762" stopColor="#106FA4" stopOpacity="0" />
           </radialGradient>
         </defs>
       </svg>
