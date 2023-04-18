@@ -365,3 +365,14 @@ export const resgisterSplashData = [
     description: "Dibimbing oleh mentor yang profesional, Dukungan untuk karir masa depan",
   },
 ];
+
+export const myTrainingBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Pelatihan-Ku",
+    link: "/pelatihanku",
+  },
+];
