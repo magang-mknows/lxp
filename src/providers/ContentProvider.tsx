@@ -6,10 +6,9 @@ import { usePathname } from "next/navigation";
 import { FC, lazy, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
-
-const Navbar = lazy(() => import("@/components/moleculs/Navbar"));
-const BottomMenu = lazy(() => import("@/components/atoms/BottomMenu"));
-const ContentFooter = lazy(() => import("@/components/moleculs/ContentFooter"));
+import Navbar from "@/components/moleculs/Navbar";
+import BottomMenu from "@/components/atoms/BottomMenu";
+import ContentFooter from "@/components/moleculs/ContentFooter";
 
 const ContentProvider: FC<TProviderProps> = ({ children }): ReactElement => {
   const pathname = usePathname() as unknown as string;
