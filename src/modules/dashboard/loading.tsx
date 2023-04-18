@@ -2,7 +2,7 @@ import { FC, ReactElement } from "react";
 
 const DashboardLoading: FC = (): ReactElement => {
   return (
-    <section className="pt-[138px] bg-neutral-50/60  min-h-[100vh]">
+    <section className=" bg-neutral-50/60  min-h-[100vh]">
       <section className="bg-neutral-50/60 min-h-[100vh] pb-20">
         <section className=" px-8 md:px-14 lg:px-16 py-8 text-sm font-[600]">
           <div className="bg-neutral-200 animate-pulse rounded-md w-40 h-4"></div>
@@ -10,7 +10,8 @@ const DashboardLoading: FC = (): ReactElement => {
         <div className="grid grid-cols-3 gap-x-10 px-8 md:px-14 lg:px-16">
           <div className="flex flex-col lg:col-span-3 xl:col-span-1 col-span-3">
             <div className="flex xl:flex-col gap-x-10 md:flex-row lg:flex-row flex-col ">
-              <div className="w-full shadow-md  bg-neutral-50 shadow-neutral-100  rounded-md min-h-[540px] mb-10 overflow-hidden">
+              {/* dashboard resume */}
+              <div className="w-full shadow-md  bg-neutral-200 shadow-neutral-100  rounded-md min-h-[540px] mb-10 overflow-hidden">
                 <section className="text-neutral-50 bg-neutral-200 animate-pulse rounded-md relative px-6 pt-12 pb-28">
                   <div className="font-bold text-2xl mb-2 h-10 w-40 bg-neutral-300 animate-pulse rounded-md"></div>
                   <div className="font-bold text-2xl mb-2 h-5 w-60 bg-neutral-300 animate-pulse rounded-md"></div>
@@ -20,7 +21,7 @@ const DashboardLoading: FC = (): ReactElement => {
                       return (
                         <div
                           key={index}
-                          className="h-40 bg-neutral-200 animate-pulse hover:bg-neutral-200 cursor-pointer transition-colors ease-in-out duration-300 rounded-lg shadow-sm w-[12 0px] md:w-32 lg:w-36"
+                          className="h-40 bg-neutral-300 animate-pulse hover:bg-neutral-200 cursor-pointer transition-colors ease-in-out duration-300 rounded-lg shadow-sm w-[12 0px] md:w-32 lg:w-36"
                         >
                           <div className="flex  auto p-4 flex-col cursor-pointer  justify-between gap-y-4 text-neutral-500 hover:text-neutral-600 "></div>
                         </div>
@@ -29,27 +30,29 @@ const DashboardLoading: FC = (): ReactElement => {
                   </section>
                 </section>
               </div>
-              <section className="w-full bg-neutral-200 animate-pulse  mb-10 px-8 py-7 rounded-md  shadow-md shadow-neutral-100 min-h-[520px] ">
-                <div>
+              {/* dashboard leaderboard */}
+              <section className="w-full bg-neutral-200 animate-pulse  mb-10 px-8 py-7 rounded-md  shadow-md shadow-neutral-100 min-h-[560px] ">
+                <div className="mb-8">
                   <div className="font-bold text-2xl mb-2 h-10 w-40 bg-neutral-300 animate-pulse rounded-md"></div>
                   <div className="font-bold text-2xl mb-2 h-4 w-56 bg-neutral-300 animate-pulse rounded-md"></div>
                   <div className="font-bold text-2xl mb-2 h-4 w-40 bg-neutral-300 animate-pulse rounded-md"></div>
                 </div>
+                <div>
+                  <div className="h-16 w-full bg-neutral-300 rounded-md animate-pulse mb-2"></div>
+                  <div className="h-16 w-full bg-neutral-300 rounded-md animate-pulse mb-2"></div>
+                  <div className="h-16 w-full bg-neutral-300 rounded-md animate-pulse mb-2"></div>
+                  <div className="h-16 w-full bg-neutral-300 rounded-md animate-pulse mb-2"></div>
+                </div>
               </section>
+            </div>
+            {/* dashboard article */}
+            <div className=" w-full  overflow-hidden mb-10 ">
+              <div className="flex flex-row items-center justify-between mb-4 h-80 w-full bg-neutral-200 rounded-md animate-pulse"></div>
             </div>
           </div>
           <div className="flex flex-col w-full col-span-3 lg:col-span-3  xl:col-span-2">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-              <div className="bg-neutral-200 animate-pulse min-h-[250px]  p-6 rounded-md shadow-sm">
-                <div className="w-full">
-                  <div>
-                    <div className="w-full h-6 mb-3 bg-neutral-300 animate-pulse rounded-md"></div>
-                    <div className="w-[20%] h-4 mb-6 bg-neutral-300 animate-pulse rounded-md"></div>
-                    <div className="w-full h-28 mb-5 bg-neutral-300 animate-pulse rounded-md"></div>
-                    <div className="w-[40%] h-8  bg-neutral-300 animate-pulse rounded-md"></div>
-                  </div>
-                </div>
-              </div>
+              {/* dashobad carousel */}
               <div className="bg-neutral-200 animate-pulse min-h-[250px]  p-6 rounded-md shadow-sm">
                 <div className="w-full">
                   <div>
@@ -61,6 +64,7 @@ const DashboardLoading: FC = (): ReactElement => {
                 </div>
               </div>
             </div>
+            {/* dashboard progres */}
             <section className="bg-neutral-200 w-full px-6 py-4 rounded-md mb-10">
               <div className="h-7 mb-2 w-[50%] bg-neutral-300 animate-pulse rounded-md"></div>
               <div className="h-4 w-[10%] bg-neutral-300 animate-pulse rounded-md"></div>
@@ -113,7 +117,12 @@ const DashboardLoading: FC = (): ReactElement => {
                 </div>
               </section>
             </section>
-            {/* <DashboardCalendar /> */}
+            {/* dashbaord calander */}
+            <section className="w-full px-7 py-12 min-h-max bg-neutral-200 animate-pulse rounded-md">
+              <section className="w-60 h-8 bg-neutral-300 rounded-md animate-pulse mb-2"></section>
+              <section className="w-40 h-6 bg-neutral-300 rounded-md animate-pulse mb-20"></section>
+              <section className="h-32 bg-neutral-300 rounded-md animate-pulse mb-2"></section>
+            </section>
           </div>
         </div>
       </section>
