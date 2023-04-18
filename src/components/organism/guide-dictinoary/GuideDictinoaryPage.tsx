@@ -14,7 +14,7 @@ const GuideDictionaryPage = (): ReactElement => {
       <LayoutProvider className="!bg-[#FAFAFA]">
         <Suspense>
           <Breadcums items={guideDictinoaryBreadCumbs} />
-          <div className=" w-full flex flex-col-reverse lg:flex-row justify-center lg:gap-[90px]">
+          <div className="  flex flex-col-reverse lg:flex-row justify-start px-8 md:px-14 lg:px-16 w-full gap-36">
             <Sidebar />
             <ContentSection />
           </div>

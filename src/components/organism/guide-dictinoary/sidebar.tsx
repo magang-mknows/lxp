@@ -6,7 +6,7 @@ import { useGuideDictinoary } from "@/modules/Guide/hooks/useGuideDictionary";
 const Sidebar = (): ReactElement => {
   const { getGuideDictionary } = useGuideDictinoary();
   return (
-    <div className="px-6 md:px-8 lg:px10 mb-10">
+    <div className="mb-10">
       <h1 className=" text-[20px] font-[700] mb-2">Kamus Populer </h1>
       <div className="grid grid-cols-2 lg:grid-cols-1 md:grid-cols-3 gap-2 lg:gap-0 md:gap-4">
         {getGuideDictionary.map((dummy, i) => {

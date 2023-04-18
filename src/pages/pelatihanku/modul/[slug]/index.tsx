@@ -1,4 +1,4 @@
-import RegistrationVideoModule from "@/modules/Guide/registration-video/RegistrationVideoModule";
+import RegistrationVideoModule from "@/modules/pelatihanku/registration-video/MyTrainingVideoModule";
 import { NextPage } from "next";
 import React, { ReactElement, Suspense } from "react";
 
