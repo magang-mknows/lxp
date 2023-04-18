@@ -6,7 +6,7 @@ import search from "/public/assets/guide/search.svg";
 
 const ContentSection = (): ReactElement => {
   return (
-    <div className="flex flex-col px-6 md:px-8 lg:px10 mt-[30px] mb-[50px]">
+    <div className="flex flex-col file:mt-[30px] mb-[50px] ">
       <div className="col-span-1 ">
         <div className="title">
           <h1 className=" text-[50px] font-[700]">Kamus LMS M-KNOWS </h1>

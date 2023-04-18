@@ -25,7 +25,7 @@ const Page: NextPage = (): ReactElement => {
       link: "/panduan",
     },
     {
-      name: "Kamus Kampus Gratis",
+      name: "Kamus",
       link: "/panduan/kamus",
     },
     {
@@ -37,9 +37,9 @@ const Page: NextPage = (): ReactElement => {
   return (
     <LayoutProvider className="!bg-[#FAFAFA]">
       <Breadcums items={BreadCrumbEndpoint} />
-      <div className="w-full flex flex-col-reverse lg:flex-row justify-center lg:gap-[90px]">
+      <div className="w-full flex flex-col-reverse lg:flex-row justify-start px-8 md:px-14 lg:px-16 gap-36">
         <Sidebar />
-        <div className="flex flex-col px-6 md:px-8 lg:px10 mt-[30px] mb-[50px]">
+        <div className="flex flex-col px-6 mt-[30px] mb-[50px]">
           <div className="col-span-1 ">
             <div className="title">
               <h1 className=" text-[50px] font-[700]">Kamus Kampus Gratis </h1>
@@ -63,7 +63,7 @@ const Page: NextPage = (): ReactElement => {
             return (
               <div
                 key={index}
-                className="lg:w-[700px] w-full rounded-[8px] flex flex-col place-content-center my-5 bg-[#F5F5F5] shadow-sm dark:bg-[#232529] text-black dark:text-white px-[10px] p-4"
+                className="lg:w-[700px] w-full rounded-[8px] flex flex-col place-content-center my-5 bg-[#F5F5F5] shadow-sm dark:bg-[#232529] text-black dark:text-white  p-4"
               >
                 <div className="font-bold text-xl my-1">{item.title}</div>
                 <div className="font-medium my-2 text-sm lg:text-base">{item.description}</div>

@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 
 const ContentSection = dynamic(() => import("./ContentSection"));
 
-const RegistrationVideoPages = (): ReactElement => {
+const VideoTrainingPages = (): ReactElement => {
   return (
     <Fragment>
       <Breadcums items={guideVideoBreadCumbs} />
@@ -15,4 +15,4 @@ const RegistrationVideoPages = (): ReactElement => {
   );
 };
 
-export default RegistrationVideoPages;
+export default VideoTrainingPages;

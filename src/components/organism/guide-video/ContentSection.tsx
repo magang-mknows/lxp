@@ -9,7 +9,7 @@ import { useGuideVideo } from "@/modules/Guide/hooks/useVideoGuide";
 const ContentSection = (): ReactElement => {
   const { getGuideVideo } = useGuideVideo();
   return (
-    <div className="w-full px-6 md:px-8 lg:px-10">
+    <div className="w-full px-8 md:px-14 lg:px-16">
       <div className="mt-[24px] mb-[54px] justify-between grid lg:grid-cols-3 md:grid-cols-2 lg:gap-x-8 md:gap-x-8 md:gap-y-5 gap-y-5">
         {getGuideVideo.slice(0, 6).map((item, i) => {
           return (

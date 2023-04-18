@@ -1,9 +1,9 @@
 "use client";
 
 import React, { ReactElement } from "react";
-import BukuPanduan from "../../../../public/assets/guide/buku-panduan.svg";
-import VideoPlayer from "../../../../public/assets/guide/video-player.svg";
-import Kamus from "../../../../public/assets/guide/kamus.svg";
+import BukuPanduan from "/public/assets/guide/buku-panduan.svg";
+import VideoPlayer from "/public/assets/guide/video-player.svg";
+import Kamus from "/public/assets/guide/kamus.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,8 +22,8 @@ const GuideSection = (): ReactElement => {
       href: "/panduan/video-panduan",
     },
     {
-      title: "Kamus Kampus Gratis",
-      desc: "Panduan ini berisi konten kampus gratis.",
+      title: "Kamus LMS",
+      desc: "Panduan ini berisi konten LMS M-Knows.",
       img: Kamus,
       href: "/panduan/kamus",
     },
