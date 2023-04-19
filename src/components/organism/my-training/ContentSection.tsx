@@ -12,7 +12,7 @@ const ContentSection = (): ReactElement => {
       pertemuan: 14,
       kodematkul: 1142,
       sks: 131,
-      slug: "/pelatihanku/Course",
+      slug: "/pelatihanku/course",
     },
     {
       src: "/assets/StudyPlan/choicefaculty2.svg",
@@ -21,7 +21,7 @@ const ContentSection = (): ReactElement => {
       pertemuan: 14,
       kodematkul: 1142,
       sks: 131,
-      slug: "/software-engineering",
+      slug: "/pelatihanku/course",
     },
     {
       src: "/assets/StudyPlan/choicefaculty2.svg",
@@ -30,7 +30,7 @@ const ContentSection = (): ReactElement => {
       pertemuan: 14,
       kodematkul: 1142,
       sks: 131,
-      slug: "/software-engineering",
+      slug: "/pelatihanku/course",
     },
     {
       src: "/assets/StudyPlan/choicefaculty2.svg",
@@ -39,7 +39,7 @@ const ContentSection = (): ReactElement => {
       pertemuan: 14,
       kodematkul: 1142,
       sks: 131,
-      slug: "/software-engineering",
+      slug: "/pelatihanku/course",
     },
   ];
   return (
