@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { Fragment, ReactElement } from "react";
-// import ImgChoiceFaculty2 from "/public/assets/StudyPlan/choicefaculty2.svg";
 import Card from "@/components/atoms/Card";
+import Link from "next/link";
 
 const ContentSection = (): ReactElement => {
   const content = [
@@ -12,7 +12,7 @@ const ContentSection = (): ReactElement => {
       pertemuan: 14,
       kodematkul: 1142,
       sks: 131,
-      slug: "/software-engineering",
+      slug: "/pelatihanku/Course",
     },
     {
       src: "/assets/StudyPlan/choicefaculty2.svg",
@@ -44,7 +44,6 @@ const ContentSection = (): ReactElement => {
   ];
   return (
     <Fragment>
-      {/* Title, Seach bar */}
       <div className="flex justify-center items-center flex-col mt-10">
         <h1 className="text-[#171717] text-[24px] font-[700]">Mata Kuliah</h1>
         <div className="bg-[#FAFAFA] dark:bg-gray-300 dark:text-white  w-full h-[56px] mt-10 mb-10 rounded-[8px]">
@@ -65,7 +64,6 @@ const ContentSection = (): ReactElement => {
         </div>
       </div>
 
-      {/* Content Card */}
       <div className="flex md:flex-row md:flex-wrap flex-col gap-7 md:justify-start justify-center pb-40">
         <>
           {content.length === 0 ? (
@@ -83,10 +81,11 @@ const ContentSection = (): ReactElement => {
           ) : (
             content.map((x, i) => (
               <Card
-                key={i}
                 hasImage={true}
+                href={x.slug}
+                key={i}
                 className="rounded-lg shadow-lg lg:w-[31%] md:w-[47%] w-full"
-                imgStyle="rounded-lg h-[241px] "
+                imgStyle="rounded-lg h-[241px] w-auto "
                 src={x.src}
                 imgheight={100}
                 imgwidth={100}

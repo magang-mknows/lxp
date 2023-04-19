@@ -1,38 +1,15 @@
-"use client";
-import { FC, Fragment, ReactElement, useEffect, useMemo, useState } from "react";
+import { FC, Fragment, ReactElement } from "react";
 import Image from "next/image";
 import { MdArrowDropDown } from "react-icons/md";
-import imgCourseHome from "/public/assets/course/course-home-1.svg";
-import imgModuleIcon from "/public/assets/course/module-icon.svg";
 import imgQuizIcon from "/public/assets/course/quiz-icon.svg";
 import imgAssignmentIcon from "/public/assets/course/assignment-icon.svg";
 import imgDiscussionIcon from "/public/assets/course/discussion-icon.svg";
 import imgDoneIcon from "/public/assets/course/done-icon.svg";
-import imgLockIcon from "@/assets/course/lock-icon.svg";
 import Link from "next/link";
 
-const CourseHome: FC = (): ReactElement => {
+const ContentSection: FC = (): ReactElement => {
   return (
     <Fragment>
-      <div className=" lg:px-14 px-5 ">
-        <div className="items-center px-8 md:px-14 lg:px-16 bg-[#FFFF] rounded-[8px] mt-10">
-          <h3 className="text-black dark:text-white text-[28px] text-center font-bold pt-[13px] pb-5">
-            Pelatihan Keterampilan Komunikasi
-          </h3>
-          <div className="w-full h-[253px]">
-            <Image src={imgCourseHome} alt="" className="h-full object-cover rounded-lg mx-auto" />
-          </div>
-          <p className="text-sm font-normal text-neutral-800 dark:text-neutral-400 text-justify py-10 ">
-            Manajemen Keuangan belajar tentang bagaimana merencanakan, mengelola, serta menggunakan
-            sumber daya keuangan perusahaan. Perkuliahan jurusan ini juga tentang lembaga perbankan,
-            kinerja perusahaan, perpajakan, akuntansi, perdagangan internasional, perencanaan modal,
-            asuransi, anggaran, analisis keuangan, akuisisi dana, manajemen utang dan aset, hingga
-            portofolio dan manajemen investasi. Pengawasan berbagai aspek keuangan guna mencegah
-            kesalahan atau kecurangan juga dipelajari selama kuliah.
-          </p>
-        </div>
-      </div>
-
       <div className="gap-[30px] select-none px-8 md:px-14 lg:px-16 mt-[25px]">
         <div className="flex flex-col">
           <button
@@ -46,7 +23,13 @@ const CourseHome: FC = (): ReactElement => {
           <div className={`w-[94%] mx-auto visible bg-[#fff]`}>
             <div className="h-[60px] items-center flex justify-between border-b border-[#D4D4D4] pl-[21px] pr-[40.5px]">
               <div className="flex gap-x-6">
-                <Image src={imgModuleIcon} alt="" />
+                <Image
+                  src={"/assets/course/module-icon.svg"}
+                  className="w-auto"
+                  alt=""
+                  width={100}
+                  height={100}
+                />
                 <Link
                   href="/studi-ku/course/modul"
                   className="text-base text-neutral-800 dark:text-neutral-400 hover:underline"
@@ -107,4 +90,4 @@ const CourseHome: FC = (): ReactElement => {
   );
 };
 
-export default CourseHome;
+export default ContentSection;

@@ -1,17 +1,16 @@
-"use client";
-// import BreadCrumb from "@/components/Assigment/BreadCrumb";
 import { FC, ReactElement } from "react";
-// import { courseBreadCumbs } from "@/utilities/constant";
 import LayoutProvider from "@/providers/LayoutProvider";
 import dynamic from "next/dynamic";
+import Breadcums from "@/components/atoms/Breadcums";
+import { myTrainingCourseBreadCumbs } from "@/utils/const";
 
-const CourseHome = dynamic(() => import("./CourseHome"));
+const CourseMyTrainingPage = dynamic(() => import("@/components/organism/my-training-course"));
 
 const CourseModule: FC = (): ReactElement => {
   return (
     <LayoutProvider>
-      {/* <BreadCrumb items={courseBreadCumbs} /> */}
-      <CourseHome />
+      <Breadcums items={myTrainingCourseBreadCumbs} />
+      <CourseMyTrainingPage />
     </LayoutProvider>
   );
 };
