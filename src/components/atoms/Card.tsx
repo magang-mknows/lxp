@@ -21,8 +21,8 @@ const Card: FC<CardProps> = ({
   return (
     <>
       {href ? (
-        <Link href={`${href}`}>
-          <div className={`${className} flex auto p-4 flex-col`} onClick={() => onClick}>
+        <div className={`${className} flex auto p-4 flex-col`} onClick={() => onClick}>
+          <Link href={href}>
             {hasImage && (
               <Image
                 className={`object-cover ${imgStyle}`}
@@ -35,8 +35,8 @@ const Card: FC<CardProps> = ({
             {icon}
             <h1 className={titleStyle}>{title}</h1>
             <section className="flex">{children}</section>
-          </div>
-        </Link>
+          </Link>
+        </div>
       ) : (
         <div className={`${className} flex auto p-4 flex-col cursor-pointer`} onClick={onClick}>
           {hasImage && (
