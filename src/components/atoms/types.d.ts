@@ -163,7 +163,7 @@ export type TEventCardProps = {
 };
 
 export type TDiscussinCardProps = {
-  hasImage: boolean;
+  hasImage?: boolean;
   text: string;
   imgSource?: string;
   userName: string;
@@ -171,6 +171,12 @@ export type TDiscussinCardProps = {
   time: string;
   type: string;
   countLikes: number;
+  option: ReactNode;
+  children?: ReactNode;
+};
+
+export type TSelectedOptionId = {
+  id: string;
 };
 
 export interface PopupProfilProps {

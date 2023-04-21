@@ -4,8 +4,11 @@ import { AiFillFlag } from "react-icons/ai";
 import { Menu, Transition } from "@headlessui/react";
 import { BsPencilFill } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
+import { useSetRecoilState } from "recoil";
+import { isModalOpen, selectedOption, selectedPostId } from "@/modules/discussion-room/store";
+import { TSelectedOptionId } from "./types";
 
-const DiscussionPostOption: FC = (): ReactElement => {
+const DiscussionPostOption: FC<TSelectedOptionId> = ({ id }): ReactElement => {
   const options = [
     {
       title: "Report",
@@ -20,6 +23,10 @@ const DiscussionPostOption: FC = (): ReactElement => {
       icon: <MdDelete className="text-warning-500" />,
     },
   ];
+
+  const setSeletedOption = useSetRecoilState(selectedOption);
+  const setOptionOpen = useSetRecoilState(isModalOpen);
+  const setSelectedPosId = useSetRecoilState(selectedPostId);
 
   return (
     <Menu as="div" className={" inline-block bg-neutral-50/0   text-left left-0 mt-1.5"}>
@@ -47,6 +54,11 @@ const DiscussionPostOption: FC = (): ReactElement => {
               className={
                 "flex gap-3 items-center px-4 py-3 cursor-pointer  hover:bg-neutral-100 transition-all duration-300 ease-in-out"
               }
+              onClick={() => {
+                setSelectedPosId(id as unknown as string);
+                setSeletedOption(title.toLowerCase());
+                setOptionOpen(true);
+              }}
             >
               {icon}
               <h1 id="post-option" className="text-neutral-800  text-xs text-center">

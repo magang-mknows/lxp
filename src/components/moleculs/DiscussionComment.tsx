@@ -1,6 +1,7 @@
 import { FC, Fragment, ReactElement } from "react";
 import DiscussionAddComment from "../atoms/DiscussionAddComment";
 import DiscussionCard from "../atoms/DisscucionCard";
+import DiscussionPostOption from "../atoms/DiscussionPostOption";
 
 const DiscussionComment: FC = (): ReactElement => {
   const dummyComments = [
@@ -43,7 +44,12 @@ const DiscussionComment: FC = (): ReactElement => {
                   text={comment.text}
                   imgSource={comment.imgSource as unknown as string}
                   title={""}
-                />
+                  option={
+                    <DiscussionPostOption id={`test id ${(index + 1) as unknown as string}`} />
+                  }
+                >
+                  <DiscussionComment />
+                </DiscussionCard>
               </section>
             );
           })}
