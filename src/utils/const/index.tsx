@@ -391,3 +391,21 @@ export const myTrainingCourseBreadCumbs = [
     link: "/Course",
   },
 ];
+export const myTrainingModuleBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Pelatihan-Ku",
+    link: "/pelatihanku",
+  },
+  {
+    name: "Pelatihan Keterampilan Komunikasi",
+    link: "/Course",
+  },
+  {
+    name: "Modul",
+    link: "/modul",
+  },
+];
