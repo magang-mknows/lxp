@@ -1,12 +1,9 @@
 "use client";
-
 import { FC, Fragment, ReactElement } from "react";
 import Image from "next/image";
 
-import { AiFillCloseCircle, AiFillLike } from "react-icons/ai";
+import { AiFillLike } from "react-icons/ai";
 import { GoCommentDiscussion } from "react-icons/go";
-
-import DiscussionPostOption from "./DiscussionPostOption";
 import { TDiscussinCardProps } from "./types";
 
 const DiscussionCard: FC<TDiscussinCardProps> = ({
@@ -18,6 +15,8 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
   time,
   type,
   countLikes,
+  children,
+  option,
 }): ReactElement => {
   return (
     <Fragment>
@@ -41,7 +40,7 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
               <p className="text-neutral-400 dark:text-white/80 text-xs">{time}</p>
             </div>
           </section>
-          <DiscussionPostOption />
+          {option}
         </div>
         <section className="text-neutral-900 text-sm">
           {hasImage && (
@@ -70,7 +69,7 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
           </div>
         </section>
       </div>
-      {type == "post" && (
+      {/* {type == "post" && (
         <section className="relative w-fit my-5">
           <Image
             src={"/assets/dashboard/dummyCourse.png"}
@@ -84,7 +83,9 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
             <span className="h-full w-[65%] bg-[#3EB449] dark:bg-[#17A2B8] block"></span>
           </div>
         </section>
-      )}
+      )} */}
+      {/* <DiscussionComment /> */}
+      {children}
     </Fragment>
   );
 };

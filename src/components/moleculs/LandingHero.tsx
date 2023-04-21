@@ -15,7 +15,7 @@ const LandingHero: FC = (): ReactElement => {
           src={"/assets/landing/landingHeroImage.webp"}
           width={800}
           height={800}
-          loading="lazy"
+          loading="eager"
         />
       </div>
       <LandingHeroHeadlineTitle />

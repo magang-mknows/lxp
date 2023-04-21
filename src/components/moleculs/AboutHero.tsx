@@ -11,8 +11,8 @@ const AboutHero = () => {
           alt="bg-hero"
           className="h-full -z-50 w-full object-cover"
           src={"/assets/about/aboutHeroImage.webp"}
-          width={2000}
-          height={2000}
+          width={1500}
+          height={1500}
           loading="eager"
         />
       </div>
