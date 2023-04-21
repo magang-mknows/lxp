@@ -27,7 +27,7 @@ const ContentSection: FC = (): ReactElement => {
                   height={100}
                 />
                 <Link
-                  href="/studi-ku/course/modul"
+                  href="/pelatihanku/modul"
                   className="text-base text-neutral-800 dark:text-neutral-400 hover:underline"
                 >
                   Modul
