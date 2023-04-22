@@ -23,7 +23,7 @@ const DiscussionCard: FC<TDiscussinCardProps> = ({
       <div
         className={`${
           type === "post" ? "bg-neutral-50" : "bg-neutral-100"
-        } px-5 md:px-8 lg:px-10 py-5  dark:bg-[#222529] border-neutral-100 border-2 dark:border-none rounded-md shadow-sm`}
+        } px-5 md:px-8 lg:px-10 py-5 mb-6  dark:bg-[#222529] border-neutral-100 border-2 dark:border-none rounded-md shadow-sm`}
       >
         <div className="flex justify-between relative">
           <section className=" border-neutral-100/60 flex gap-4 items-center mb-6">
