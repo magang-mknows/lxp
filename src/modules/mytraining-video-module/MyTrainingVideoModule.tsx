@@ -1,12 +1,16 @@
-import MyTrainingVideoPages from "@/components/organism/my-training-video-module";
 import LayoutProvider from "@/providers/LayoutProvider";
-import React, { ReactElement } from "react";
+import SuspenseError from "@/providers/SuspenseError";
+import React, { ReactElement, lazy } from "react";
+import Loading from "./loading";
 
 const MyTrainingVideoModule = (): ReactElement => {
+  const MyTrainingVideoPages = lazy(() => import("@/components/organism/my-training-video-module"));
   return (
-    <LayoutProvider className="!bg-[#FAFAFA] dark:!bg-gray-900">
-      <MyTrainingVideoPages />
-    </LayoutProvider>
+    <SuspenseError loadingFallback={<Loading />}>
+      <LayoutProvider className="!bg-[#FAFAFA] dark:!bg-gray-900">
+        <MyTrainingVideoPages />
+      </LayoutProvider>
+    </SuspenseError>
   );
 };
 
