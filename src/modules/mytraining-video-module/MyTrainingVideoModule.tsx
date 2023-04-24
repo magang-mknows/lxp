@@ -1,13 +1,13 @@
-import VideoTrainingPages from "@/components/organism/my-training-video-module";
+import MyTrainingVideoPages from "@/components/organism/my-training-video-module";
 import LayoutProvider from "@/providers/LayoutProvider";
 import React, { ReactElement } from "react";
 
-const RegistrationVideoModule = (): ReactElement => {
+const MyTrainingVideoModule = (): ReactElement => {
   return (
     <LayoutProvider className="!bg-[#FAFAFA] dark:!bg-gray-900">
-      <VideoTrainingPages />
+      <MyTrainingVideoPages />
     </LayoutProvider>
   );
 };
 
-export default RegistrationVideoModule;
+export default MyTrainingVideoModule;
