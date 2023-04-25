@@ -12,7 +12,7 @@ const ContentSection = () => {
           <Card
             hasImage={false}
             className="border-[#E5E5E5] border-2 text-start rounded-lg shadow-sm"
-            href="/studi-ku/couse/modul/modul1"
+            href="/pelatihanku/video-module/1"
           >
             <div className="flex flex-col p-4">
               <h1 className="font-bold text-[18px]">
@@ -71,7 +71,7 @@ const ContentSection = () => {
           <Card
             hasImage={false}
             className="border-[#E5E5E5] border-2 text-start rounded-lg shadow-sm"
-            href="/studi-ku/couse/modul/modul1"
+            href="/pelatihanku/video-module/1"
           >
             <div className="flex flex-col p-4">
               <h1 className="font-bold text-[18px]">
