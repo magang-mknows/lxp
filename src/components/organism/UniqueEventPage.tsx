@@ -1,20 +1,26 @@
 "use client";
 
 import { UniqueEventBreadCumbs } from "@/utils/const";
-import { usePathname, redirect } from "next/navigation";
-import React, { FC, ReactElement } from "react";
+import React, { FC, ReactElement, lazy } from "react";
 import Breadcums from "../atoms/Breadcums";
 import UniqueEventSearch from "../atoms/UniqueEventSearch";
-import UniqueEventContent from "../moleculs/UniqueEventContent";
 import UniqueEventSidebar from "../moleculs/UniqueEventSidebar";
+import { useRouter } from "next/router";
+import SuspenseError from "@/providers/SuspenseError";
+import CardLoading from "@/modules/unique-event/loading/CardLoading";
+
+const UniqueEventContent = lazy(() => import("../moleculs/UniqueEventContent"));
 
 const UniqueEventPage: FC = (): ReactElement => {
-  const pathname = usePathname() as unknown as string;
+  const router = useRouter();
+  const pathname = router.asPath;
+
   const eventPath = ["/acara-unik", "/acara-unik/terdaftar", "/acara-unik/riwayat"];
 
   if (!eventPath.includes(pathname)) {
-    redirect("/acara-unik");
+    router.push("/acara-unik");
   }
+
   return (
     <section className="bg-neutral-50/60 min-h-[100vh] pb-20">
       <Breadcums items={UniqueEventBreadCumbs} />
@@ -22,7 +28,9 @@ const UniqueEventPage: FC = (): ReactElement => {
         <UniqueEventSidebar />
         <section className="col-span-2">
           <UniqueEventSearch />
-          <UniqueEventContent />
+          <SuspenseError loadingFallback={<CardLoading />}>
+            <UniqueEventContent />
+          </SuspenseError>
         </section>
       </section>
     </section>

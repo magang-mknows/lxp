@@ -1,27 +1,23 @@
 "use client";
 import { UniqueEventBreadCumbs } from "@/utils/const";
-import dynamic from "next/dynamic";
-import { FC, ReactElement, Suspense } from "react";
+import { FC, ReactElement, lazy } from "react";
 import Breadcums from "../atoms/Breadcums";
 import UniqueEventDetailLoading from "@/modules/unique-event/unique-event-detail/loading";
+import SuspenseError from "@/providers/SuspenseError";
 
-const EventDetailTab = dynamic(() => import("../moleculs/EventDetailTab"), {
-  ssr: false,
-});
-const EventDetailBanner = dynamic(() => import("../moleculs/EventDetailBanner"), {
-  ssr: false,
-});
+const EventDetailTab = lazy(() => import("../moleculs/EventDetailTab"));
+const EventDetailBanner = lazy(() => import("../moleculs/EventDetailBanner"));
 
 const UniqueEventDetailPage: FC = (): ReactElement => {
   return (
     <section className="bg-neutral-50/60 min-h-[100vh] pb-20 ">
-      <Suspense fallback={<UniqueEventDetailLoading />}>
+      <SuspenseError loadingFallback={<UniqueEventDetailLoading />}>
         <Breadcums items={UniqueEventBreadCumbs} />
         <section className="px-8 md:px-14 lg:px-16">
           <EventDetailBanner />
           <EventDetailTab />
         </section>
-      </Suspense>
+      </SuspenseError>
     </section>
   );
 };
