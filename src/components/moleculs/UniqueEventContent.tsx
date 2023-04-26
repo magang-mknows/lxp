@@ -5,12 +5,9 @@ import { FC, ReactElement } from "react";
 
 const UniqueEventContent: FC = (): ReactElement => {
   return (
-    <section className="grid gap-10 grid-cols-2">
-      <Link
-        href={"acara-unik/detail/Webinar-Cyber-Security"}
-        className=" bg-primary-300 overflow-hidden"
-      >
-        <div className="w-full bg-neutral-50 px-4 py-4 ">
+    <section className="grid gap-10 grid-cols-1 md:grid-cols-2">
+      <Link href={"acara-unik/detail/Webinar-Cyber-Security"} className="overflow-hidden ">
+        <div className="w-full bg-neutral-50 px-4 py-4 overflow-hidden">
           <Image
             src={"/assets/event/event.svg"}
             className="w-full mb-2"
