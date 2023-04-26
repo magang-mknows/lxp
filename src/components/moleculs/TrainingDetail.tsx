@@ -17,7 +17,7 @@ const TrainingDetail: FC = (): ReactElement => {
           <h1 className="text-base font-bold text-neutral-800">Kompetensi yang dikembangkan</h1>
           <p className="text-sm etxt-text-neutral-700">Mata Kuliah Satu</p>
         </header>
-        <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           {[...Array(6)].map((item, index) => {
             return (
               <section

@@ -13,7 +13,7 @@ const TrainingPlanMain: FC = (): ReactElement => {
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         <SuspenseError loadingFallback={<CardLoading />}>
           <Card
-            href="/rencana-pelatihan/kontrak-pelatihan/test"
+            href="/rencana-pelatihan/informasi-pelatihan/test"
             hasImage
             src={"/assets/training-plan/dummyImg.svg"}
             imgheight={100}
