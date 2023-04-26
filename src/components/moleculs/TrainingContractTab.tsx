@@ -1,10 +1,10 @@
 import { FC, ReactElement } from "react";
-import TrainingDraftTable from "./TrainingDraftTable";
+import TrainingContractTable from "./TrainingContractTable";
 
 const TrainingContractTab: FC = (): ReactElement => {
   return (
     <section>
-      <TrainingDraftTable />
+      <TrainingContractTable />
     </section>
   );
 };

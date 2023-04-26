@@ -1,9 +1,7 @@
-"use client";
 import TrainingContractPage from "@/components/organism/TrainingContractPage";
 import ContentProvider from "@/providers/ContentProvider";
-import { FC, ReactElement } from "react";
 
-const TrainingContractModule: FC = (): ReactElement => {
+const TrainingContractModule = () => {
   return (
     <ContentProvider>
       <TrainingContractPage />

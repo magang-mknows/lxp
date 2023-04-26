@@ -1,6 +1,6 @@
 import { FC, ReactElement } from "react";
 
-const TrainingContractInfo: FC = (): ReactElement => {
+const TrainingInformationInfo: FC = (): ReactElement => {
   return (
     <main>
       <h1 className="flex gap-4 mb-2 text-sm md:text-base">
@@ -19,4 +19,4 @@ const TrainingContractInfo: FC = (): ReactElement => {
   );
 };
 
-export default TrainingContractInfo;
+export default TrainingInformationInfo;
