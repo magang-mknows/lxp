@@ -1,4 +1,4 @@
-import UniqueEventModule from "@/modules/unique-event/loading";
+import UniqueEventModule from "@/modules/unique-event";
 import { NextPage } from "next";
 import { ReactElement } from "react";
 

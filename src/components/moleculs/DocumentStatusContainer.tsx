@@ -1,8 +1,11 @@
 "use client";
 import { Tab } from "@headlessui/react";
-import { FC, ReactElement } from "react";
-import DocumentStatusCard from "../atoms/DocumentStatusCard";
+import { FC, ReactElement, lazy } from "react";
 import DocumentStatusTab from "../atoms/DocumentStatusTab";
+import SuspenseError from "@/providers/SuspenseError";
+import CardLoading from "@/modules/consulting-service/service/document-status/loading/CardLoading";
+
+const DocumentStatusCard = lazy(() => import("../atoms/DocumentStatusCard"));
 
 const DocumentStatusContainer: FC = (): ReactElement => {
   const dummyStoredDocument = [
@@ -30,12 +33,13 @@ const DocumentStatusContainer: FC = (): ReactElement => {
           <Tab.Panel>
             {dummyStoredDocument.map((item, index) => {
               return (
-                <DocumentStatusCard
-                  title={item?.title}
-                  desc={item?.status}
-                  key={index}
-                  subTitle={item?.desc}
-                />
+                <SuspenseError key={index} loadingFallback={<CardLoading />}>
+                  <DocumentStatusCard
+                    title={item?.title}
+                    desc={item?.status}
+                    subTitle={item?.desc}
+                  />
+                </SuspenseError>
               );
             })}
           </Tab.Panel>
@@ -46,12 +50,13 @@ const DocumentStatusContainer: FC = (): ReactElement => {
               })
               .map((item, index) => {
                 return (
-                  <DocumentStatusCard
-                    title={item?.title}
-                    desc={item?.status}
-                    key={index}
-                    subTitle={item?.desc}
-                  />
+                  <SuspenseError key={index} loadingFallback={<CardLoading />}>
+                    <DocumentStatusCard
+                      title={item?.title}
+                      desc={item?.status}
+                      subTitle={item?.desc}
+                    />
+                  </SuspenseError>
                 );
               })}
           </Tab.Panel>
@@ -62,12 +67,13 @@ const DocumentStatusContainer: FC = (): ReactElement => {
               })
               .map((item, index) => {
                 return (
-                  <DocumentStatusCard
-                    title={item?.title}
-                    desc={item?.status}
-                    key={index}
-                    subTitle={item?.desc}
-                  />
+                  <SuspenseError key={index} loadingFallback={<CardLoading />}>
+                    <DocumentStatusCard
+                      title={item?.title}
+                      desc={item?.status}
+                      subTitle={item?.desc}
+                    />
+                  </SuspenseError>
                 );
               })}
           </Tab.Panel>
@@ -77,7 +83,11 @@ const DocumentStatusContainer: FC = (): ReactElement => {
                 return doc.status === "accepted";
               })
               .map((item, index) => {
-                return <DocumentStatusCard title={item?.title} desc={item?.status} key={index} />;
+                return (
+                  <SuspenseError key={index} loadingFallback={<CardLoading />}>
+                    <DocumentStatusCard title={item?.title} desc={item?.status} />
+                  </SuspenseError>
+                );
               })}
           </Tab.Panel>
         </Tab.Panels>

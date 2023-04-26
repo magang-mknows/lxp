@@ -18,7 +18,9 @@ const EventDetailTab: FC = (): ReactElement => {
             {({ selected }) => (
               <div
                 className={`${
-                  selected ? "border-b-2 outline-none   border-version3-500 text-version3-500" : ""
+                  selected
+                    ? "border-b-2 outline-none  focus:outline-none active:outline-none   border-version3-500 text-version3-500"
+                    : ""
                 } py-2 px-4 cursor-pointer  font-bold`}
               >
                 Deskripsi

@@ -1,7 +1,7 @@
 "use client";
 import { ducumentStatus } from "@/utils/const";
 import { Tab } from "@headlessui/react";
-import { FC, ReactElement } from "react";
+import { FC, Fragment, ReactElement } from "react";
 
 const DocumentStatusTab: FC = (): ReactElement => {
   return (
@@ -11,12 +11,12 @@ const DocumentStatusTab: FC = (): ReactElement => {
     >
       {ducumentStatus.map((status, index) => {
         return (
-          <Tab key={index}>
+          <Tab key={index} as={Fragment}>
             {({ selected }) => (
               <button
                 className={`${
                   selected
-                    ? "text-version3-500 border-b-2 border-version3-500 "
+                    ? "text-version3-500 border-b-2 border-version3-500 outline-none  focus:outline-none active:outline-none"
                     : "text-neutral-900"
                 } font-bold py-4 focus:outline-none outline-none `}
               >

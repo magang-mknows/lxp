@@ -1,9 +1,9 @@
 "use client";
 import { DocStatusBreadCumbs } from "@/utils/const";
-import React, { FC, ReactElement } from "react";
+import React, { FC, ReactElement, lazy } from "react";
 import Breadcums from "../atoms/Breadcums";
-import DocumentStatusContainer from "../moleculs/DocumentStatusContainer";
 import DocumentStatusHeader from "../moleculs/DocumentStatusHeader";
+import DocumentStatusContainer from "../moleculs/DocumentStatusContainer";
 
 const DocumentStatusPage: FC = (): ReactElement => {
   return (
