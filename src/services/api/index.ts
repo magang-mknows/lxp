@@ -1,5 +1,6 @@
 import axios from "axios";
-import TokenService from "@/services/token";
+import TokenService from "../token";
+// import AuthService from "@/services/Auth";
 
 const ApiService = {
   _401interceptor: null || 0,
@@ -28,6 +29,7 @@ const ApiService = {
   //     async (error) => {
   //       if (error.request.status === 401) {
   //         if (error.config.url.includes("auth/login")) {
+  //           AuthService.Logout();
   //           throw error;
   //         } else {
   //           try {
