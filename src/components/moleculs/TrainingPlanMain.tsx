@@ -3,7 +3,7 @@ import { FC, ReactElement, lazy } from "react";
 import TrainingPlanCardContent from "../atoms/TrainingPlanCardContent";
 import SuspenseError from "@/providers/SuspenseError";
 import CardLoading from "@/modules/training-plan/loading/CardLoading";
-import { useGetAllDepartment } from "@/pages/rencana-pelatihan/hook";
+import { useGetAllDepartment } from "@/modules/training-plan/hook";
 
 const Card = lazy(() => import("../atoms/Card"));
 
