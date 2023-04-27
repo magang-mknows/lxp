@@ -12,9 +12,9 @@ RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 import { Montserrat } from "next/font/google";
 import SuspenseError from "@/providers/SuspenseError";
 import SpinerLoading from "@/components/atoms/SpinerLoading";
-import ApiService from "@/services/api";
 import configs from "@/configs";
-import TokenService from "@/services/token";
+import ApiService from "@/modules/service/api";
+import TokenService from "@/modules/service/token";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

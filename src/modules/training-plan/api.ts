@@ -1,4 +1,4 @@
-import ApiService from "@/services/api";
+import ApiService from "../service/api";
 import { TDepartmentResponse } from "./type";
 
 export const DepartmentService = {

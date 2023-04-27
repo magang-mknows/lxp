@@ -1,4 +1,4 @@
-import { IMetaResponse } from "@/services/api/type";
+import { ICommonMetaResponse } from "../service/types";
 
 export type TDepartmentItems = {
   id: string;
@@ -9,4 +9,4 @@ export type TDepartmentItems = {
   slug: string;
 };
 
-export type TDepartmentResponse = IMetaResponse<TDepartmentItems>;
+export type TDepartmentResponse = ICommonMetaResponse<TDepartmentItems>;

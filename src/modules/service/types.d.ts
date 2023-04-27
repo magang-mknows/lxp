@@ -1,4 +1,4 @@
-export interface IMetaResponse<T> {
+export interface ICommonMetaResponse<T> {
   code?: number;
   status?: string;
   message?: string;
