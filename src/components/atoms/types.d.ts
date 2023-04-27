@@ -190,3 +190,32 @@ export interface PopupProfilProps {
   widthModal?: string;
   onClose?: MouseEventHandler<HTMLDivElement | HTMLSpanElement>;
 }
+
+export interface AccordionProps {
+  title: string;
+  idAccordion: string;
+  children: React.ReactNode;
+  disabled?: boolean;
+}
+
+export interface SelectFieldProps {
+  className?: string;
+  labelClassName?: string;
+  error?: string;
+  onChange?: ChangeEventHandler<HTMLSelectElement>;
+  value?: string;
+  name: string;
+  label: string | ReactNode;
+  defaultValue?: string;
+  required?: boolean;
+  disabled?: boolean;
+  options: OptionFieldProps[];
+  hasLabel?: boolean;
+  control?: Control<any, T>;
+}
+
+export interface OptionFieldProps {
+  value: string;
+  label: string;
+  className?: string;
+}

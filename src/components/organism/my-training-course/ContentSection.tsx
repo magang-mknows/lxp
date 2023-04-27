@@ -53,7 +53,7 @@ const ContentSection: FC = (): ReactElement => {
                   alt=""
                 />
                 <Link
-                  href="/"
+                  href="/pelatihanku/quiz"
                   className="text-base text-neutral-800 dark:text-neutral-400 hover:underline"
                 >
                   Quiz
@@ -79,7 +79,7 @@ const ContentSection: FC = (): ReactElement => {
                   alt=""
                 />
                 <Link
-                  href="/"
+                  href="/penugasan"
                   className="text-base text-neutral-800 dark:text-neutral-400 hover:underline"
                 >
                   Tugas
@@ -105,7 +105,7 @@ const ContentSection: FC = (): ReactElement => {
                   alt=""
                 />
                 <Link
-                  href="/"
+                  href="/pelatihanku/diskusi"
                   className="text-base text-neutral-800 dark:text-neutral-400 hover:underline"
                 >
                   Diskusi
