@@ -57,7 +57,7 @@ const PostReportModal: FC = (): ReactElement => {
   return (
     <section className="bg-neutral-50">
       <header className="w-full flex justify-center border-b-[0.5px] py-2 border-neutral-300  relative">
-        <h1 className="font-bold text-base text-neutral-900">Laporkan </h1>
+        <h1 className="font-bold text-base text-neutral-900">Laporkan {getSeletedPostId}</h1>
         <RxCross1
           className="text-neutral-400 cursor-pointer text-xl absolute right-0"
           onClick={() => {
