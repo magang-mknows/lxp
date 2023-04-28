@@ -389,6 +389,24 @@ export const myTrainingBreadCumbs = [
     link: "/pelatihanku",
   },
 ];
+export const myTrainingDiscussionBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Pelatihan-Ku",
+    link: "/pelatihanku",
+  },
+  {
+    name: "Mata Kuliah",
+    link: "/pelatihanku",
+  },
+  {
+    name: "Diskusi",
+    link: "/diskusi",
+  },
+];
 
 export const myTrainingCourseBreadCumbs = [
   {
@@ -422,3 +440,33 @@ export const myTrainingModuleBreadCumbs = [
     link: "/modul",
   },
 ];
+export const myTrainingQuizBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Pelatihan-Ku",
+    link: "/pelatihanku",
+  },
+  {
+    name: "Pelatihan Keterampilan Komunikasi",
+    link: "/Course",
+  },
+  {
+    name: "Quiz",
+    link: "/quiz",
+  },
+];
+
+export const administrationBreadCumbs = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "Administrasi",
+    link: "/administrasi",
+  },
+];
+
