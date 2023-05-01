@@ -4,7 +4,6 @@ import { FC, ReactElement } from "react";
 import Breadcums from "../atoms/Breadcums";
 import TrainingInformationHeader from "../moleculs/TrainingInformationHeader";
 import TrainingInformationMain from "../moleculs/TrainingInformationMain";
-import TrainingDetail from "../moleculs/TrainingDetail";
 
 const TrainingInformationPage: FC = (): ReactElement => {
   return (
@@ -12,7 +11,6 @@ const TrainingInformationPage: FC = (): ReactElement => {
       <Breadcums items={TrainingContractBreadCumbs} />
       <TrainingInformationHeader />
       <TrainingInformationMain />
-      <TrainingDetail />
     </section>
   );
 };

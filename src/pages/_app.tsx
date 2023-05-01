@@ -11,12 +11,7 @@ const queryClient = new QueryClient();
 RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
 
 import { Montserrat } from "next/font/google";
-import SuspenseError from "@/providers/SuspenseError";
 import SpinerLoading from "@/components/atoms/SpinerLoading";
-import configs from "@/configs";
-import ApiService from "@/service/api";
-import TokenService from "@/service/token";
-import { ToastContainer } from "react-toastify";
 import { SessionProvider } from "next-auth/react";
 
 const montserrat = Montserrat({
@@ -33,10 +28,7 @@ const montserrat = Montserrat({
 //     ApiService.removeHeader();
 //   }
 // }
-const source_sans_pro = Source_Sans_Pro({
-  weight: "400",
-  subsets: ["latin"],
-});
+
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
@@ -72,7 +64,7 @@ export default function App({
     <QueryClientProvider client={queryClient}>
       <SessionProvider session={session}>
         <RecoilRoot>
-          <main className={source_sans_pro.className}>
+          <main className={montserrat.className}>
             <Component {...pageProps} />
           </main>
         </RecoilRoot>

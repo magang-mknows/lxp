@@ -6,8 +6,8 @@ const ERROR_CODE = 200;
 export default function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   if (req.method == "POST") {
     loginRequest({
-      email: "admin1@gmail.com",
-      password: "1",
+      email: "admin01@gmail.com",
+      password: "admin01",
     });
   }
 }
