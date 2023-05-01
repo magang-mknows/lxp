@@ -1,6 +1,12 @@
 import { useRecoilState } from "recoil";
-import { PrivateInformationState, JobInformationState, FileInformationState, AdministrationStatusState } from "./store";
-import { ReturnTypesPrivateInformation, ReturnTypesJobInformation, ReturnTypesFileInformation, StatusReturnTypesAdministration } from "./type";
+import { PrivateInformationState, AdministrationStatusState } from "./store";
+import {
+  ReturnTypesPrivateInformation,
+  StatusReturnTypesAdministration,
+  TAdministrationResponse,
+} from "./type";
+import { UseQueryResult, useQuery } from "@tanstack/react-query";
+// import { AdministrationService } from "./api";
 
 export const usePrivateInformationStatus = (): ReturnTypesPrivateInformation => {
   const [get, set] = useRecoilState(PrivateInformationState);
@@ -9,23 +15,6 @@ export const usePrivateInformationStatus = (): ReturnTypesPrivateInformation => 
     getPrivateStatus: get,
   };
 };
-
-export const useJobInformationStatus = (): ReturnTypesJobInformation => {
-  const [get, set] = useRecoilState(JobInformationState);
-  return {
-    setJobStatus: (val: boolean) => set(val),
-    getJobStatus: get,
-  };
-};
-
-export const useFileInformationStatus = (): ReturnTypesFileInformation => {
-  const [getStatus, setStatus] = useRecoilState(FileInformationState);
-  return {
-    setFileStatus: (val: boolean) => setStatus(val),
-    getFileStatus: getStatus,
-  };
-};
-
 export const useAdministrationStatus = (): StatusReturnTypesAdministration => {
   const [getStatus, setStatus] = useRecoilState(AdministrationStatusState);
   return {
@@ -33,3 +22,9 @@ export const useAdministrationStatus = (): StatusReturnTypesAdministration => {
     getAdministrationStatus: getStatus,
   };
 };
+
+export const useGetAllDepartment = (): UseQueryResult<TAdministrationResponse, unknown> =>
+  useQuery<TAdministrationResponse>({
+    queryKey: ["get-all-administration"],
+    // queryFn: async () => await AdministrationService.GetAllAdministration(),
+  });

@@ -14,7 +14,7 @@ const AdministrationModule: FC = (): ReactElement => {
       <LayoutProvider>
         <div className=" bg-[#F5F5F5] w-full">
           <Breadcums items={administrationBreadCumbs} />
-          <div className="bg-[#FFFF] container mx-auto rounded-md p-10 ">
+          <div className="bg-[#FFFF] container mx-auto rounded-md p-10 min-h-screen ">
             <TitleAdministration />
             <ContentAdministration />
           </div>
