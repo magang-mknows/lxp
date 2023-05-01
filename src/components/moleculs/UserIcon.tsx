@@ -1,9 +1,11 @@
 import { FC, ReactElement, useEffect, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { RiDashboardFill, RiSettings5Fill } from "react-icons/ri";
-import { FaUserAlt, FaUserCircle } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import SpinerLoading from "../atoms/SpinerLoading";
+import { logoutRequest } from "@/modules/auth/logout/api";
+import { useSession } from "next-auth/react";
 
 const UserIcon: FC = (): ReactElement => {
   const UserMenu = [
@@ -30,6 +32,8 @@ const UserIcon: FC = (): ReactElement => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const { data } = useSession();
 
   if (!mounted) return <SpinerLoading />;
 
@@ -73,9 +77,18 @@ const UserIcon: FC = (): ReactElement => {
                 }
               >
                 {icon}
-                <h1 className="text-[#171717] group:hover:text-neutral-100 text-xs text-center">
-                  {name}
-                </h1>
+                <button
+                  type="submit"
+                  onClick={() => {
+                    logoutRequest({
+                      refresh_token: data?.user?.token?.refresh_token as string,
+                    });
+                  }}
+                >
+                  <h1 className="text-[#171717] group:hover:text-neutral-100 text-xs text-center">
+                    {name}
+                  </h1>
+                </button>
               </Menu.Item>
             ))}
           </Menu.Items>
