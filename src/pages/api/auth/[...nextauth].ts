@@ -1,8 +1,8 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { TLoginData } from "@/modules/auth/types";
 import { loginByGoogleRequest, loginRequest } from "@/modules/auth/api";
+import { TLoginData } from "@/modules/auth/types";
 // import { loginByGoogleRequest, loginRequest } from "../../../modules";
 
 export const authOptions: NextAuthOptions = {
