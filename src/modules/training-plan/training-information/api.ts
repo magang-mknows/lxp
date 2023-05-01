@@ -1,21 +1,7 @@
-// import ApiService from "@/modules/service/api";
-// import { TSubjectResponse } from "./type";
+import api from "@/service/api";
+import { TSubjectResponse } from "./types";
 
-// export const SebjectService = {
-//   GetSubjectByDepartmenId: async (id: string): Promise<TSubjectResponse> => {
-//     const requestData = {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       url: `/subjects/department/${id}`,
-//     };
-//     try {
-//       const result = await ApiService.customRequest(requestData);
-//       ApiService.setHeader();
-//       return result.data;
-//     } catch (error) {
-//       throw console.log(error);
-//     }
-//   },
-// };
+export const getSubjectByDepartmenId = async (id: string): Promise<TSubjectResponse> => {
+  const { data } = await api.get(`/subjects/department/${id}`);
+  return data;
+};

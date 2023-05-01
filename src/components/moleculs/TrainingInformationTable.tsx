@@ -8,15 +8,18 @@ import { useRecoilState } from "recoil";
 import TrainingDetail from "./TrainingDetail";
 import TrainingDetailTableHeader from "../atoms/TrainingDetailTableHeader";
 import { showSelectedDetail } from "@/modules/training-plan/training-information/store";
+import { useGetSubjectByDepartmenId } from "@/modules/training-plan/training-information/hook";
+import { usePathname } from "next/navigation";
 
 const TrainingInformationTable: FC = (): ReactElement => {
-  const { query } = useRouter();
-
-  // const { data } = useGetSubjectByDepartmenId(query?.slug as unknown as string);
-  // const subjects = data?.data;
+  const { query, isReady } = useRouter();
 
   const [selectedDetail, setSelectedDetail] = useRecoilState(showSelectedDetail);
   const [isShowDetail, setShowDetail] = useRecoilState(showDetailTraining);
+
+  if (isReady) {
+    console.log("isReady : ", isReady);
+  }
 
   return (
     <div className="flex flex-col">
