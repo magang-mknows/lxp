@@ -7,7 +7,7 @@ import Form from "@/components/atoms/CommonForm";
 import GoogleFoto from "../../../public/assets/Login/Google.svg";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import ControlledTextField from "../atoms/ControlledInput";
@@ -15,9 +15,13 @@ import ControlledCheckboxField from "../atoms/ControlledCheckbox";
 import { FcGoogle } from "react-icons/fc";
 import { useForgotPopup } from "@/modules/auth/hooks/ForgotPassword/usePopupForgot";
 import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
+import { useRouter } from "next/router";
+import { signIn } from "next-auth/react";
 
 const LoginForm: FC = (): ReactElement => {
   const { setForgotPopup } = useForgotPopup();
+  const [loading, setLoading] = useState(false);
+  const [getError, setError] = useState<string | undefined>(undefined);
   const { setLoginPopup } = useLoginPopup();
   const validationSchema = z.object({
     email: z.string().min(1, { message: "Email harus diisi" }).email({
@@ -45,9 +49,28 @@ const LoginForm: FC = (): ReactElement => {
       remember: false,
     },
   });
+  const router = useRouter();
+  const onSubmit = handleSubmit(async (data) => {
+    setLoading(true);
+    try {
+      const response = await signIn("login", {
+        email: data.email,
+        password: data.password,
+        redirect: false,
+      });
+      if (response?.ok) {
+        router.push("/");
+      } else {
+        setError(response?.error);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+    setLoading(false);
+  });
 
   return (
-    <Form onSubmit={"/"} className=" flex flex-col px-20 py-12">
+    <Form onSubmit={onSubmit} className=" flex flex-col px-20 py-12">
       <section className="flex flex-col w-full gap-y-1 mb-6 mt-10">
         <h1 className="text-center font-bold text-4xl">Masuk</h1>
         <p className="text-center text-sm">

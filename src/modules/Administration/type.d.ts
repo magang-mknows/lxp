@@ -18,56 +18,16 @@ export type StatusReturnTypesAdministration = {
   getAdministrationStatus: string;
 };
 
-export const optionsGender = [
-  {
-    value: "pilih",
-    label: "Pilih jenis kelamin",
-  },
-  {
-    value: "P",
-    label: "Perempuan",
-  },
-  {
-    value: "L",
-    label: "Laki - Laki",
-  },
-];
+import { ICommonMetaResponse } from "../../service/types";
 
-export const optionsLastEducation = [
-  {
-    value: "pilih",
-    label: "Pilih pendidikan terakhir",
-  },
-  {
-    value: "NA",
-    label: "Tidak lulus SD / belum tamat SD",
-  },
-  {
-    value: "ELEMENTARY",
-    label: "Tamat SD / setingkat",
-  },
-  {
-    value: "HIGHSCHOOL",
-    label: "Tamat SMP / setingkat",
-  },
-  {
-    value: "SENIORHS",
-    label: "Tamat SMA / setingkat",
-  },
-  {
-    value: "DIPLOMA",
-    label: "Diploma 1 / 2 / 3",
-  },
-  {
-    value: "BACHELOR",
-    label: "Sarjana (S1)",
-  },
-  {
-    value: "MAGISTRATE",
-    label: "Magister (S2)",
-  },
-  {
-    value: "DOCTORATE",
-    label: "Doktor (S3)",
-  },
-];
+export type TAdministrationItems = {
+  id: string;
+  name: string;
+  category: string;
+  point: number;
+  thumbnail: string;
+  slug: string;
+};
+
+export type TAdministrationResponse = ICommonMetaResponse<TAdministrationItems>;
+
