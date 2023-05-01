@@ -4,6 +4,7 @@ import Button from "../atoms/Button";
 import LandingHeroHeadlineTitle from "../atoms/LandingHeroHeadlineTitle";
 import LandingHeroHeadlineDesc from "../atoms/LandingHeroHeadlineDesc";
 import LandingHeroHeadlinePoster from "../atoms/LandingHeroHeadlinePoster";
+import { toast } from "react-toastify";
 
 const LandingHero: FC = (): ReactElement => {
   return (
@@ -20,7 +21,12 @@ const LandingHero: FC = (): ReactElement => {
       </div>
       <LandingHeroHeadlineTitle />
       <LandingHeroHeadlineDesc />
-      <Button type="primary" text="Get a demo" size="medium" />
+      <Button
+        type="primary"
+        text="Get a demo"
+        size="medium"
+        onClick={() => toast.success("Sukses")}
+      />
       <LandingHeroHeadlinePoster />
     </div>
   );

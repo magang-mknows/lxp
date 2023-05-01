@@ -144,11 +144,15 @@ const PrivateInformationSection: FC = (): ReactElement => {
               />
             </div>
             <div className="flex w-full my-8 justify-end">
-              <Button
-                disabled={!isValid}
-                className="my-4 w-[211px] rounded-[8px] disabled:bg-gray-400 disabled:text-gray-200 bg-blue-600 text-white font-bold p-3 text-1xl"
-                text={"Simpan Informasi Pribadi"}
-              />
+              <button
+                className={`my-4 w-[211px] rounded-[8px] disabled:bg-gray-400 disabled:text-gray-200 ${
+                  isValid ? "bg-[#F26800]" : " bg-neutral-200"
+                } font-bold p-3 text-1xl text-[#FFFF] `}
+                disabled={isValid}
+                type="submit"
+              >
+                Simpan Informasi Pribadi
+              </button>
             </div>
           </div>
         </div>
