@@ -11,6 +11,8 @@ import dynamic from "next/dynamic";
 import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
 import Link from "next/link";
 import useWindowScroll from "@/modules/navbar/hook";
+import UserIcon from "./UserIcon";
+import { useSession } from "next-auth/react";
 
 const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
   ssr: false,
@@ -19,6 +21,7 @@ const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
 const Navbar = () => {
   const { isScrollY } = useWindowScroll();
   const { getLoginPopup, setLoginPopup } = useLoginPopup();
+  const { data: session } = useSession();
 
   return (
     <nav
@@ -38,19 +41,23 @@ const Navbar = () => {
         <NavbarMenu />
         <NavbarAskMenu />
         <NavbarFeatureMenu />
-        <NavbarThemeOption />
-        <section className="lg:flex gap-4 hidden">
-          <NavButton
-            type="secondary"
-            text="Masuk"
-            size="small"
-            onClick={() => setLoginPopup(true)}
-          />
+        {/* <NavbarThemeOption /> */}
+        {!session ? (
+          <section className="lg:flex gap-4 hidden">
+            <NavButton
+              type="secondary"
+              text="Masuk"
+              size="small"
+              onClick={() => setLoginPopup(true)}
+            />
 
-          <Link href={"daftar"} passHref>
-            <NavButton type="primary" text="Daftar" size="small" />
-          </Link>
-        </section>
+            <Link href={"daftar"} passHref>
+              <NavButton type="primary" text="Daftar" size="small" />
+            </Link>
+          </section>
+        ) : (
+          <UserIcon />
+        )}
       </div>
     </nav>
   );

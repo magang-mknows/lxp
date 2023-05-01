@@ -1,4 +1,3 @@
-"use client";
 import Button from "@/components/atoms/Button";
 import DashedText from "@/components/atoms/DashedText";
 import Form from "@/components/atoms/CommonForm";
@@ -56,7 +55,7 @@ const LoginForm: FC = (): ReactElement => {
       const response = await signIn("login", {
         email: data.email,
         password: data.password,
-        redirect: false,
+        // redirect: false,
       });
       if (response?.ok) {
         router.push("/");
@@ -90,7 +89,7 @@ const LoginForm: FC = (): ReactElement => {
           control={control}
           type={"password"}
           name={"password"}
-          placeholder={"*******"}
+          placeholder={"***"}
           required
           className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
         />

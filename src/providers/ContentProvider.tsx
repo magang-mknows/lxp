@@ -1,9 +1,8 @@
 "use client";
 
 import { BottomNavMenu } from "@/utils/const";
-import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
-import { FC, lazy, ReactElement, Suspense } from "react";
+import { FC, ReactElement, Suspense } from "react";
 import ClienProvider from "./ClientProvider";
 import { TProviderProps } from "./types";
 import Navbar from "@/components/moleculs/Navbar";
