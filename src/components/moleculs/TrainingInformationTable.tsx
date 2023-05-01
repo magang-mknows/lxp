@@ -1,6 +1,6 @@
 "use client";
 import { showDetailTraining } from "@/modules/training-plan/store";
-import { useGetSubjectByDepartmenId } from "@/modules/training-plan/training-information/hook";
+// import { useGetSubjectByDepartmenId } from "@/modules/training-plan/training-information/hook";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { FC, ReactElement, useEffect, useState } from "react";
@@ -12,8 +12,8 @@ import { showSelectedDetail } from "@/modules/training-plan/training-information
 const TrainingInformationTable: FC = (): ReactElement => {
   const { query } = useRouter();
 
-  const { data } = useGetSubjectByDepartmenId(query?.slug as unknown as string);
-  const subjects = data?.data;
+  // const { data } = useGetSubjectByDepartmenId(query?.slug as unknown as string);
+  // const subjects = data?.data;
 
   const [selectedDetail, setSelectedDetail] = useRecoilState(showSelectedDetail);
   const [isShowDetail, setShowDetail] = useRecoilState(showDetailTraining);
@@ -27,7 +27,7 @@ const TrainingInformationTable: FC = (): ReactElement => {
               <thead className="bg-secondary-blue-100/20 border-b-2 border-neutral-200">
                 <TrainingDetailTableHeader />
               </thead>
-              <tbody className=" text-center   text-neutral-800 ">
+              {/* <tbody className=" text-center   text-neutral-800 ">
                 {subjects?.map((subject, index) => {
                   return (
                     <tr
@@ -105,7 +105,7 @@ const TrainingInformationTable: FC = (): ReactElement => {
                     {subjects?.reduce((prev, subject) => prev + subject.credit, 0)}
                   </td>
                 </tr>
-              </tbody>
+              </tbody> */}
             </table>
           </div>
         </div>
