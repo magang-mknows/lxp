@@ -16,6 +16,7 @@ import { useForgotPopup } from "@/modules/auth/hooks/ForgotPassword/usePopupForg
 import { useLoginPopup } from "@/modules/auth/hooks/Login/usePopupLogin";
 import { useRouter } from "next/router";
 import { signIn } from "next-auth/react";
+import { ImSpinner5 } from "react-icons/im";
 
 const LoginForm: FC = (): ReactElement => {
   const { setForgotPopup } = useForgotPopup();
@@ -117,6 +118,7 @@ const LoginForm: FC = (): ReactElement => {
           text="Masuk"
           className="!bg-version2-400 disabled:!bg-version2-400/60 !border-none"
           size="full"
+          icon={loading ? <ImSpinner5 className="animate-spin duration-200 delay-150" /> : null}
         />
 
         <DashedText />

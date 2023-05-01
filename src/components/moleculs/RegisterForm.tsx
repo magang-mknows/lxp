@@ -10,18 +10,23 @@ import { z } from "zod";
 import ControlledTextField from "../atoms/ControlledInput";
 import { FcGoogle } from "react-icons/fc";
 import CheckboxField from "../atoms/CheckboxField";
+import { useRegister } from "@/modules/auth/resgiter/hook";
+import { useRouter } from "next/router";
+import { ImSpinner5 } from "react-icons/im";
 
 const RegisterForm: FC = (): ReactElement => {
   const validationSchema = z
     .object({
-      fullName: z.string().min(1, { message: "Nama Lengkap harus diisi" }),
+      full_name: z.string().min(1, { message: "Nama Lengkap harus diisi" }),
       email: z.string().min(1, { message: "Email harus diisi" }).email({
         message: "Email harus valid",
       }),
       password: z.string().min(1, { message: "Password harus diisi" }),
-      confirmPassword: z.string().min(1, { message: "Password harus diisi" }),
+      password_confirmation: z.string().min(1, { message: "Password harus diisi" }),
     })
-    .refine((data) => data.password === data.confirmPassword, { message: "Password tidak sesuai" });
+    .refine((data) => data.password === data.password_confirmation, {
+      message: "Password tidak sesuai",
+    });
 
   type ValidationSchema = z.infer<typeof validationSchema>;
 
@@ -33,15 +38,27 @@ const RegisterForm: FC = (): ReactElement => {
     resolver: zodResolver(validationSchema),
     mode: "all",
     defaultValues: {
-      fullName: "",
+      full_name: "",
       email: "",
       password: "",
-      confirmPassword: "",
+      password_confirmation: "",
     },
+  });
+  const { mutate, isLoading } = useRegister();
+
+  const router = useRouter();
+
+  const onSubmit = handleSubmit((data) => {
+    mutate(data, {
+      onSuccess: () => router.push("/"),
+      onError: (e) => {
+        console.log(e.response?.data.message);
+      },
+    });
   });
 
   return (
-    <Form onSubmit={"/"} className="flex flex-col justify-center px-8 md:px-14 lg:px-16 pt-10">
+    <Form onSubmit={onSubmit} className="flex flex-col justify-center px-8 md:px-14 lg:px-16 pt-10">
       <section className="flex flex-col w-full mb-4">
         <h1 className="text-4xl font-bold text-left text-neutral-700 mb-1">Daftar Akun</h1>
         <p className="text-sm text-neutral-900 mb-4">
@@ -52,7 +69,7 @@ const RegisterForm: FC = (): ReactElement => {
         <ControlledTextField
           control={control}
           type={"text"}
-          name={"fullName"}
+          name={"full_name"}
           placeholder={"Nama Lengkap"}
           required
           className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3] "
@@ -76,7 +93,7 @@ const RegisterForm: FC = (): ReactElement => {
         <ControlledTextField
           control={control}
           type={"password"}
-          name={"confirmPassword"}
+          name={"password_confirmation"}
           placeholder={"Konfirmasi Kata Sandi"}
           className="!h-[56px] !rounded-[8px] !border-2 !border-[#A3A3A3]"
           required
@@ -98,6 +115,7 @@ const RegisterForm: FC = (): ReactElement => {
           type="primary"
           size="full"
           className="!bg-version2-400 !border-none"
+          icon={isLoading ? <ImSpinner5 className="animate-spin duration-200 delay-150" /> : null}
         />
         <DashedText />
         <Button

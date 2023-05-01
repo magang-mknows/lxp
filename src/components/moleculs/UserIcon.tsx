@@ -6,6 +6,7 @@ import { FiLogOut } from "react-icons/fi";
 import SpinerLoading from "../atoms/SpinerLoading";
 import { logoutRequest } from "@/modules/auth/logout/api";
 import { useSession } from "next-auth/react";
+import { useProfile } from "@/modules/profile/hooks";
 
 const UserIcon: FC = (): ReactElement => {
   const UserMenu = [
@@ -35,6 +36,12 @@ const UserIcon: FC = (): ReactElement => {
 
   const { data } = useSession();
 
+  const { data: profileData } = useProfile();
+  const _profile_user = {
+    email: profileData?.data?.user?.email,
+    full_name: profileData?.data?.user?.full_name,
+  };
+
   if (!mounted) return <SpinerLoading />;
 
   return (
@@ -62,9 +69,11 @@ const UserIcon: FC = (): ReactElement => {
 
               <section>
                 <h1 className="text-sm text-neutral-900 dark:text-neubg-neutral-100">
-                  Mario Silalahi
+                  {_profile_user.full_name}
                 </h1>
-                <p className="text-xs text-neutral-500 dark:text-neutral-300">user@jshdj.com</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-300">
+                  {_profile_user.email}
+                </p>
               </section>
             </div>
 

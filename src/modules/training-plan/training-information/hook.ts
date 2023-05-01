@@ -4,6 +4,6 @@ import { getSubjectByDepartmenId } from "./api";
 
 export const useGetSubjectByDepartmenId = (id: string): UseQueryResult<TSubjectResponse, unknown> =>
   useQuery({
-    queryKey: ["get-subject-by-department-id"],
+    queryKey: ["get-subject-by-department-id", id],
     queryFn: async () => await getSubjectByDepartmenId(id),
   });
