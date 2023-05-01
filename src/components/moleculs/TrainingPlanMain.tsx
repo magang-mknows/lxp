@@ -13,9 +13,19 @@ import { useSearchParams } from "next/navigation";
 const Card = lazy(() => import("../atoms/Card"));
 
 const TrainingPlanMain: FC = (): ReactElement => {
-  const [getKeyword, setKeyword] = useRecoilState(searchKeyword);
   const { data } = useGetAllDepartments();
   const departments = data?.data;
+
+  const [query, setQuery] = useState("");
+
+  const handleChange = (e: any) => {
+    setQuery(e.target.value);
+  };
+
+  const searchFilter = (array: any) => {
+    return array?.filter((item: any) => item.name.toLowerCase().includes(query));
+  };
+  const filtered = searchFilter(departments);
 
   return (
     <main className="px-8 md:px-14 lg:px-16 ">
@@ -24,10 +34,8 @@ const TrainingPlanMain: FC = (): ReactElement => {
           <div className="flex items-center px-4 md:px-6 gap-4 py-4">
             <AiOutlineSearch className="text-neutral-400 text-xl" />
             <input
-              value={getKeyword}
-              onChange={(e) => {
-                setKeyword(e.target.value);
-              }}
+              value={query}
+              onChange={handleChange}
               type={"text"}
               className="bg-neutral-100 text-sm text-neutral-700 w-full focus:outline-none"
               placeholder="Cari Mata Kuliah"
@@ -38,7 +46,7 @@ const TrainingPlanMain: FC = (): ReactElement => {
       <h1 className="text-xl font-bold text-neutral-900 mb-8">Pilihan Pelatihan</h1>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <SuspenseError loadingFallback={<CardLoading />}>
-          {departments?.map((department, index) => {
+          {filtered?.map((department: any, index: any) => {
             return (
               <Card
                 key={index}
