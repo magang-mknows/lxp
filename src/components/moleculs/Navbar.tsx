@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavbarAskMenu from "../atoms/NavbarAskMenu";
 import NavbarFeatureMenu from "../atoms/NavbarFeatureMenu";
 import CompanyLogo from "../atoms/CompanyLogo";
@@ -20,8 +20,13 @@ const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
 
 const Navbar = () => {
   const { isScrollY } = useWindowScroll();
+  const [isLogin, setislogin] = useState(true);
   const { getLoginPopup, setLoginPopup } = useLoginPopup();
   const { data: session } = useSession();
+  console.log("sesi", session);
+  useEffect(() => {
+    session == null ? setislogin(false) : setislogin(true);
+  }, [session]);
 
   return (
     <nav
@@ -42,7 +47,9 @@ const Navbar = () => {
         <NavbarAskMenu />
         <NavbarFeatureMenu />
         {/* <NavbarThemeOption /> */}
-        {!session ? (
+        {isLogin ? (
+          <UserIcon />
+        ) : (
           <section className="lg:flex gap-4 hidden">
             <NavButton
               type="secondary"
@@ -55,8 +62,6 @@ const Navbar = () => {
               <NavButton type="primary" text="Daftar" size="small" />
             </Link>
           </section>
-        ) : (
-          <UserIcon />
         )}
       </div>
     </nav>

@@ -193,7 +193,7 @@ export const FeaturesList = [
     title: "Pelatihan-ku",
     desc: "Isi administrasi kamu sekarang untuk dapat mengikuti program Kampus Gratis",
     isAvailable: true,
-    link: "/pelatihan-ku",
+    link: "/pelatihanku",
     srcImg: "/assets/features/studiku.svg",
   },
   {
@@ -249,7 +249,7 @@ export const FeaturesList = [
     title: "Papan Skor",
     desc: "Isi administrasi kamu sekarang untuk dapat mengikuti program Kampus Gratis",
     isAvailable: true,
-    link: "/papan-skor",
+    link: "/dashboard/papan-skor",
     srcImg: "/assets/features/panduan.svg",
   },
   {
