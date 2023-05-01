@@ -6,6 +6,7 @@ import {
   TAdministrationResponse,
 } from "./type";
 import { UseQueryResult, useQuery } from "@tanstack/react-query";
+import { getAdministrationRequest } from "./api";
 // import { AdministrationService } from "./api";
 
 export const usePrivateInformationStatus = (): ReturnTypesPrivateInformation => {
@@ -23,8 +24,8 @@ export const useAdministrationStatus = (): StatusReturnTypesAdministration => {
   };
 };
 
-export const useGetAllDepartment = (): UseQueryResult<TAdministrationResponse, unknown> =>
+export const useGetAllAdministration = (): UseQueryResult<TAdministrationResponse, unknown> =>
   useQuery<TAdministrationResponse>({
     queryKey: ["get-all-administration"],
-    // queryFn: async () => await AdministrationService.GetAllAdministration(),
+    queryFn: async () => await getAdministrationRequest(),
   });

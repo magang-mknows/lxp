@@ -4,13 +4,19 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 // import { handleError } from "@/utilities/helper";
 // import Button from "@/components/Common/Button";
-import { usePrivateInformationStatus, useAdministrationStatus } from "../hooks";
+import {
+  usePrivateInformationStatus,
+  useAdministrationStatus,
+  useGetAllAdministration,
+} from "../hooks";
 import ControlledTextField from "@/components/atoms/ControlledInput";
 import Form from "@/components/atoms/CommonForm";
 import Accordion from "@/components/atoms/Accordion";
 import Button from "@/components/atoms/Button";
 
 const PrivateInformationSection: FC = (): ReactElement => {
+  const { data } = useGetAllAdministration();
+  console.log("data", data);
   const validationSchema = z.object({
     fullname: z.string().min(1, { message: "Nama lengkap harus diisi" }),
     nip: z.string().min(1, { message: " NIP harus diisi" }),
