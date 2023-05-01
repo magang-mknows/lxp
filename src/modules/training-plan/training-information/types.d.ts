@@ -1,4 +1,4 @@
-import { ICommonMetaResponse } from "@/modules/service/types";
+import { ICommonMetaResponse } from "@/service/types";
 
 export type TsubjectItems = {
   id: string;

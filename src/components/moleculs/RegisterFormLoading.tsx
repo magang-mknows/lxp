@@ -1,5 +1,4 @@
 "use client";
-import Form from "@/components/atoms/CommonForm";
 import { FC, ReactElement } from "react";
 
 const RegisterFormLoading: FC = (): ReactElement => {

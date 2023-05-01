@@ -3,7 +3,7 @@ import { useRecoilState, useSetRecoilState } from "recoil";
 import Button from "../atoms/Button";
 import { showDetailTraining } from "@/modules/training-plan/store";
 import TrainingDetailCard from "../atoms/TrainingDetailCard";
-import { TdetailInformation } from "@/modules/training-plan/training-information/type";
+import { TdetailInformation } from "@/modules/training-plan/training-information/types";
 
 const TrainingDetail: FC<TdetailInformation> = ({
   name,
