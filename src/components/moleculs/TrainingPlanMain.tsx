@@ -1,5 +1,5 @@
 "use client";
-import { FC, ReactElement, lazy } from "react";
+import { FC, ReactElement, lazy, useState } from "react";
 import TrainingPlanCardContent from "../atoms/TrainingPlanCardContent";
 import SuspenseError from "@/providers/SuspenseError";
 import CardLoading from "@/modules/training-plan/loading/CardLoading";
@@ -7,6 +7,8 @@ import { useGetAllDepartments } from "@/modules/training-plan/hook";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useRecoilState } from "recoil";
 import { searchKeyword } from "@/modules/training-plan/store";
+import { useSearchDepartments } from "@/modules/training-plan/hook";
+import { useSearchParams } from "next/navigation";
 
 const Card = lazy(() => import("../atoms/Card"));
 

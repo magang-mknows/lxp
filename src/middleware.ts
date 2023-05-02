@@ -1,4 +1,4 @@
-import { withAuth } from "next-auth/middleware";
+import { withAuth } from 'next-auth/middleware';
 
 export default withAuth(
   function (req) {
@@ -10,7 +10,7 @@ export default withAuth(
         return !!token;
       },
     },
-  },
+  }
 );
 
-export const config = { matcher: ["/dashboard", "/profile", "/mitra"] };
+export const config = { matcher: ['/dashboard', '/profile', '/mitra'] };
