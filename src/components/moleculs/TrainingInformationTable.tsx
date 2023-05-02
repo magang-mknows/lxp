@@ -3,24 +3,23 @@ import { showDetailTraining } from "@/modules/training-plan/store";
 // import { useGetSubjectByDepartmenId } from "@/modules/training-plan/training-information/hook";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import TrainingDetail from "./TrainingDetail";
 import TrainingDetailTableHeader from "../atoms/TrainingDetailTableHeader";
 import { showSelectedDetail } from "@/modules/training-plan/training-information/store";
 import { useGetSubjectByDepartmenId } from "@/modules/training-plan/training-information/hook";
-import { TsubjectItems } from "@/modules/training-plan/training-information/types";
+import { usePathname } from "next/navigation";
 
 const TrainingInformationTable: FC = (): ReactElement => {
+  const { query, isReady } = useRouter();
+
   const [selectedDetail, setSelectedDetail] = useRecoilState(showSelectedDetail);
   const [isShowDetail, setShowDetail] = useRecoilState(showDetailTraining);
 
-  const router = useRouter();
-  const { id } = router.query;
-
-  const { data } = useGetSubjectByDepartmenId(id as string);
-
-  const subjects = data?.data;
+  if (isReady) {
+    console.log("isReady : ", isReady);
+  }
 
   return (
     <div className="flex flex-col">
@@ -31,8 +30,8 @@ const TrainingInformationTable: FC = (): ReactElement => {
               <thead className="bg-secondary-blue-100/20 border-b-2 border-neutral-200">
                 <TrainingDetailTableHeader />
               </thead>
-              <tbody className=" text-center   text-neutral-800 ">
-                {subjects?.map((subject: TsubjectItems, index: number) => {
+              {/* <tbody className=" text-center   text-neutral-800 ">
+                {subjects?.map((subject, index) => {
                   return (
                     <tr
                       className="bg-neutral-100/80"
@@ -106,13 +105,10 @@ const TrainingInformationTable: FC = (): ReactElement => {
                     Total Poin
                   </td>
                   <td className="col-span-4 py-4 ">
-                    {subjects?.reduce(
-                      (prev: number, subject: TsubjectItems) => prev + subject.credit,
-                      0,
-                    )}
+                    {subjects?.reduce((prev, subject) => prev + subject.credit, 0)}
                   </td>
                 </tr>
-              </tbody>
+              </tbody> */}
             </table>
           </div>
         </div>
