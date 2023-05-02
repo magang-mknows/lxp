@@ -6,24 +6,42 @@ import { FiLogOut } from "react-icons/fi";
 import SpinerLoading from "../atoms/SpinerLoading";
 import { logoutRequest } from "@/modules/auth/logout/api";
 import { useSession } from "next-auth/react";
+import { useProfile } from "@/modules/profile/hooks";
+import { useRouter } from "next/router";
 
 const UserIcon: FC = (): ReactElement => {
+  const router = useRouter();
+
   const UserMenu = [
     {
       icon: <RiDashboardFill className="text-version3-500 rounded-md" size={16} />,
       name: "dashboard",
+      onclick: () => {
+        router.push("/dashboard");
+      },
     },
     {
       icon: <FaUserAlt className="text-version3-300 rounded-md" size={16} />,
       name: "Profile",
+      onclick: () => {
+        router.push("/");
+      },
     },
     {
       icon: <RiSettings5Fill className="text-neutral-700 rounded-md" size={16} />,
       name: "Pengaturan",
+      onclick: () => {
+        router.push("/");
+      },
     },
     {
       icon: <FiLogOut className="text-pink-400 rounded-md" size={16} />,
       name: "Logout",
+      onclick: async () => {
+        await logoutRequest({
+          refresh_token: data?.user?.token?.refresh_token as string,
+        });
+      },
     },
   ];
 
@@ -34,6 +52,12 @@ const UserIcon: FC = (): ReactElement => {
   }, []);
 
   const { data } = useSession();
+
+  const { data: profileData } = useProfile();
+  const _profile_user = {
+    email: profileData?.data?.user?.email,
+    full_name: profileData?.data?.user?.full_name,
+  };
 
   if (!mounted) return <SpinerLoading />;
 
@@ -62,13 +86,15 @@ const UserIcon: FC = (): ReactElement => {
 
               <section>
                 <h1 className="text-sm text-neutral-900 dark:text-neubg-neutral-100">
-                  Mario Silalahi
+                  {_profile_user.full_name}
                 </h1>
-                <p className="text-xs text-neutral-500 dark:text-neutral-300">user@jshdj.com</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-300">
+                  {_profile_user.email}
+                </p>
               </section>
             </div>
 
-            {UserMenu.map(({ icon, name }, index) => (
+            {UserMenu.map(({ icon, name, onclick }, index) => (
               <Menu.Item
                 key={index}
                 as="div"
@@ -77,14 +103,7 @@ const UserIcon: FC = (): ReactElement => {
                 }
               >
                 {icon}
-                <button
-                  type="submit"
-                  onClick={() => {
-                    logoutRequest({
-                      refresh_token: data?.user?.token?.refresh_token as string,
-                    });
-                  }}
-                >
+                <button type="submit" onClick={onclick}>
                   <h1 className="text-[#171717] group:hover:text-neutral-100 text-xs text-center">
                     {name}
                   </h1>

@@ -45,7 +45,7 @@ export const authOptions: NextAuthOptions = {
     signOut: "/auth/logout",
   },
   session: {
-    maxAge: 2 * 60 * 60,
+    maxAge: 10 * 60 * 60,
   },
   callbacks: {
     async signIn({ user, account }) {
