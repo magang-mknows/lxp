@@ -150,7 +150,12 @@ const LoginForm: FC = (): ReactElement => {
           <div className="flex justify-center pt-2">
             <h1 className="text-xs md:text-sm">
               Belum punya akun ?{" "}
-              <span className="text-version2-400 font-bold  ">
+              <span
+                className="text-version2-400 font-bold  "
+                onClick={() => {
+                  setLoginPopup(false);
+                }}
+              >
                 <Link href={"/daftar"}>Daftar disini</Link>
               </span>
             </h1>
