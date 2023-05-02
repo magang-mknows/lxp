@@ -42,35 +42,35 @@ const TextField: FC<TextFieldProps> = forwardRef(
             error &&
             !warning &&
             !success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800 border-[0.5px] "
+            " text-xs focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800 border-[0.5px] "
           }
 
           ${
             error &&
             !warning &&
             success &&
-            " text-sm focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800 border-[0.5px] "
+            " text-xs focus:border-warning-600 border-warning-600  bg-warning-100 text-neutral-800 border-[0.5px] "
           }
 
           ${
             success &&
             !warning &&
             !error &&
-            " text-sm focus:border-green-400 border-green-400  bg-green-50 border-[0.5px] "
+            " text-xs focus:border-green-400 border-green-400  bg-green-50 border-[0.5px] "
           }
           
           ${
             warning &&
             !success &&
             !error &&
-            " text-sm focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px] "
+            " text-xs focus:border-yellow-600 border-yellow-600 bg-yellow-50 border-[0.5px] "
           }
           
           ${
             !warning &&
             !error &&
             !success &&
-            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-sm"
+            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-xs"
           }
           ${className}
             rounded-lg p-3 outline-none focus:outline-none
@@ -117,10 +117,10 @@ const TextField: FC<TextFieldProps> = forwardRef(
             !warning &&
             !error &&
             !success &&
-            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-xs md:text-sm"
+            "border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-xs "
           }
           ${className}
-          border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-xs md:text-sm
+          border-[0.5px]  border-neutral-500 rounded-md px-3 py-2 text-xs 
           `}
             placeholder={placeholder}
             onChange={onChange}
@@ -129,21 +129,21 @@ const TextField: FC<TextFieldProps> = forwardRef(
         )}
 
         {error && (
-          <div className="flex items-center text-sm w-full gap-x-1">
+          <div className="flex items-center text-xs w-full gap-x-1">
             <RiErrorWarningFill className="text-warning-700" />
             <span className="text-warning-700">{error}</span>
           </div>
         )}
 
         {warning && (
-          <div className="flex items-center w-full gap-x-1 text-sm">
+          <div className="flex items-center w-full gap-x-1 text-xs">
             <RiErrorWarningFill className="text-version3-400" />
             <span className="text-version3-400">{error}</span>
           </div>
         )}
 
         {success && (
-          <div className="flex items-center w-full text-sm gap-x-1">
+          <div className="flex items-center w-full text-xs gap-x-1">
             <RiCheckFill className="text-version2-300" />
             <span className="text-version2-300">{error}</span>
           </div>

@@ -14,16 +14,11 @@ import useWindowScroll from "@/modules/navbar/hook";
 import UserIcon from "./UserIcon";
 import { useSession } from "next-auth/react";
 
-const NavbarThemeOption = dynamic(() => import("../atoms/NavbarThemeOption"), {
-  ssr: false,
-});
-
 const Navbar = () => {
   const { isScrollY } = useWindowScroll();
   const [isLogin, setislogin] = useState(true);
   const { getLoginPopup, setLoginPopup } = useLoginPopup();
   const { data: session } = useSession();
-  console.log("sesi", session);
   useEffect(() => {
     session == null ? setislogin(false) : setislogin(true);
   }, [session]);
